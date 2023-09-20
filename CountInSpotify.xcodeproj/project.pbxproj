@@ -487,7 +487,7 @@
 				);
 				MARKETING_VERSION = 1.0;
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_BUNDLE_IDENTIFIER = com.appenvision.CountInSpotify.CountInSpotify;
+				PRODUCT_BUNDLE_IDENTIFIER = com.appenvision.CountInSpotify;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "CountInSpotify/CountInSpotify-Bridging-Header.h";
@@ -519,7 +519,7 @@
 				);
 				MARKETING_VERSION = 1.0;
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_BUNDLE_IDENTIFIER = com.appenvision.CountInSpotify.CountInSpotify;
+				PRODUCT_BUNDLE_IDENTIFIER = com.appenvision.CountInSpotify;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "CountInSpotify/CountInSpotify-Bridging-Header.h";
