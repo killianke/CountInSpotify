@@ -32,7 +32,7 @@
         <string>com.appenvision.CountInSpotify</string>
         <key>CFBundleURLSchemes</key>
         <array>
-          <string>count-in-spotify</string>
+          <string>appenvision-spotify-count-in-ios</string>
         </array>
       </dict>
     </array>
