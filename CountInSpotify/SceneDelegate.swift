@@ -11,7 +11,10 @@ import SpotifyiOS
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate, SPTAppRemoteDelegate, SPTAppRemotePlayerStateDelegate {
     
+    let maxAuthRetryCount = 1
+
     var window: UIWindow?
+    var authRetryCount = 0
     
     lazy var spotifyRemote: SPTAppRemote = {
         let configuration = SPTConfiguration(clientID: Constants.spotifyClientID,
@@ -92,7 +95,12 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate, SPTAppRemoteDelegate, S
     }
     
     func appRemote(_ appRemote: SPTAppRemote, didFailConnectionAttemptWithError error: Error?) {
-      print("failed")
+        if let err = error as? NSError, err.code == Constants.spotifyAuthErrorCode, authRetryCount < maxAuthRetryCount {
+            //Retry authentication
+            authRetryCount += 1
+            self.spotifyRemote.authorizeAndPlayURI("")
+        }
+        print("failed")
     }
     
     //MARK: - PTAppRemotePlayerStateDelegate
