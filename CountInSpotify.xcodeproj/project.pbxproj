@@ -19,6 +19,7 @@
 		AC5968862ABA9F210067B0D9 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5968852ABA9F210067B0D9 /* Constants.swift */; };
 		AC5968872ABAA0A50067B0D9 /* SpotifyiOS.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC59687F2ABA996E0067B0D9 /* SpotifyiOS.xcframework */; };
 		AC5968882ABAA0A50067B0D9 /* SpotifyiOS.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AC59687F2ABA996E0067B0D9 /* SpotifyiOS.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		AC59688C2ABC3E440067B0D9 /* UserDefaults+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC59688B2ABC3E440067B0D9 /* UserDefaults+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +70,7 @@
 		AC59687F2ABA996E0067B0D9 /* SpotifyiOS.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = SpotifyiOS.xcframework; sourceTree = "<group>"; };
 		AC5968822ABA9B150067B0D9 /* CountInSpotify-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CountInSpotify-Bridging-Header.h"; sourceTree = "<group>"; };
 		AC5968852ABA9F210067B0D9 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		AC59688B2ABC3E440067B0D9 /* UserDefaults+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +123,7 @@
 		AC59684E2ABA96E80067B0D9 /* CountInSpotify */ = {
 			isa = PBXGroup;
 			children = (
+				AC59688A2ABC3E2B0067B0D9 /* Extensions */,
 				AC59684F2ABA96E80067B0D9 /* AppDelegate.swift */,
 				AC5968512ABA96E80067B0D9 /* SceneDelegate.swift */,
 				AC5968852ABA9F210067B0D9 /* Constants.swift */,
@@ -157,6 +160,14 @@
 				AC59687F2ABA996E0067B0D9 /* SpotifyiOS.xcframework */,
 			);
 			path = Frameworks;
+			sourceTree = "<group>";
+		};
+		AC59688A2ABC3E2B0067B0D9 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				AC59688B2ABC3E440067B0D9 /* UserDefaults+Extensions.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -295,6 +306,7 @@
 				AC5968542ABA96E80067B0D9 /* ViewController.swift in Sources */,
 				AC5968502ABA96E80067B0D9 /* AppDelegate.swift in Sources */,
 				AC5968522ABA96E80067B0D9 /* SceneDelegate.swift in Sources */,
+				AC59688C2ABC3E440067B0D9 /* UserDefaults+Extensions.swift in Sources */,
 				AC5968862ABA9F210067B0D9 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
