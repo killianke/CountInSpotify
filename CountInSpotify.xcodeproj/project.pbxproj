@@ -21,6 +21,7 @@
 		AC5968882ABAA0A50067B0D9 /* SpotifyiOS.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AC59687F2ABA996E0067B0D9 /* SpotifyiOS.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		AC59688C2ABC3E440067B0D9 /* UserDefaults+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC59688B2ABC3E440067B0D9 /* UserDefaults+Extensions.swift */; };
 		AC59688E2AC3A9300067B0D9 /* SpotifyRemoteManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC59688D2AC3A9300067B0D9 /* SpotifyRemoteManager.swift */; };
+		AC5968912AC3B6D00067B0D9 /* click.wav in Resources */ = {isa = PBXBuildFile; fileRef = AC5968902AC3B6D00067B0D9 /* click.wav */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +74,7 @@
 		AC5968852ABA9F210067B0D9 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		AC59688B2ABC3E440067B0D9 /* UserDefaults+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+Extensions.swift"; sourceTree = "<group>"; };
 		AC59688D2AC3A9300067B0D9 /* SpotifyRemoteManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotifyRemoteManager.swift; sourceTree = "<group>"; };
+		AC5968902AC3B6D00067B0D9 /* click.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = click.wav; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +127,7 @@
 		AC59684E2ABA96E80067B0D9 /* CountInSpotify */ = {
 			isa = PBXGroup;
 			children = (
+				AC59688F2AC3B6B80067B0D9 /* Assets */,
 				AC59688A2ABC3E2B0067B0D9 /* Extensions */,
 				AC59684F2ABA96E80067B0D9 /* AppDelegate.swift */,
 				AC5968512ABA96E80067B0D9 /* SceneDelegate.swift */,
@@ -171,6 +174,14 @@
 				AC59688B2ABC3E440067B0D9 /* UserDefaults+Extensions.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		AC59688F2AC3B6B80067B0D9 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				AC5968902AC3B6D00067B0D9 /* click.wav */,
+			);
+			path = Assets;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -281,6 +292,7 @@
 			files = (
 				AC59685C2ABA96EB0067B0D9 /* LaunchScreen.storyboard in Resources */,
 				AC5968592ABA96EB0067B0D9 /* Assets.xcassets in Resources */,
+				AC5968912AC3B6D00067B0D9 /* click.wav in Resources */,
 				AC5968572ABA96E80067B0D9 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
