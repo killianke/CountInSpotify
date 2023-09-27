@@ -20,6 +20,7 @@
 		AC5968872ABAA0A50067B0D9 /* SpotifyiOS.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC59687F2ABA996E0067B0D9 /* SpotifyiOS.xcframework */; };
 		AC5968882ABAA0A50067B0D9 /* SpotifyiOS.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AC59687F2ABA996E0067B0D9 /* SpotifyiOS.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		AC59688C2ABC3E440067B0D9 /* UserDefaults+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC59688B2ABC3E440067B0D9 /* UserDefaults+Extensions.swift */; };
+		AC59688E2AC3A9300067B0D9 /* SpotifyRemoteManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC59688D2AC3A9300067B0D9 /* SpotifyRemoteManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +72,7 @@
 		AC5968822ABA9B150067B0D9 /* CountInSpotify-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CountInSpotify-Bridging-Header.h"; sourceTree = "<group>"; };
 		AC5968852ABA9F210067B0D9 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		AC59688B2ABC3E440067B0D9 /* UserDefaults+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+Extensions.swift"; sourceTree = "<group>"; };
+		AC59688D2AC3A9300067B0D9 /* SpotifyRemoteManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotifyRemoteManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +129,7 @@
 				AC59684F2ABA96E80067B0D9 /* AppDelegate.swift */,
 				AC5968512ABA96E80067B0D9 /* SceneDelegate.swift */,
 				AC5968852ABA9F210067B0D9 /* Constants.swift */,
+				AC59688D2AC3A9300067B0D9 /* SpotifyRemoteManager.swift */,
 				AC5968532ABA96E80067B0D9 /* ViewController.swift */,
 				AC5968552ABA96E80067B0D9 /* Main.storyboard */,
 				AC5968582ABA96EB0067B0D9 /* Assets.xcassets */,
@@ -305,6 +308,7 @@
 			files = (
 				AC5968542ABA96E80067B0D9 /* ViewController.swift in Sources */,
 				AC5968502ABA96E80067B0D9 /* AppDelegate.swift in Sources */,
+				AC59688E2AC3A9300067B0D9 /* SpotifyRemoteManager.swift in Sources */,
 				AC5968522ABA96E80067B0D9 /* SceneDelegate.swift in Sources */,
 				AC59688C2ABC3E440067B0D9 /* UserDefaults+Extensions.swift in Sources */,
 				AC5968862ABA9F210067B0D9 /* Constants.swift in Sources */,
