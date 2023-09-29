@@ -15,23 +15,20 @@ class Metronome {
     
     private let fileName1 = "sound1.wav"
     private let fileName2 = "sound2.wav"
-    private var file1: AVAudioFile! = nil
-    private var file2: AVAudioFile! = nil
-    private var buffer1: AVAudioPCMBuffer! = nil
-    private var buffer2: AVAudioPCMBuffer! = nil
+    private var buffer1: AVAudioPCMBuffer!
+    private var buffer2: AVAudioPCMBuffer!
     
     private let sampleRate: Double = 44100
     
     private var bpm: Double = 120
-    private var maxBar: Int?
-    private var periodLengthInSamples: Double {
-        60.0 / bpm * sampleRate
+    private var periodLength: Double {
+        60.0 / bpm
     }
     private var timerEventCounter: Int = 1
     private var currentBeat: Int = 1
     private var timer: Timer! = nil
     
-    private enum MetronomeState {case running; case stopped}
+    private enum MetronomeState { case running; case stopped }
     private var state: MetronomeState = .stopped
     
     init() {
@@ -41,7 +38,6 @@ class Metronome {
     //MARK: Public interface
     
     func start(forBars numberOfBars: Int? = nil) {
-        self.maxBar = numberOfBars
         
         state = .running
         scheduleFirstBuffer()
@@ -58,44 +54,53 @@ class Metronome {
     //MARK: Private funcs
     
     private func setupAudio() {
-        
-        let path1 = Bundle.main.path(forResource: fileName1, ofType: nil)!
-        let url1 = URL(fileURLWithPath: path1)
-        do {
-            file1 = try AVAudioFile(forReading: url1)
-            buffer1 = AVAudioPCMBuffer(
-                pcmFormat: file1.processingFormat,
-                frameCapacity: AVAudioFrameCount(periodLengthInSamples))
-            try file1.read(into: buffer1!)
-            buffer1.frameLength = AVAudioFrameCount(periodLengthInSamples)
-        } catch {
-            print("Error loading buffer1 \(error)")
+        guard let audioFile1 = createAudioFile(fileName: fileName1) else {
+            return
         }
+        buffer1 = createBuffer(withFile: audioFile1)
         
-        let path2 = Bundle.main.path(forResource: fileName2, ofType: nil)!
-        let url2 = URL(fileURLWithPath: path2)
-        do {
-            file2 = try AVAudioFile(forReading: url2)
-            buffer2 = AVAudioPCMBuffer(
-                pcmFormat: file2.processingFormat,
-                frameCapacity: AVAudioFrameCount(periodLengthInSamples))
-            try file2.read(into: buffer2!)
-            buffer2.frameLength = AVAudioFrameCount(periodLengthInSamples)
-        } catch {
-            print("Error loading buffer2 \(error)")
+        guard let audioFile2 = createAudioFile(fileName: fileName2) else {
+            return
         }
+        buffer2 = createBuffer(withFile: audioFile2)
         
         // MARK: Configure + start engine
         engine.attach(player)
-        engine.connect(player, to: engine.mainMixerNode, format: file1.processingFormat)
+        engine.connect(player, to: engine.mainMixerNode, format: audioFile1.processingFormat)
         engine.prepare()
         do { try engine.start() } catch { print(error) }
+    }
+    
+    private func createAudioFile(fileName: String) -> AVAudioFile? {
+        let path = Bundle.main.path(forResource: fileName, ofType: nil)!
+        let url = URL(fileURLWithPath: path)
+        do {
+            return try AVAudioFile(forReading: url)
+        } catch {
+            print("Error creating audio file: \(error)")
+        }
+        return nil
+    }
+    
+    private func createBuffer(withFile file: AVAudioFile) -> AVAudioPCMBuffer? {
+        do {
+            var periodLengthInSamples = periodLength * sampleRate
+            let buffer = AVAudioPCMBuffer(
+                pcmFormat: file.processingFormat,
+                frameCapacity: AVAudioFrameCount(periodLengthInSamples))!
+            try file.read(into: buffer)
+            buffer.frameLength = AVAudioFrameCount(periodLengthInSamples)
+            return buffer
+        } catch {
+            print("Error loading buffer: \(error)")
+        }
+        return nil
     }
         
     private func createTimer() {
         
         // Compute interval for 2 events per period and set up timer
-        let timerIntervallInSamples = 0.5 * self.periodLengthInSamples / sampleRate
+        let timerIntervallInSamples = 0.5 * self.periodLength
         
         timer = Timer.scheduledTimer(withTimeInterval: timerIntervallInSamples, repeats: true) { timer in
 
