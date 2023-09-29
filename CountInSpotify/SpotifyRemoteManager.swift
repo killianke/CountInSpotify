@@ -35,7 +35,7 @@ final class SpotifyRemoteManager: NSObject, SPTAppRemoteDelegate, SPTAppRemotePl
             if isActive {
                 self.remote.connect()
             } else {
-                self.remote.authorizeAndPlayURI("spotify:track:4nFNJmjfgBF7jwv2oBC45b")
+                self.remote.authorizeAndPlayURI(Constants.spotifySilentTrackId)
             }
         }
     }
