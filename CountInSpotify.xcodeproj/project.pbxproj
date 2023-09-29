@@ -24,6 +24,7 @@
 		AC9024A42AC67B51007EE9A1 /* Metronome.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9024A32AC67B51007EE9A1 /* Metronome.swift */; };
 		AC9024A72AC67F8F007EE9A1 /* sound2.wav in Resources */ = {isa = PBXBuildFile; fileRef = AC9024A52AC67F8E007EE9A1 /* sound2.wav */; };
 		AC9024A82AC67F8F007EE9A1 /* sound1.wav in Resources */ = {isa = PBXBuildFile; fileRef = AC9024A62AC67F8F007EE9A1 /* sound1.wav */; };
+		AC9024AB2AC6CDF6007EE9A1 /* Track.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9024AA2AC6CDF6007EE9A1 /* Track.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +80,7 @@
 		AC9024A32AC67B51007EE9A1 /* Metronome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Metronome.swift; sourceTree = "<group>"; };
 		AC9024A52AC67F8E007EE9A1 /* sound2.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = sound2.wav; sourceTree = "<group>"; };
 		AC9024A62AC67F8F007EE9A1 /* sound1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = sound1.wav; sourceTree = "<group>"; };
+		AC9024AA2AC6CDF6007EE9A1 /* Track.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Track.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,6 +135,7 @@
 			children = (
 				AC59688F2AC3B6B80067B0D9 /* Assets */,
 				AC59688A2ABC3E2B0067B0D9 /* Extensions */,
+				AC9024A92AC6CDDD007EE9A1 /* Models */,
 				AC59684F2ABA96E80067B0D9 /* AppDelegate.swift */,
 				AC5968512ABA96E80067B0D9 /* SceneDelegate.swift */,
 				AC5968852ABA9F210067B0D9 /* Constants.swift */,
@@ -188,6 +191,14 @@
 				AC9024A52AC67F8E007EE9A1 /* sound2.wav */,
 			);
 			path = Assets;
+			sourceTree = "<group>";
+		};
+		AC9024A92AC6CDDD007EE9A1 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				AC9024AA2AC6CDF6007EE9A1 /* Track.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -328,6 +339,7 @@
 				AC5968542ABA96E80067B0D9 /* ViewController.swift in Sources */,
 				AC5968502ABA96E80067B0D9 /* AppDelegate.swift in Sources */,
 				AC59688E2AC3A9300067B0D9 /* SpotifyRemoteManager.swift in Sources */,
+				AC9024AB2AC6CDF6007EE9A1 /* Track.swift in Sources */,
 				AC9024A42AC67B51007EE9A1 /* Metronome.swift in Sources */,
 				AC5968522ABA96E80067B0D9 /* SceneDelegate.swift in Sources */,
 				AC59688C2ABC3E440067B0D9 /* UserDefaults+Extensions.swift in Sources */,
