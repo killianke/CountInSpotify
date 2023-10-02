@@ -14,6 +14,21 @@ class ViewController: UIViewController, SPTAppRemoteDelegate {
         super.viewDidLoad()
 
         SpotifyRemoteManager.shared.connectionDelegate = self
+        
+        self.searchSong()
+    }
+    
+    func searchSong() {
+        Task {
+            let searchResult = await SpotifyService().searchTracks(with: "money for nothing", offset: 0, limit: 20)
+            
+            switch searchResult {
+            case .success(let result):
+                print(result)
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+        }
     }
     
     //MARK: SPTAppRemoteDelegate
