@@ -27,6 +27,12 @@
 		AC9024AF2AC918A5007EE9A1 /* SpotifyTrack.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9024AE2AC918A5007EE9A1 /* SpotifyTrack.swift */; };
 		AC9024B12AC918EF007EE9A1 /* SpotifyAlbum.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9024B02AC918EF007EE9A1 /* SpotifyAlbum.swift */; };
 		AC9024B32AC91D43007EE9A1 /* SpotifyArtist.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9024B22AC91D43007EE9A1 /* SpotifyArtist.swift */; };
+		AC9024C82ACA8492007EE9A1 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9024C42ACA8492007EE9A1 /* HTTPMethod.swift */; };
+		AC9024C92ACA8492007EE9A1 /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9024C52ACA8492007EE9A1 /* HTTPClient.swift */; };
+		AC9024CA2ACA8492007EE9A1 /* RequestError.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9024C62ACA8492007EE9A1 /* RequestError.swift */; };
+		AC9024CB2ACA8492007EE9A1 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9024C72ACA8492007EE9A1 /* Endpoint.swift */; };
+		AC9024D32ACA85CC007EE9A1 /* SpotifyEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9024D22ACA85CC007EE9A1 /* SpotifyEndpoint.swift */; };
+		AC9024D52ACA8829007EE9A1 /* SpotifyService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9024D42ACA8829007EE9A1 /* SpotifyService.swift */; };
 		AC9024D72ACAA865007EE9A1 /* Track.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9024D62ACAA865007EE9A1 /* Track.swift */; };
 		AC9024D92ACAA927007EE9A1 /* SpotifySearchResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9024D82ACAA927007EE9A1 /* SpotifySearchResult.swift */; };
 /* End PBXBuildFile section */
@@ -87,6 +93,12 @@
 		AC9024AE2AC918A5007EE9A1 /* SpotifyTrack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotifyTrack.swift; sourceTree = "<group>"; };
 		AC9024B02AC918EF007EE9A1 /* SpotifyAlbum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotifyAlbum.swift; sourceTree = "<group>"; };
 		AC9024B22AC91D43007EE9A1 /* SpotifyArtist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotifyArtist.swift; sourceTree = "<group>"; };
+		AC9024C42ACA8492007EE9A1 /* HTTPMethod.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
+		AC9024C52ACA8492007EE9A1 /* HTTPClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
+		AC9024C62ACA8492007EE9A1 /* RequestError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestError.swift; sourceTree = "<group>"; };
+		AC9024C72ACA8492007EE9A1 /* Endpoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
+		AC9024D22ACA85CC007EE9A1 /* SpotifyEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotifyEndpoint.swift; sourceTree = "<group>"; };
+		AC9024D42ACA8829007EE9A1 /* SpotifyService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotifyService.swift; sourceTree = "<group>"; };
 		AC9024D62ACAA865007EE9A1 /* Track.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Track.swift; sourceTree = "<group>"; };
 		AC9024D82ACAA927007EE9A1 /* SpotifySearchResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotifySearchResult.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -144,6 +156,7 @@
 				AC59688F2AC3B6B80067B0D9 /* Assets */,
 				AC59688A2ABC3E2B0067B0D9 /* Extensions */,
 				AC9024A92AC6CDDD007EE9A1 /* Models */,
+				AC9024B42AC95580007EE9A1 /* Networking */,
 				AC59684F2ABA96E80067B0D9 /* AppDelegate.swift */,
 				AC5968512ABA96E80067B0D9 /* SceneDelegate.swift */,
 				AC5968852ABA9F210067B0D9 /* Constants.swift */,
@@ -389,13 +402,19 @@
 				AC5968502ABA96E80067B0D9 /* AppDelegate.swift in Sources */,
 				AC59688E2AC3A9300067B0D9 /* SpotifyRemoteManager.swift in Sources */,
 				AC9024B32AC91D43007EE9A1 /* SpotifyArtist.swift in Sources */,
+				AC9024D52ACA8829007EE9A1 /* SpotifyService.swift in Sources */,
 				AC9024D92ACAA927007EE9A1 /* SpotifySearchResult.swift in Sources */,
 				AC9024A42AC67B51007EE9A1 /* Metronome.swift in Sources */,
 				AC9024B12AC918EF007EE9A1 /* SpotifyAlbum.swift in Sources */,
 				AC5968522ABA96E80067B0D9 /* SceneDelegate.swift in Sources */,
 				AC9024AF2AC918A5007EE9A1 /* SpotifyTrack.swift in Sources */,
 				AC59688C2ABC3E440067B0D9 /* UserDefaults+Extensions.swift in Sources */,
+				AC9024CB2ACA8492007EE9A1 /* Endpoint.swift in Sources */,
+				AC9024D32ACA85CC007EE9A1 /* SpotifyEndpoint.swift in Sources */,
 				AC9024D72ACAA865007EE9A1 /* Track.swift in Sources */,
+				AC9024C92ACA8492007EE9A1 /* HTTPClient.swift in Sources */,
+				AC9024CA2ACA8492007EE9A1 /* RequestError.swift in Sources */,
+				AC9024C82ACA8492007EE9A1 /* HTTPMethod.swift in Sources */,
 				AC5968862ABA9F210067B0D9 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
