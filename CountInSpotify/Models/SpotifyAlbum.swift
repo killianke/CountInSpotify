@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct SpotifyAlbum: Codable {
+struct SpotifyAlbum: Codable, Identifiable {
     var totalTracks: Int
     var id: String
     var name: String
@@ -19,6 +19,13 @@ struct SpotifyAlbum: Codable {
         case name
         case releaseDate = "release_date"
     }    
+}
+
+extension SpotifyAlbum {
+    static let previewContent: Self = SpotifyAlbum(totalTracks: 12,
+                                                   id: "48c57b98",
+                                                   name: "In Times New Roman",
+                                                   releaseDate: "12/06/23")
 }
 
 /*

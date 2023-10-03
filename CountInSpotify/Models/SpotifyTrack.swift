@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct SpotifyTrack: Codable {
+struct SpotifyTrack: Codable, Identifiable {
     var album: SpotifyAlbum?
     var artists: [SpotifyArtist]?
     var durationInMs: Int?
@@ -26,21 +26,16 @@ struct SpotifyTrack: Codable {
     }
 }
 
+extension SpotifyTrack {
+    static let previewContent: Self = SpotifyTrack(album: SpotifyAlbum.previewContent,
+                                                   artists: [SpotifyArtist.previewContent],
+                                                   name: "Emotion Sickness")
+}
+
 /*
  {
- "album": {},
- "artists": [
- {
- "external_urls": {
- "spotify": "https://open.spotify.com/artist/6sFIWsNpZYqfjUpaCgueju"
- },
- "href": "https://api.spotify.com/v1/artists/6sFIWsNpZYqfjUpaCgueju",
- "id": "6sFIWsNpZYqfjUpaCgueju",
- "name": "Carly Rae Jepsen",
- "type": "artist",
- "uri": "spotify:artist:6sFIWsNpZYqfjUpaCgueju"
- }
- ],
+ "album": { See SpotifyAlbum },
+ "artists": [{ See SpotifyArtist }],
  "available_markets": [],
  "disc_number": 1,
  "duration_ms": 207959,
