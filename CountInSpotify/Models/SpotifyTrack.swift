@@ -27,6 +27,16 @@ struct SpotifyTrack: Codable, Identifiable {
     }
 }
 
+extension SpotifyTrack: Hashable {
+    static func == (lhs: SpotifyTrack, rhs: SpotifyTrack) -> Bool {
+        lhs.id == rhs.id
+    }
+    
+    func hash(into hasher: inout Hasher) {
+        hasher.combine(id)
+    }
+}
+
 extension SpotifyTrack {
     static let previewContent: Self = SpotifyTrack(album: SpotifyAlbum.previewContent,
                                                    artists: [SpotifyArtist.previewContent],
