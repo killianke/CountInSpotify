@@ -43,7 +43,7 @@ struct TrackListView: View {
     
     var listView: some View {
         List(tracks) { track in
-            TrackRow(viewModel: viewModel, track: track)
+            TrackRowView(viewModel: TrackRowViewModel(), track: track)
         }
     }
     
@@ -63,19 +63,5 @@ struct TrackListView_Previews: PreviewProvider {
     
     static var previews: some View {
         TrackListView(tracks: [SpotifyTrack.previewContent])
-    }
-}
-
-struct TrackRow: View {
-    
-    let viewModel: TrackListViewModel
-    var track: SpotifyTrack
-    
-    var body: some View {
-        VStack(alignment: .leading) {
-            Text(track.name ?? "Unknown").font(.headline)
-            Text(viewModel.getArtistsString(for: track)).font(.caption)
-            Text(track.album?.name ?? "Unknown").font(.caption2)
-        }
     }
 }

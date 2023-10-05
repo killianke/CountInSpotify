@@ -14,7 +14,7 @@ struct AddTrackView: View {
     var body: some View {
         Group {
             List(viewModel.tracks) { track in
-                Text(track.name ?? "")
+                TrackRowView(viewModel: TrackRowViewModel(), track: track)
             }
         }
         .navigationTitle("Add Songs")
