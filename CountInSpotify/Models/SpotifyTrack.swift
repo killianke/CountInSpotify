@@ -19,6 +19,7 @@ struct SpotifyTrack: Codable, Identifiable {
     
     private enum CodingKeys : String, CodingKey {
         case album
+        case artists
         case durationInMs = "duration_ms"
         case id
         case name
