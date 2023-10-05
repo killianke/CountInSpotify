@@ -12,23 +12,32 @@ struct TrackListView: View {
     let viewModel = TrackListViewModel()
     var tracks: [SpotifyTrack]
     
-    var body: some View {
-        NavigationStack {
-            content
-                .navigationTitle("My Songs")
-                .toolbar {
-                    Button("Add") {
-                        print("Add Song Tapped")
-                    }
-                }
-        }
+    @State private var path = NavigationPath()
+    
+    private enum NavigationDestination: Codable {
+        case addTrack
     }
     
-    @ViewBuilder var content: some View {
-        if tracks.isEmpty {
-            emptyStateView
-        } else {
-            listView
+    var body: some View {
+        NavigationStack(path: $path) {
+            Group {
+                if tracks.isEmpty {
+                    emptyStateView
+                } else {
+                    listView
+                }
+            }
+            .navigationTitle("My Songs")
+            .toolbar {
+                Button("Add") {
+                    path.append(NavigationDestination.addTrack)
+                }
+            }
+            .navigationDestination(for: NavigationDestination.self) { destination in
+                switch destination {
+                case .addTrack: AddTrackView()
+                }
+            }
         }
     }
     
@@ -42,10 +51,10 @@ struct TrackListView: View {
         VStack(spacing: 50) {
             Text("Nothing to display!").font(.title)
             Button {
-                print("Add Song Tapped")
+                path.append(NavigationDestination.addTrack)
             } label: {
                 Text("Add Songs!").font(.headline)
-            }            
+            }
         }
     }
 }

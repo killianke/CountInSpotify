@@ -38,6 +38,8 @@
 		AC9024DC2ACABE3B007EE9A1 /* TrackListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9024DB2ACABE3B007EE9A1 /* TrackListViewController.swift */; };
 		AC9024DE2ACABEB3007EE9A1 /* TrackListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9024DD2ACABEB3007EE9A1 /* TrackListView.swift */; };
 		AC9024E02ACABED8007EE9A1 /* TrackListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9024DF2ACABED8007EE9A1 /* TrackListViewModel.swift */; };
+		AC9024E42ACBF19E007EE9A1 /* AddTrackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9024E32ACBF19E007EE9A1 /* AddTrackView.swift */; };
+		AC9024E62ACCE200007EE9A1 /* AddTrackViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9024E52ACCE200007EE9A1 /* AddTrackViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -107,6 +109,8 @@
 		AC9024DB2ACABE3B007EE9A1 /* TrackListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackListViewController.swift; sourceTree = "<group>"; };
 		AC9024DD2ACABEB3007EE9A1 /* TrackListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackListView.swift; sourceTree = "<group>"; };
 		AC9024DF2ACABED8007EE9A1 /* TrackListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackListViewModel.swift; sourceTree = "<group>"; };
+		AC9024E32ACBF19E007EE9A1 /* AddTrackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTrackView.swift; sourceTree = "<group>"; };
+		AC9024E52ACCE200007EE9A1 /* AddTrackViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTrackViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -164,6 +168,7 @@
 				AC9024A92AC6CDDD007EE9A1 /* Models */,
 				AC9024B42AC95580007EE9A1 /* Networking */,
 				AC9024DA2ACABE24007EE9A1 /* Track List */,
+				AC9024E22ACBF187007EE9A1 /* AddTrack */,
 				AC59684F2ABA96E80067B0D9 /* AppDelegate.swift */,
 				AC5968512ABA96E80067B0D9 /* SceneDelegate.swift */,
 				AC5968852ABA9F210067B0D9 /* Constants.swift */,
@@ -278,6 +283,15 @@
 				AC9024DF2ACABED8007EE9A1 /* TrackListViewModel.swift */,
 			);
 			path = "Track List";
+			sourceTree = "<group>";
+		};
+		AC9024E22ACBF187007EE9A1 /* AddTrack */ = {
+			isa = PBXGroup;
+			children = (
+				AC9024E32ACBF19E007EE9A1 /* AddTrackView.swift */,
+				AC9024E52ACCE200007EE9A1 /* AddTrackViewModel.swift */,
+			);
+			path = AddTrack;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -423,6 +437,7 @@
 				AC9024D92ACAA927007EE9A1 /* SpotifySearchResult.swift in Sources */,
 				AC9024A42AC67B51007EE9A1 /* Metronome.swift in Sources */,
 				AC9024E02ACABED8007EE9A1 /* TrackListViewModel.swift in Sources */,
+				AC9024E42ACBF19E007EE9A1 /* AddTrackView.swift in Sources */,
 				AC9024B12AC918EF007EE9A1 /* SpotifyAlbum.swift in Sources */,
 				AC5968522ABA96E80067B0D9 /* SceneDelegate.swift in Sources */,
 				AC9024AF2AC918A5007EE9A1 /* SpotifyTrack.swift in Sources */,
@@ -431,6 +446,7 @@
 				AC9024D32ACA85CC007EE9A1 /* SpotifyEndpoint.swift in Sources */,
 				AC9024D72ACAA865007EE9A1 /* Track.swift in Sources */,
 				AC9024DE2ACABEB3007EE9A1 /* TrackListView.swift in Sources */,
+				AC9024E62ACCE200007EE9A1 /* AddTrackViewModel.swift in Sources */,
 				AC9024C92ACA8492007EE9A1 /* HTTPClient.swift in Sources */,
 				AC9024CA2ACA8492007EE9A1 /* RequestError.swift in Sources */,
 				AC9024C82ACA8492007EE9A1 /* HTTPMethod.swift in Sources */,
