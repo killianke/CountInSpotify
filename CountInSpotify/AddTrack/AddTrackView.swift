@@ -13,14 +13,18 @@ struct AddTrackView: View {
     
     var body: some View {
         Group {
-            if viewModel.tracks.isEmpty {
-                Text("No results").font(.title)
-            } else {
-                List(viewModel.tracks) { track in
-                    Text(track.name ?? "")
-                }
+            List(viewModel.tracks) { track in
+                Text(track.name ?? "")
             }
-        }.searchable(text: $viewModel.searchTerm)
+        }
+        .navigationTitle("Add Songs")
+        .navigationBarTitleDisplayMode(.inline)
+        .searchable(text: $viewModel.searchTerm, prompt: "Search songs")
+        .onSubmit(of: .search) {
+            Task {
+                await viewModel.performSearch()
+            }
+        }
     }
 }
 

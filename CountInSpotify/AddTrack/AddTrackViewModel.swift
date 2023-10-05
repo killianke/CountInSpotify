@@ -10,26 +10,21 @@ import Combine
 
 class AddTrackViewModel: ObservableObject {
     
-    @Published var searchTerm: String = ""
+    @Published var searchTerm: String = "" {
+        didSet {
+            tracks = []
+        }
+    }
     @Published var tracks: [SpotifyTrack] = []
     @Published var error: Error?
     
-    private var cancellable: AnyCancellable?
     private var offset = 0
 
     private let limit = 20
     private let service = SpotifyService()
     
-    init() {
-        cancellable = $searchTerm.debounce(for: 2, scheduler: DispatchQueue.main).sink { term in
-            Task {
-                await self.search(using: term)
-            }
-        }
-    }
-    
-    func search(using query: String) async {
-        let searchResult = await service.searchTracks(with: query,
+    func performSearch() async {
+        let searchResult = await service.searchTracks(with: searchTerm,
                                                       offset: offset,
                                                       limit: limit)
         switch searchResult {
