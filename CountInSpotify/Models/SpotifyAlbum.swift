@@ -12,20 +12,59 @@ struct SpotifyAlbum: Codable, Identifiable {
     var id: String
     var name: String
     var releaseDate: String
+    var images: [SpotifyAlbumImage]
     
     private enum CodingKeys : String, CodingKey {
         case totalTracks = "total_tracks"
         case id
         case name
         case releaseDate = "release_date"
-    }    
+        case images
+    }
 }
 
 extension SpotifyAlbum {
     static let previewContent: Self = SpotifyAlbum(totalTracks: 12,
                                                    id: "48c57b98",
                                                    name: "In Times New Roman",
-                                                   releaseDate: "12/06/23")
+                                                   releaseDate: "12/06/23",
+                                                   images: [.previewContent])
+}
+
+struct SpotifyAlbumImage: Codable {
+    var url: String
+    var width: Int
+    var height: Int
+}
+
+extension SpotifyAlbumImage {
+    enum Size {
+        case small
+        case medium
+        case large
+        case unknown
+        
+        init(width: Int, height: Int) {
+            switch (width, height) {
+            case (64, 64): self = .small
+            case (300, 300): self = .medium
+            case (640, 640): self = .large
+            default: self = .unknown
+            }
+        }
+    }
+    
+    var size: Size {
+        return Size(width: width, height: height)
+    }
+}
+
+extension SpotifyAlbumImage {
+    static let previewContent: Self = SpotifyAlbumImage(
+        url: "https://i.scdn.co/image/ab67616d00001e027359994525d219f64872d3b1",
+        width: 300,
+        height: 300
+    )
 }
 
 /*
