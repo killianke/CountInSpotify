@@ -9,10 +9,16 @@ import Foundation
 
 class TrackDetailsViewModel: ObservableObject {
     
+    @Published var error: Error?
+    @Published var bpmString: String = ""
+    
     private let track: SpotifyTrack
+    private let service = SpotifyService()
+    private lazy var numberFormatter = NumberFormatter()
     
     init(track: SpotifyTrack) {
         self.track = track
+        fetchTrackInfo()
     }
     
     var nameString: String {
@@ -41,5 +47,22 @@ class TrackDetailsViewModel: ObservableObject {
             return nil
         }
         return URL(string: imageObject.url)
+    }
+    
+    func fetchTrackInfo() {
+        Task {
+            let result = await service.getAudioAnalysisForTrack(withId: track.id)
+            
+            DispatchQueue.main.async {
+                switch result {
+                case .success(let analysis):
+                    if let formattedBpm = self.numberFormatter.string(for: analysis.track.tempo) {
+                        self.bpmString = formattedBpm
+                    }
+                case .failure(let error):
+                    self.error = error
+                }
+            }
+        }
     }
 }

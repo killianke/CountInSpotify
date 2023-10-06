@@ -23,6 +23,7 @@ struct TrackDetailsView: View {
             Text(viewModel.nameString).font(.title)
             Text(viewModel.artistsString).font(.title2)
             Text(viewModel.albumString).font(.title3)
+            Text("BPM: \(viewModel.bpmString)")
         }
     }
 }
