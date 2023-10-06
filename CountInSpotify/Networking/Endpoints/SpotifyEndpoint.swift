@@ -9,6 +9,7 @@ import Foundation
 
 enum SpotifyEndpoint {
     case search(query: String, offset: Int, limit: Int)
+    case audioAnalysis(trackID: String)
 }
 
 extension SpotifyEndpoint: Endpoint {
@@ -21,12 +22,14 @@ extension SpotifyEndpoint: Endpoint {
         switch self {
         case .search:
             return "/v1/search"
+        case .audioAnalysis(trackID: let trackID):
+            return "/v1/audio-analysis/\(trackID)"
         }
     }
 
     var method: RequestMethod {
         switch self {
-        case .search:
+        case .search, .audioAnalysis(trackID: _):
             return .get
         }
     }
