@@ -13,9 +13,10 @@ struct SpotifyTrack: Codable, Identifiable {
     var durationInMs: Int?
     var id: String
     var name: String
-    var uri: String?
+    var uri: String
     var startTime: Int?
     var bpm: Double?
+    var metaData: SpotifyAudioAnalysis?
     
     private enum CodingKeys : String, CodingKey {
         case album
@@ -41,7 +42,8 @@ extension SpotifyTrack {
     static let previewContent: Self = SpotifyTrack(album: SpotifyAlbum.previewContent,
                                                    artists: [SpotifyArtist.previewContent],
                                                    id: "aa1da4cc",
-                                                   name: "Emotion Sickness")
+                                                   name: "Emotion Sickness",
+                                                   uri: "spotify:track:0qhGOjVl3uY2N6CAafVmCa")
 }
 
 /*

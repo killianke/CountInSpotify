@@ -12,7 +12,7 @@ class TrackDetailsViewModel: ObservableObject {
     @Published var error: Error?
     @Published var bpmString: String = ""
     
-    let track: SpotifyTrack
+    private(set) var track: SpotifyTrack
     private let service = SpotifyService()
     private lazy var numberFormatter = NumberFormatter()
     
@@ -56,6 +56,8 @@ class TrackDetailsViewModel: ObservableObject {
             DispatchQueue.main.async {
                 switch result {
                 case .success(let analysis):
+                    self.track.metaData = analysis
+                    
                     if let formattedBpm = self.numberFormatter.string(for: analysis.track.tempo) {
                         self.bpmString = formattedBpm
                     }
