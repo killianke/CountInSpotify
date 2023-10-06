@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		AC5968502ABA96E80067B0D9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC59684F2ABA96E80067B0D9 /* AppDelegate.swift */; };
 		AC5968522ABA96E80067B0D9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5968512ABA96E80067B0D9 /* SceneDelegate.swift */; };
-		AC5968542ABA96E80067B0D9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5968532ABA96E80067B0D9 /* ViewController.swift */; };
 		AC5968572ABA96E80067B0D9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC5968552ABA96E80067B0D9 /* Main.storyboard */; };
 		AC5968592ABA96EB0067B0D9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC5968582ABA96EB0067B0D9 /* Assets.xcassets */; };
 		AC59685C2ABA96EB0067B0D9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC59685A2ABA96EB0067B0D9 /* LaunchScreen.storyboard */; };
@@ -33,7 +32,6 @@
 		AC9024CB2ACA8492007EE9A1 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9024C72ACA8492007EE9A1 /* Endpoint.swift */; };
 		AC9024D32ACA85CC007EE9A1 /* SpotifyEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9024D22ACA85CC007EE9A1 /* SpotifyEndpoint.swift */; };
 		AC9024D52ACA8829007EE9A1 /* SpotifyService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9024D42ACA8829007EE9A1 /* SpotifyService.swift */; };
-		AC9024D72ACAA865007EE9A1 /* Track.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9024D62ACAA865007EE9A1 /* Track.swift */; };
 		AC9024D92ACAA927007EE9A1 /* SpotifySearchResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9024D82ACAA927007EE9A1 /* SpotifySearchResult.swift */; };
 		AC9024DC2ACABE3B007EE9A1 /* TrackListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9024DB2ACABE3B007EE9A1 /* TrackListViewController.swift */; };
 		AC9024DE2ACABEB3007EE9A1 /* TrackListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9024DD2ACABEB3007EE9A1 /* TrackListView.swift */; };
@@ -84,7 +82,6 @@
 		AC59684C2ABA96E80067B0D9 /* CountInSpotify.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CountInSpotify.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC59684F2ABA96E80067B0D9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AC5968512ABA96E80067B0D9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		AC5968532ABA96E80067B0D9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		AC5968562ABA96E80067B0D9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AC5968582ABA96EB0067B0D9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AC59685B2ABA96EB0067B0D9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -111,7 +108,6 @@
 		AC9024C72ACA8492007EE9A1 /* Endpoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 		AC9024D22ACA85CC007EE9A1 /* SpotifyEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotifyEndpoint.swift; sourceTree = "<group>"; };
 		AC9024D42ACA8829007EE9A1 /* SpotifyService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotifyService.swift; sourceTree = "<group>"; };
-		AC9024D62ACAA865007EE9A1 /* Track.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Track.swift; sourceTree = "<group>"; };
 		AC9024D82ACAA927007EE9A1 /* SpotifySearchResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotifySearchResult.swift; sourceTree = "<group>"; };
 		AC9024DB2ACABE3B007EE9A1 /* TrackListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackListViewController.swift; sourceTree = "<group>"; };
 		AC9024DD2ACABEB3007EE9A1 /* TrackListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackListView.swift; sourceTree = "<group>"; };
@@ -191,7 +187,6 @@
 				AC59688D2AC3A9300067B0D9 /* SpotifyConnectionManager.swift */,
 				AC9024A32AC67B51007EE9A1 /* Metronome.swift */,
 				AC9024F92AD0101A007EE9A1 /* TracksStore.swift */,
-				AC5968532ABA96E80067B0D9 /* ViewController.swift */,
 				AC5968552ABA96E80067B0D9 /* Main.storyboard */,
 				AC5968582ABA96EB0067B0D9 /* Assets.xcassets */,
 				AC59685A2ABA96EB0067B0D9 /* LaunchScreen.storyboard */,
@@ -247,7 +242,6 @@
 		AC9024A92AC6CDDD007EE9A1 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				AC9024D62ACAA865007EE9A1 /* Track.swift */,
 				AC9024AE2AC918A5007EE9A1 /* SpotifyTrack.swift */,
 				AC9024B02AC918EF007EE9A1 /* SpotifyAlbum.swift */,
 				AC9024B22AC91D43007EE9A1 /* SpotifyArtist.swift */,
@@ -466,7 +460,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AC5968542ABA96E80067B0D9 /* ViewController.swift in Sources */,
 				AC5968502ABA96E80067B0D9 /* AppDelegate.swift in Sources */,
 				AC59688E2AC3A9300067B0D9 /* SpotifyConnectionManager.swift in Sources */,
 				AC9024B32AC91D43007EE9A1 /* SpotifyArtist.swift in Sources */,
@@ -486,7 +479,6 @@
 				AC9024F82ACFB4AB007EE9A1 /* View+Alerts.swift in Sources */,
 				AC9024F62ACF9D5B007EE9A1 /* SpotifyAudioAnalysis.swift in Sources */,
 				AC9024D32ACA85CC007EE9A1 /* SpotifyEndpoint.swift in Sources */,
-				AC9024D72ACAA865007EE9A1 /* Track.swift in Sources */,
 				AC9024DE2ACABEB3007EE9A1 /* TrackListView.swift in Sources */,
 				AC9024E62ACCE200007EE9A1 /* AddTrackViewModel.swift in Sources */,
 				AC9024C92ACA8492007EE9A1 /* HTTPClient.swift in Sources */,
