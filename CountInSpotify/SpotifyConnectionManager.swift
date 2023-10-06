@@ -7,9 +7,9 @@
 
 import Foundation
 
-final class SpotifyRemoteManager: NSObject, SPTAppRemoteDelegate, SPTAppRemotePlayerStateDelegate {
+final class SpotifyConnectionManager: NSObject, SPTAppRemoteDelegate {
     
-    static let shared = SpotifyRemoteManager()
+    static let shared = SpotifyConnectionManager()
     
     private let remote: SPTAppRemote = {
         let configuration = SPTConfiguration(clientID: Constants.spotifyClientID, redirectURL: Constants.spotifyRedirectURL)
@@ -18,10 +18,6 @@ final class SpotifyRemoteManager: NSObject, SPTAppRemoteDelegate, SPTAppRemotePl
     private let maxAuthRetryCount = 1
 
     weak var connectionDelegate: SPTAppRemoteDelegate?
-    var player: SPTAppRemotePlayerAPI? {
-        return remote.playerAPI
-    }
-    
     private var authRetryCount = 0
     
     private override init() {
@@ -79,11 +75,5 @@ final class SpotifyRemoteManager: NSObject, SPTAppRemoteDelegate, SPTAppRemotePl
         } else {
             connectionDelegate?.appRemote(appRemote, didFailConnectionAttemptWithError: error)
         }
-    }
-    
-    //MARK: - PTAppRemotePlayerStateDelegate
-    
-    func playerStateDidChange(_ playerState: SPTAppRemotePlayerState) {
-        print("player state changed")
     }
 }

@@ -13,7 +13,7 @@ class ViewController: UIViewController, SPTAppRemoteDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        SpotifyRemoteManager.shared.connectionDelegate = self
+        SpotifyConnectionManager.shared.connectionDelegate = self
     }
     
     //MARK: SPTAppRemoteDelegate
