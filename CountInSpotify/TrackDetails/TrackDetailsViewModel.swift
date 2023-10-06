@@ -12,7 +12,7 @@ class TrackDetailsViewModel: ObservableObject {
     @Published var error: Error?
     @Published var bpmString: String = ""
     
-    private let track: SpotifyTrack
+    let track: SpotifyTrack
     private let service = SpotifyService()
     private lazy var numberFormatter = NumberFormatter()
     

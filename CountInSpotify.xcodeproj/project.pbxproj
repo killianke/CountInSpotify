@@ -46,6 +46,7 @@
 		AC9024F42ACF80C5007EE9A1 /* TrackDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9024F32ACF80C5007EE9A1 /* TrackDetailsViewModel.swift */; };
 		AC9024F62ACF9D5B007EE9A1 /* SpotifyAudioAnalysis.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9024F52ACF9D5B007EE9A1 /* SpotifyAudioAnalysis.swift */; };
 		AC9024F82ACFB4AB007EE9A1 /* View+Alerts.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9024F72ACFB4AB007EE9A1 /* View+Alerts.swift */; };
+		AC9024FA2AD0101A007EE9A1 /* TracksStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9024F92AD0101A007EE9A1 /* TracksStore.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -123,6 +124,7 @@
 		AC9024F32ACF80C5007EE9A1 /* TrackDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackDetailsViewModel.swift; sourceTree = "<group>"; };
 		AC9024F52ACF9D5B007EE9A1 /* SpotifyAudioAnalysis.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotifyAudioAnalysis.swift; sourceTree = "<group>"; };
 		AC9024F72ACFB4AB007EE9A1 /* View+Alerts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Alerts.swift"; sourceTree = "<group>"; };
+		AC9024F92AD0101A007EE9A1 /* TracksStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TracksStore.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -188,6 +190,7 @@
 				AC5968852ABA9F210067B0D9 /* Constants.swift */,
 				AC59688D2AC3A9300067B0D9 /* SpotifyRemoteManager.swift */,
 				AC9024A32AC67B51007EE9A1 /* Metronome.swift */,
+				AC9024F92AD0101A007EE9A1 /* TracksStore.swift */,
 				AC5968532ABA96E80067B0D9 /* ViewController.swift */,
 				AC5968552ABA96E80067B0D9 /* Main.storyboard */,
 				AC5968582ABA96EB0067B0D9 /* Assets.xcassets */,
@@ -476,6 +479,7 @@
 				AC9024B12AC918EF007EE9A1 /* SpotifyAlbum.swift in Sources */,
 				AC5968522ABA96E80067B0D9 /* SceneDelegate.swift in Sources */,
 				AC9024EB2ACE5231007EE9A1 /* TrackRowViewModel.swift in Sources */,
+				AC9024FA2AD0101A007EE9A1 /* TracksStore.swift in Sources */,
 				AC9024AF2AC918A5007EE9A1 /* SpotifyTrack.swift in Sources */,
 				AC59688C2ABC3E440067B0D9 /* UserDefaults+Extensions.swift in Sources */,
 				AC9024CB2ACA8492007EE9A1 /* Endpoint.swift in Sources */,

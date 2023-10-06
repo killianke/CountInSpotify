@@ -10,8 +10,8 @@ import SwiftUI
 struct TrackListView: View {
     
     let viewModel = TrackListViewModel()
-    var tracks: [SpotifyTrack]
     
+    @StateObject var trackStore = TrackStore()
     @State private var path = NavigationPath()
     
     private enum NavigationDestination: Codable {
@@ -21,7 +21,7 @@ struct TrackListView: View {
     var body: some View {
         NavigationStack(path: $path) {
             Group {
-                if tracks.isEmpty {
+                if trackStore.tracks.isEmpty {
                     emptyStateView
                 } else {
                     listView
@@ -38,11 +38,11 @@ struct TrackListView: View {
                 case .addTrack: AddTrackView(path: $path)
                 }
             }
-        }
+        }.environmentObject(trackStore)
     }
     
     var listView: some View {
-        List(tracks) { track in
+        List(trackStore.tracks) { track in
             TrackRowView(viewModel: TrackRowViewModel(track: track))
         }
     }
@@ -62,6 +62,6 @@ struct TrackListView: View {
 struct TrackListView_Previews: PreviewProvider {
     
     static var previews: some View {
-        TrackListView(tracks: [SpotifyTrack.previewContent])
+        TrackListView()
     }
 }

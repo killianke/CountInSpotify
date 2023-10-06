@@ -10,7 +10,7 @@ import SwiftUI
 
 class TrackListViewController: UIViewController {
     
-    let contentView = UIHostingController(rootView: TrackListView(tracks: []))
+    let contentView = UIHostingController(rootView: TrackListView())
     
     override func viewDidLoad() {
         super.viewDidLoad()

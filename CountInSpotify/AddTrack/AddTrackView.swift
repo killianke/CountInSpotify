@@ -15,7 +15,7 @@ struct AddTrackView: View {
     var body: some View {
         List(viewModel.tracks) { track in
             NavigationLink<TrackRowView, TrackDetailsView> {
-                TrackDetailsView(path: $path, viewModel: TrackDetailsViewModel(track: track))
+                TrackDetailsView(viewModel: TrackDetailsViewModel(track: track), path: $path)
             } label: {
                 TrackRowView(viewModel: TrackRowViewModel(track: track))
             }
