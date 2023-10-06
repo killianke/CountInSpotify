@@ -42,6 +42,8 @@
 		AC9024E62ACCE200007EE9A1 /* AddTrackViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9024E52ACCE200007EE9A1 /* AddTrackViewModel.swift */; };
 		AC9024E92ACE5206007EE9A1 /* TrackRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9024E82ACE5206007EE9A1 /* TrackRowView.swift */; };
 		AC9024EB2ACE5231007EE9A1 /* TrackRowViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9024EA2ACE5231007EE9A1 /* TrackRowViewModel.swift */; };
+		AC9024F22ACF80B6007EE9A1 /* TrackDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9024F12ACF80B6007EE9A1 /* TrackDetailsView.swift */; };
+		AC9024F42ACF80C5007EE9A1 /* TrackDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9024F32ACF80C5007EE9A1 /* TrackDetailsViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -115,6 +117,8 @@
 		AC9024E52ACCE200007EE9A1 /* AddTrackViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTrackViewModel.swift; sourceTree = "<group>"; };
 		AC9024E82ACE5206007EE9A1 /* TrackRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackRowView.swift; sourceTree = "<group>"; };
 		AC9024EA2ACE5231007EE9A1 /* TrackRowViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackRowViewModel.swift; sourceTree = "<group>"; };
+		AC9024F12ACF80B6007EE9A1 /* TrackDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackDetailsView.swift; sourceTree = "<group>"; };
+		AC9024F32ACF80C5007EE9A1 /* TrackDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackDetailsViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -174,6 +178,7 @@
 				AC9024E72ACE51DB007EE9A1 /* SharedViews */,
 				AC9024DA2ACABE24007EE9A1 /* Track List */,
 				AC9024E22ACBF187007EE9A1 /* AddTrack */,
+				AC9024F02ACF80A2007EE9A1 /* TrackDetails */,
 				AC59684F2ABA96E80067B0D9 /* AppDelegate.swift */,
 				AC5968512ABA96E80067B0D9 /* SceneDelegate.swift */,
 				AC5968852ABA9F210067B0D9 /* Constants.swift */,
@@ -306,6 +311,15 @@
 				AC9024EA2ACE5231007EE9A1 /* TrackRowViewModel.swift */,
 			);
 			path = SharedViews;
+			sourceTree = "<group>";
+		};
+		AC9024F02ACF80A2007EE9A1 /* TrackDetails */ = {
+			isa = PBXGroup;
+			children = (
+				AC9024F12ACF80B6007EE9A1 /* TrackDetailsView.swift */,
+				AC9024F32ACF80C5007EE9A1 /* TrackDetailsViewModel.swift */,
+			);
+			path = TrackDetails;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -464,10 +478,12 @@
 				AC9024DE2ACABEB3007EE9A1 /* TrackListView.swift in Sources */,
 				AC9024E62ACCE200007EE9A1 /* AddTrackViewModel.swift in Sources */,
 				AC9024C92ACA8492007EE9A1 /* HTTPClient.swift in Sources */,
+				AC9024F42ACF80C5007EE9A1 /* TrackDetailsViewModel.swift in Sources */,
 				AC9024CA2ACA8492007EE9A1 /* RequestError.swift in Sources */,
 				AC9024C82ACA8492007EE9A1 /* HTTPMethod.swift in Sources */,
 				AC9024DC2ACABE3B007EE9A1 /* TrackListViewController.swift in Sources */,
 				AC5968862ABA9F210067B0D9 /* Constants.swift in Sources */,
+				AC9024F22ACF80B6007EE9A1 /* TrackDetailsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

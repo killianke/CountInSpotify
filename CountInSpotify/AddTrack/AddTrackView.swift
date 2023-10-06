@@ -9,12 +9,15 @@ import SwiftUI
 
 struct AddTrackView: View {
     
+    @Binding var path: NavigationPath
     @StateObject var viewModel = AddTrackViewModel()
     
     var body: some View {
-        Group {
-            List(viewModel.tracks) { track in
-                TrackRowView(viewModel: TrackRowViewModel(), track: track)
+        List(viewModel.tracks) { track in
+            NavigationLink<TrackRowView, TrackDetailsView> {
+                TrackDetailsView(path: $path, viewModel: TrackDetailsViewModel(track: track))
+            } label: {
+                TrackRowView(viewModel: TrackRowViewModel(track: track))
             }
         }
         .navigationTitle("Add Songs")
@@ -30,6 +33,6 @@ struct AddTrackView: View {
 
 struct AddTrackView_Previews: PreviewProvider {
     static var previews: some View {
-        AddTrackView()
+        AddTrackView(path: .constant(NavigationPath()))
     }
 }

@@ -35,7 +35,7 @@ struct TrackListView: View {
             }
             .navigationDestination(for: NavigationDestination.self) { destination in
                 switch destination {
-                case .addTrack: AddTrackView()
+                case .addTrack: AddTrackView(path: $path)
                 }
             }
         }
