@@ -38,12 +38,15 @@ struct TrackListView: View {
                 case .addTrack: AddTrackView(path: $path)
                 }
             }
-        }.environmentObject(trackStore)
+        }
+        .environmentObject(trackStore)
     }
     
     var listView: some View {
         List(trackStore.tracks) { track in
-            TrackRowView(viewModel: TrackRowViewModel(track: track))
+            TrackRowView(viewModel: TrackRowViewModel(track: track)).onTapGesture {
+                viewModel.playTrack(track)
+            }
         }
     }
     

@@ -10,6 +10,14 @@ import Foundation
 struct SpotifyAudioAnalysis: Codable {
     var track: SpotifyAudioAnalysisTrack
     var bars: [SpotifyTrackBar]
+    
+    var startTime: Double {
+        if let firstBar = bars.first {
+            return firstBar.start
+        } else {
+            return 0.0
+        }
+    }
 }
 
 struct SpotifyAudioAnalysisTrack: Codable {
