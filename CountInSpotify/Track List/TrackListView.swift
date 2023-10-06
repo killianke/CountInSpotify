@@ -43,7 +43,7 @@ struct TrackListView: View {
     
     var listView: some View {
         List(tracks) { track in
-            TrackRowView(viewModel: TrackRowViewModel(), track: track)
+            TrackRowView(viewModel: TrackRowViewModel(track: track))
         }
     }
     

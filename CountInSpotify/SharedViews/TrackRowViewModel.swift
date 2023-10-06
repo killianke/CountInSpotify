@@ -9,7 +9,17 @@ import Foundation
 
 class TrackRowViewModel {
     
-    func getArtistsString(for track: SpotifyTrack) -> String {
+    private let track: SpotifyTrack
+
+    init(track: SpotifyTrack) {
+        self.track = track
+    }
+    
+    var nameString: String {
+        track.name ?? "Unknown"
+    }
+    
+    var artistsString: String {
         guard let artists = track.artists else {
             return "Unknown Artist"
         }
@@ -24,5 +34,9 @@ class TrackRowViewModel {
         }
         
         return artistsString
+    }
+    
+    var albumString: String {
+        track.album?.name ?? "Unknown"
     }
 }
