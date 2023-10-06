@@ -44,6 +44,7 @@
 		AC9024EB2ACE5231007EE9A1 /* TrackRowViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9024EA2ACE5231007EE9A1 /* TrackRowViewModel.swift */; };
 		AC9024F22ACF80B6007EE9A1 /* TrackDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9024F12ACF80B6007EE9A1 /* TrackDetailsView.swift */; };
 		AC9024F42ACF80C5007EE9A1 /* TrackDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9024F32ACF80C5007EE9A1 /* TrackDetailsViewModel.swift */; };
+		AC9024F62ACF9D5B007EE9A1 /* SpotifyAudioAnalysis.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9024F52ACF9D5B007EE9A1 /* SpotifyAudioAnalysis.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -119,6 +120,7 @@
 		AC9024EA2ACE5231007EE9A1 /* TrackRowViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackRowViewModel.swift; sourceTree = "<group>"; };
 		AC9024F12ACF80B6007EE9A1 /* TrackDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackDetailsView.swift; sourceTree = "<group>"; };
 		AC9024F32ACF80C5007EE9A1 /* TrackDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackDetailsViewModel.swift; sourceTree = "<group>"; };
+		AC9024F52ACF9D5B007EE9A1 /* SpotifyAudioAnalysis.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotifyAudioAnalysis.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -244,6 +246,7 @@
 				AC9024B02AC918EF007EE9A1 /* SpotifyAlbum.swift */,
 				AC9024B22AC91D43007EE9A1 /* SpotifyArtist.swift */,
 				AC9024D82ACAA927007EE9A1 /* SpotifySearchResult.swift */,
+				AC9024F52ACF9D5B007EE9A1 /* SpotifyAudioAnalysis.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -473,6 +476,7 @@
 				AC9024AF2AC918A5007EE9A1 /* SpotifyTrack.swift in Sources */,
 				AC59688C2ABC3E440067B0D9 /* UserDefaults+Extensions.swift in Sources */,
 				AC9024CB2ACA8492007EE9A1 /* Endpoint.swift in Sources */,
+				AC9024F62ACF9D5B007EE9A1 /* SpotifyAudioAnalysis.swift in Sources */,
 				AC9024D32ACA85CC007EE9A1 /* SpotifyEndpoint.swift in Sources */,
 				AC9024D72ACAA865007EE9A1 /* Track.swift in Sources */,
 				AC9024DE2ACABEB3007EE9A1 /* TrackListView.swift in Sources */,
