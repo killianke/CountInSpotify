@@ -16,17 +16,13 @@ class TrackDetailsViewModel: ObservableObject {
     }
     
     var nameString: String {
-        track.name ?? "Unknown"
+        track.name
     }
     
     var artistsString: String {
-        guard let artists = track.artists else {
-            return "Unknown Artist"
-        }
-        
         var artistsString: String = ""
         
-        for (idx, artist) in artists.enumerated() {
+        for (idx, artist) in track.artists.enumerated() {
             if idx > 0 {
                 artistsString.append(", ")
             }
@@ -37,11 +33,11 @@ class TrackDetailsViewModel: ObservableObject {
     }
     
     var albumString: String {
-        track.album?.name ?? "Unknown"
+        track.album.name
     }
     
     var imageURL: URL? {
-        guard let imageObject = track.album?.images.first(where: { $0.size == .medium }) else {
+        guard let imageObject = track.album.images.first(where: { $0.size == .medium }) else {
             return nil
         }
         return URL(string: imageObject.url)

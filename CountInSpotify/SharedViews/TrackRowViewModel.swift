@@ -16,17 +16,13 @@ class TrackRowViewModel {
     }
     
     var nameString: String {
-        track.name ?? "Unknown"
+        track.name
     }
     
     var artistsString: String {
-        guard let artists = track.artists else {
-            return "Unknown Artist"
-        }
-        
         var artistsString: String = ""
         
-        for (idx, artist) in artists.enumerated() {
+        for (idx, artist) in track.artists.enumerated() {
             if idx > 0 {
                 artistsString.append(", ")
             }
@@ -37,6 +33,6 @@ class TrackRowViewModel {
     }
     
     var albumString: String {
-        track.album?.name ?? "Unknown"
+        track.album.name
     }
 }

@@ -8,11 +8,11 @@
 import Foundation
 
 struct SpotifyTrack: Codable, Identifiable {
-    var album: SpotifyAlbum?
-    var artists: [SpotifyArtist]?
+    var album: SpotifyAlbum
+    var artists: [SpotifyArtist]
     var durationInMs: Int?
-    var id: String?
-    var name: String?
+    var id: String
+    var name: String
     var uri: String?
     var startTime: Int?
     var bpm: Double?
@@ -40,6 +40,7 @@ extension SpotifyTrack: Hashable {
 extension SpotifyTrack {
     static let previewContent: Self = SpotifyTrack(album: SpotifyAlbum.previewContent,
                                                    artists: [SpotifyArtist.previewContent],
+                                                   id: "aa1da4cc",
                                                    name: "Emotion Sickness")
 }
 
