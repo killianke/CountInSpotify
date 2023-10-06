@@ -28,6 +28,7 @@ struct AddTrackView: View {
                 await viewModel.performSearch()
             }
         }
+        .errorAlert(error: $viewModel.error)
     }
 }
 

@@ -25,6 +25,8 @@ struct TrackDetailsView: View {
             Text(viewModel.albumString).font(.title3)
             Text("BPM: \(viewModel.bpmString)")
         }
+        .errorAlert(error: $viewModel.error)
+        .padding(20)
     }
 }
 
