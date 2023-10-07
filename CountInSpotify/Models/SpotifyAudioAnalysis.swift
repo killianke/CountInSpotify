@@ -10,12 +10,13 @@ import Foundation
 struct SpotifyAudioAnalysis: Codable {
     var track: SpotifyAudioAnalysisTrack
     var bars: [SpotifyTrackBar]
+    var sections: [SpotifyTrackSection]
     
-    var startTime: Double {
-        if let firstBar = bars.first {
-            return firstBar.start
+    var startTime: Int {
+        if let section = sections.first(where: { $0.keyConfidence > 0 }) {
+            return Int(section.start)
         } else {
-            return 0.0
+            return 0
         }
     }
 }
@@ -29,6 +30,20 @@ struct SpotifyAudioAnalysisTrack: Codable {
         case tempo = "tempo"
         case timeSignature = "time_signature"
         case key = "key"
+    }
+}
+
+struct SpotifyTrackSection: Codable {
+    var start: Double
+    var duration: Double
+    var confidence: Double
+    var keyConfidence: Double
+    
+    private enum CodingKeys: String, CodingKey {
+        case start = "start"
+        case duration = "duration"
+        case confidence = "confidence"
+        case keyConfidence = "key_confidence"
     }
 }
 
