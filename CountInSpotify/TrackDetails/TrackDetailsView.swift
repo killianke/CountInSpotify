@@ -42,7 +42,8 @@ struct TrackDetailsView: View {
                     .foregroundColor(.white)
             }
             .frame(maxWidth: .infinity, minHeight: 50)
-            .background(.red)
+            .background(viewModel.buttonDisabled ? .gray : .red)
+            .disabled(viewModel.buttonDisabled)
             .cornerRadius(12)
         }
         .frame(maxHeight: .infinity, alignment: .bottom)

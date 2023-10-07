@@ -10,6 +10,7 @@ import Foundation
 class TrackDetailsViewModel: ObservableObject {
     
     @Published var error: Error?
+    @Published var buttonDisabled: Bool = true
     @Published var bpmString: String = ""
     
     private(set) var track: SpotifyTrack
@@ -56,6 +57,8 @@ class TrackDetailsViewModel: ObservableObject {
             DispatchQueue.main.async {
                 switch result {
                 case .success(let analysis):
+                    self.buttonDisabled = false
+                    
                     self.track.metaData = analysis
                     
                     if let formattedBpm = self.numberFormatter.string(for: analysis.track.tempo) {
