@@ -13,11 +13,11 @@ class TrackDetailsViewModel: ObservableObject {
     @Published var buttonDisabled: Bool = true
     @Published var bpmString: String = ""
     
-    private(set) var track: SpotifyTrack
+    private(set) var track: Track
     private let service = SpotifyService()
     private lazy var numberFormatter = NumberFormatter()
     
-    init(track: SpotifyTrack) {
+    init(track: Track) {
         self.track = track
         fetchTrackInfo()
     }

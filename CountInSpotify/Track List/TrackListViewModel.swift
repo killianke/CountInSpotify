@@ -23,7 +23,7 @@ class TrackListViewModel: NSObject, ObservableObject, SPTAppRemoteDelegate {
         self.spotifyRemote = appRemote
     }
     
-    func playTrack(_ track: SpotifyTrack) {
+    func playTrack(_ track: Track) {
         guard let remote = spotifyRemote else {
             return
         }

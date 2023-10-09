@@ -9,9 +9,9 @@ import Foundation
 
 class TrackRowViewModel {
     
-    private let track: SpotifyTrack
+    private let track: Track
 
-    init(track: SpotifyTrack) {
+    init(track: Track) {
         self.track = track
     }
     

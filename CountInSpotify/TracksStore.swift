@@ -9,9 +9,9 @@ import Foundation
 
 final class TrackStore: ObservableObject {
     
-    @Published var tracks: [SpotifyTrack] = []
+    @Published var tracks: [Track] = []
     
-    func addTrack(_ track: SpotifyTrack) {
+    func addTrack(_ track: Track) {
         tracks.append(track)
     }
     

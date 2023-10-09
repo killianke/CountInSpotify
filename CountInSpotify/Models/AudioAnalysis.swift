@@ -7,10 +7,10 @@
 
 import Foundation
 
-struct SpotifyAudioAnalysis: Codable {
-    var track: SpotifyAudioAnalysisTrack
-    var bars: [SpotifyTrackBar]
-    var sections: [SpotifyTrackSection]
+struct AudioAnalysis: Codable {
+    var track: AudioAnalysisTrack
+    var bars: [TrackBar]
+    var sections: [TrackSection]
     
     var startTime: Int {
         if let section = sections.first(where: { $0.keyConfidence > 0 }) {
@@ -21,7 +21,7 @@ struct SpotifyAudioAnalysis: Codable {
     }
 }
 
-struct SpotifyAudioAnalysisTrack: Codable {
+struct AudioAnalysisTrack: Codable {
     var tempo: Double
     var timeSignature: Int
     var key: Int
@@ -33,7 +33,7 @@ struct SpotifyAudioAnalysisTrack: Codable {
     }
 }
 
-struct SpotifyTrackSection: Codable {
+struct TrackSection: Codable {
     var start: Double
     var duration: Double
     var confidence: Double
@@ -47,7 +47,7 @@ struct SpotifyTrackSection: Codable {
     }
 }
 
-struct SpotifyTrackBar: Codable {
+struct TrackBar: Codable {
     var start: Double
     var duration: Double
     var confidence: Double

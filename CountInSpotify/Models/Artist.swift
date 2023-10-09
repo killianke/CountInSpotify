@@ -7,16 +7,16 @@
 
 import Foundation
 
-struct SpotifyArtist: Codable, Identifiable {
+struct Artist: Codable, Identifiable {
     var id: String
     var name: String
     var uri: String
 }
 
-extension SpotifyArtist {
-    static let previewContent: Self = SpotifyArtist(id: "4252803a",
-                                                    name: "Queens of the Stone Age",
-                                                    uri: "4252803a")
+extension Artist {
+    static let previewContent: Self = Artist(id: "4252803a",
+                                             name: "Queens of the Stone Age",
+                                             uri: "4252803a")
 }
 
 /*

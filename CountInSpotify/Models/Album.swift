@@ -7,12 +7,12 @@
 
 import Foundation
 
-struct SpotifyAlbum: Codable, Identifiable {
+struct Album: Codable, Identifiable {
     var totalTracks: Int
     var id: String
     var name: String
     var releaseDate: String
-    var images: [SpotifyAlbumImage]
+    var images: [AlbumImage]
     
     private enum CodingKeys : String, CodingKey {
         case totalTracks = "total_tracks"
@@ -23,21 +23,21 @@ struct SpotifyAlbum: Codable, Identifiable {
     }
 }
 
-extension SpotifyAlbum {
-    static let previewContent: Self = SpotifyAlbum(totalTracks: 12,
-                                                   id: "48c57b98",
-                                                   name: "In Times New Roman",
-                                                   releaseDate: "12/06/23",
-                                                   images: [.previewContent])
+extension Album {
+    static let previewContent: Self = Album(totalTracks: 12,
+                                            id: "48c57b98",
+                                            name: "In Times New Roman",
+                                            releaseDate: "12/06/23",
+                                            images: [.previewContent])
 }
 
-struct SpotifyAlbumImage: Codable {
+struct AlbumImage: Codable {
     var url: String
     var width: Int
     var height: Int
 }
 
-extension SpotifyAlbumImage {
+extension AlbumImage {
     enum Size {
         case small
         case medium
@@ -59,8 +59,8 @@ extension SpotifyAlbumImage {
     }
 }
 
-extension SpotifyAlbumImage {
-    static let previewContent: Self = SpotifyAlbumImage(
+extension AlbumImage {
+    static let previewContent: Self = AlbumImage(
         url: "https://i.scdn.co/image/ab67616d00001e027359994525d219f64872d3b1",
         width: 300,
         height: 300

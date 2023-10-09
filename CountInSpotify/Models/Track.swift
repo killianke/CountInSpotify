@@ -7,16 +7,16 @@
 
 import Foundation
 
-struct SpotifyTrack: Codable, Identifiable {
-    var album: SpotifyAlbum
-    var artists: [SpotifyArtist]
+struct Track: Codable, Identifiable {
+    var album: Album
+    var artists: [Artist]
     var durationInMs: Int?
     var id: String
     var name: String
     var uri: String
     var startTime: Int?
     var bpm: Double?
-    var metaData: SpotifyAudioAnalysis?
+    var metaData: AudioAnalysis?
     
     private enum CodingKeys : String, CodingKey {
         case album
@@ -28,8 +28,8 @@ struct SpotifyTrack: Codable, Identifiable {
     }
 }
 
-extension SpotifyTrack: Hashable {
-    static func == (lhs: SpotifyTrack, rhs: SpotifyTrack) -> Bool {
+extension Track: Hashable {
+    static func == (lhs: Track, rhs: Track) -> Bool {
         lhs.id == rhs.id
     }
     
@@ -38,12 +38,12 @@ extension SpotifyTrack: Hashable {
     }
 }
 
-extension SpotifyTrack {
-    static let previewContent: Self = SpotifyTrack(album: SpotifyAlbum.previewContent,
-                                                   artists: [SpotifyArtist.previewContent],
-                                                   id: "aa1da4cc",
-                                                   name: "Emotion Sickness",
-                                                   uri: "spotify:track:0qhGOjVl3uY2N6CAafVmCa")
+extension Track {
+    static let previewContent: Self = Track(album: Album.previewContent,
+                                            artists: [Artist.previewContent],
+                                            id: "aa1da4cc",
+                                            name: "Emotion Sickness",
+                                            uri: "spotify:track:0qhGOjVl3uY2N6CAafVmCa")
 }
 
 /*

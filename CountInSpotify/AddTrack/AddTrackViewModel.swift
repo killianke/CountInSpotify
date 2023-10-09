@@ -15,7 +15,7 @@ class AddTrackViewModel: ObservableObject {
             tracks = []
         }
     }
-    @Published var tracks: [SpotifyTrack] = []
+    @Published var tracks: [Track] = []
     @Published var error: Error?
     
     private var offset = 0
