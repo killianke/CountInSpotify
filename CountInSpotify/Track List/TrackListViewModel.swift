@@ -44,6 +44,7 @@ class TrackListViewModel: NSObject, ObservableObject, SPTAppRemoteDelegate {
         let metronome = Metronome(bpm: trackBPM)
         
         metronome.didStopClosure = {
+            remote.playerAPI?.setRepeatMode(.off)
             remote.playerAPI?.play(track.uri)
             if let adjustedStartTime = track.startTime {
                 remote.playerAPI?.seek(toPosition: Int(adjustedStartTime))

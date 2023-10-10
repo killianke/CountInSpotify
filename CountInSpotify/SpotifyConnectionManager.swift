@@ -37,6 +37,7 @@ final class SpotifyConnectionManager: NSObject, SPTAppRemoteDelegate {
     }
     
     func handleSceneWillResignActive(_ scene: UIScene) {
+        remote.playerAPI?.setRepeatMode(.off)
         remote.disconnect()
     }
     
@@ -58,12 +59,13 @@ final class SpotifyConnectionManager: NSObject, SPTAppRemoteDelegate {
     //MARK: - SPTAppRemoteDelegate
     
     func appRemoteDidEstablishConnection(_ appRemote: SPTAppRemote) {
-        print("connected")
+        print("SpotifyConnectionManager: Connected")
         connectionDelegate?.appRemoteDidEstablishConnection(appRemote)
+        appRemote.playerAPI?.setRepeatMode(.track) //Repeat silent track
     }
     
     func appRemote(_ appRemote: SPTAppRemote, didDisconnectWithError error: Error?) {
-        print("disconnected")
+        print("SpotifyConnectionManager: Disconnected")
         connectionDelegate?.appRemote(appRemote, didDisconnectWithError: error)
     }
     
@@ -71,7 +73,7 @@ final class SpotifyConnectionManager: NSObject, SPTAppRemoteDelegate {
         if let err = error as? NSError, err.code == Constants.spotifyAuthErrorCode, authRetryCount < maxAuthRetryCount {
             //Retry authentication
             authRetryCount += 1
-            self.remote.authorizeAndPlayURI("")
+            self.remote.authorizeAndPlayURI(Constants.spotifySilentTrackId)
         } else {
             connectionDelegate?.appRemote(appRemote, didFailConnectionAttemptWithError: error)
         }
