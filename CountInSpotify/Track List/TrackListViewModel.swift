@@ -37,15 +37,17 @@ class TrackListViewModel: NSObject, ObservableObject, SPTAppRemoteDelegate {
             print(error.localizedDescription)
         }
         
-        guard let trackMetaData = track.metaData else {
+        guard let trackBPM = track.bpm else {
             return
         }
 
-        let metronome = Metronome(bpm: trackMetaData.track.tempo)
+        let metronome = Metronome(bpm: trackBPM)
         
         metronome.didStopClosure = {
             remote.playerAPI?.play(track.uri)
-            remote.playerAPI?.seek(toPosition: Int(trackMetaData.startTime * 1000))
+            if let adjustedStartTime = track.startTime {
+                remote.playerAPI?.seek(toPosition: Int(adjustedStartTime))
+            }
         }
         
         metronome.start(forBars: 1)

@@ -16,7 +16,6 @@ struct Track: Codable, Identifiable {
     var uri: String
     var startTime: Int?
     var bpm: Double?
-    var metaData: AudioAnalysis?
     
     private enum CodingKeys : String, CodingKey {
         case album
@@ -25,6 +24,8 @@ struct Track: Codable, Identifiable {
         case id
         case name
         case uri
+        case startTime
+        case bpm
     }
 }
 

@@ -58,8 +58,7 @@ class TrackDetailsViewModel: ObservableObject {
                 switch result {
                 case .success(let analysis):
                     self.buttonDisabled = false
-                    
-                    self.track.metaData = analysis
+                    self.track.bpm = analysis.track.tempo
                     
                     if let formattedBpm = self.numberFormatter.string(for: analysis.track.tempo) {
                         self.bpmString = formattedBpm
