@@ -14,7 +14,8 @@ class TrackDetailsViewModel: ObservableObject {
     @Published var bpmString: String = ""
     @Published var startTimeString: String = "00:00"
     
-    private(set) var track: Track
+    private var track: Track
+    private var store: TrackStoreProtocol!
     
     private lazy var numberFormatter = NumberFormatter()
     private lazy var timeFormatter: DateComponentsFormatter = {
@@ -35,6 +36,8 @@ class TrackDetailsViewModel: ObservableObject {
         self.track = track
         fetchTrackInfo()
     }
+    
+    //MARK: Computed properties
     
     var nameString: String {
         track.name
@@ -64,23 +67,14 @@ class TrackDetailsViewModel: ObservableObject {
         return URL(string: imageObject.url)
     }
     
-    func fetchTrackInfo() {
-        Task {
-            let result = await service.getAudioAnalysisForTrack(withId: track.id)
-            
-            DispatchQueue.main.async {
-                switch result {
-                case .success(let analysis):
-                    self.userInteractionDisabled = false
-                    
-                    self.updateBPM(to: analysis.track.tempo.round(nearest: self.bpmIncrement))
-                    self.updateStartTime(to: 0.0)
-                    
-                case .failure(let error):
-                    self.error = error
-                }
-            }
-        }
+    //MARK: Public interface
+    
+    func setTrackStore(_ store: TrackStoreProtocol) {
+        self.store = store
+    }
+    
+    func didTapAddTrack() {
+        store.addTrack(track)
     }
 
     func incrementBPM() {
@@ -104,6 +98,27 @@ class TrackDetailsViewModel: ObservableObject {
     func decrementStartTime() {
         if let startTime = track.startTime, startTime > startTimeIncrement {
             updateStartTime(to: startTime - startTimeIncrement)
+        }
+    }
+    
+    //MARK: Private funcs
+
+    private func fetchTrackInfo() {
+        Task {
+            let result = await service.getAudioAnalysisForTrack(withId: track.id)
+            
+            DispatchQueue.main.async {
+                switch result {
+                case .success(let analysis):
+                    self.userInteractionDisabled = false
+                    
+                    self.updateBPM(to: analysis.track.tempo.round(nearest: self.bpmIncrement))
+                    self.updateStartTime(to: 0.0)
+                    
+                case .failure(let error):
+                    self.error = error
+                }
+            }
         }
     }
 

@@ -55,6 +55,9 @@ struct TrackDetailsView: View {
         .frame(maxHeight: .infinity, alignment: .bottom)
         .padding(20)
         .errorAlert(error: $viewModel.error)
+        .onAppear {
+            viewModel.setTrackStore(store)
+        }
     }
     
     var bottomButtons: some View {
@@ -66,7 +69,7 @@ struct TrackDetailsView: View {
             }
             
             Button {
-                store.addTrack(viewModel.track)
+                viewModel.didTapAddTrack()
                 path.removeLast()
             } label: {
                 buttonLabel(title: "Add to my songs")

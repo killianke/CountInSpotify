@@ -7,7 +7,11 @@
 
 import Foundation
 
-final class TrackStore: ObservableObject {
+protocol TrackStoreProtocol {
+    func addTrack(_ track: Track)
+}
+
+final class TrackStore: ObservableObject, TrackStoreProtocol {
     
     @Published var tracks: [Track] = []
     @Published var error: Error?
