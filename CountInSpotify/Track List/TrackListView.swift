@@ -14,8 +14,9 @@ struct TrackListView: View {
     @StateObject var trackStore = TrackStore()
     @State private var path = NavigationPath()
     
-    private enum NavigationDestination: Codable {
+    private enum NavigationDestination: Hashable {
         case addTrack
+        case editTrack(track: Track)
     }
     
     var body: some View {
@@ -37,7 +38,11 @@ struct TrackListView: View {
             }
             .navigationDestination(for: NavigationDestination.self) { destination in
                 switch destination {
-                case .addTrack: AddTrackView(path: $path)
+                case .addTrack:
+                    AddTrackView(path: $path)
+                case .editTrack(track: let track):
+                    //TODO: Add edit navigation
+                    Text("Edit track")
                 }
             }
         }
@@ -59,6 +64,12 @@ struct TrackListView: View {
                     } label: {
                         Label("Delete", systemImage: "trash.fill")
                     }
+                    Button {
+                        path.append(NavigationDestination.editTrack(track: track))
+                    } label: {
+                        Label("Edit", systemImage: "slider.horizontal.3")
+                    }
+                    .tint(.blue)
                 }
         }
     }
