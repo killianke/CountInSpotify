@@ -21,9 +21,8 @@ struct TrackDetailsView: View {
             } placeholder: {
                 ProgressView()
             }
-            .frame(width: 250, height: 250)
-            .padding(.top, 50)
-            .padding(.bottom, 25)
+            .aspectRatio(contentMode: .fit)
+            .padding([.leading, .trailing], 20)
                         
             Text(viewModel.nameString).font(.title)
             Text(viewModel.artistsString).font(.title2)
@@ -51,28 +50,44 @@ struct TrackDetailsView: View {
 
             Spacer()
             
-            Button {
-                store.addTrack(viewModel.track)
-                withAnimation(.easeInOut) {
-                    path.removeLast()
-                }
-            } label: {
-                if viewModel.userInteractionDisabled {
-                    ProgressView()
-                } else {
-                    Text("Add to my songs")
-                        .font(.headline)
-                        .foregroundColor(.white)
-                }
-            }
-            .frame(maxWidth: .infinity, minHeight: 50)
-            .background(viewModel.userInteractionDisabled ? .gray : .red)
-            .disabled(viewModel.userInteractionDisabled)
-            .cornerRadius(12)
+            bottomButtons
         }
         .frame(maxHeight: .infinity, alignment: .bottom)
         .padding(20)
         .errorAlert(error: $viewModel.error)
+    }
+    
+    var bottomButtons: some View {
+        Group {
+            Button {
+                print("Play sample")
+            } label: {
+                buttonLabel(title: "Play Sample")
+            }
+            
+            Button {
+                store.addTrack(viewModel.track)
+                path.removeLast()
+            } label: {
+                buttonLabel(title: "Add to my songs")
+            }
+        }
+        .frame(maxWidth: .infinity, minHeight: 50)
+        .background(viewModel.userInteractionDisabled ? .gray : .red)
+        .disabled(viewModel.userInteractionDisabled)
+        .cornerRadius(12)
+    }
+    
+    private func buttonLabel(title: String) -> AnyView {
+        if viewModel.userInteractionDisabled {
+            return ProgressView()
+                .eraseToAnyView()
+        } else {
+            return Text(title)
+                .font(.headline)
+                .foregroundColor(.white)
+                .eraseToAnyView()
+        }
     }
 }
 
