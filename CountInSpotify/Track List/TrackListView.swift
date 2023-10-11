@@ -29,8 +29,10 @@ struct TrackListView: View {
             }
             .navigationTitle("My Songs")
             .toolbar {
-                Button("Add") {
+                Button {
                     path.append(NavigationDestination.addTrack)
+                } label: {
+                    Image(systemName: "plus")
                 }
             }
             .navigationDestination(for: NavigationDestination.self) { destination in
