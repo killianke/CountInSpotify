@@ -9,6 +9,7 @@ import Foundation
 
 protocol TrackStoreProtocol {
     func addTrack(_ track: Track)
+    func deleteTrack(_ track: Track)
 }
 
 final class TrackStore: ObservableObject, TrackStoreProtocol {
@@ -18,10 +19,6 @@ final class TrackStore: ObservableObject, TrackStoreProtocol {
     
     private let storage = CodableStorage(storage: DiskStorage())
     private let storageKey = "tracks-storage"
-    
-    func addTrack(_ track: Track) {
-        tracks.append(track)
-    }
     
     init() {
         NotificationCenter.default.addObserver(
@@ -39,6 +36,16 @@ final class TrackStore: ObservableObject, TrackStoreProtocol {
         )
     }
     
+    func addTrack(_ track: Track) {
+        tracks.append(track)
+    }
+    
+    func deleteTrack(_ track: Track) {
+        if let idx = tracks.firstIndex(of: track) {
+            tracks.remove(at: idx)
+        }
+    }
+
     @objc private func appWillMoveToBackground() {
         do {
             try storage.save(tracks, for: storageKey)

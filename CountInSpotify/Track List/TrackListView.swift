@@ -40,13 +40,24 @@ struct TrackListView: View {
             }
         }
         .environmentObject(trackStore)
+        .onAppear {
+            viewModel.setTrackStore(trackStore)
+        }
     }
     
     var listView: some View {
         List(trackStore.tracks) { track in
-            TrackRowView(viewModel: TrackRowViewModel(track: track)).onTapGesture {
-                viewModel.playTrack(track)
-            }
+            TrackRowView(viewModel: TrackRowViewModel(track: track))
+                .onTapGesture {
+                    viewModel.playTrack(track)
+                }
+                .swipeActions {
+                    Button(role: .destructive) {
+                        viewModel.deleteTrack(track)
+                    } label: {
+                        Label("Delete", systemImage: "trash.fill")
+                    }
+                }
         }
     }
     

@@ -13,14 +13,15 @@ class TrackListViewModel: NSObject, ObservableObject, SPTAppRemoteDelegate {
     @Published var error: Error?
     
     private var spotifyRemote: SPTAppRemote?
-    
+    private var store: TrackStoreProtocol!
+
     override init() {
         super.init()
         SpotifyConnectionManager.shared.connectionDelegate = self
     }
     
-    func appRemoteDidEstablishConnection(_ appRemote: SPTAppRemote) {
-        self.spotifyRemote = appRemote
+    func setTrackStore(_ store: TrackStoreProtocol) {
+        self.store = store
     }
     
     func playTrack(_ track: Track) {
@@ -52,6 +53,16 @@ class TrackListViewModel: NSObject, ObservableObject, SPTAppRemoteDelegate {
         }
         
         metronome.start(forBars: 2)
+    }
+    
+    func deleteTrack(_ track: Track) {
+        store.deleteTrack(track)
+    }
+    
+    //MARK: SPTAppRemoteDelegate
+    
+    func appRemoteDidEstablishConnection(_ appRemote: SPTAppRemote) {
+        self.spotifyRemote = appRemote
     }
     
     func appRemote(_ appRemote: SPTAppRemote, didFailConnectionAttemptWithError error: Error?) {
