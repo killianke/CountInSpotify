@@ -1,5 +1,5 @@
 //
-//  TrackListViewController.swift
+//  ViewController.swift
 //  CountInSpotify
 //
 //  Created by Killian-Kenny on 02/10/2023.
@@ -8,7 +8,7 @@
 import UIKit
 import SwiftUI
 
-class TrackListViewController: UIViewController {
+class ViewController: UIViewController {
     
     let contentView = UIHostingController(rootView: TrackListView())
     
