@@ -24,11 +24,11 @@ class TrackListViewModel: NSObject, ObservableObject, SPTAppRemoteDelegate {
     }
     
     func playTrack(_ track: Track) {
-        guard let remote = spotifyRemote else {
+        guard let playerAPI = spotifyRemote?.playerAPI else {
             return
         }
         
-        remote.playerAPI?.play(Constants.spotifySilentTrackId)
+        playerAPI.play(Constants.spotifySilentTrackId)
                 
         do {
             try AVAudioSession.sharedInstance().setCategory(.playback, options: .mixWithOthers)
@@ -44,14 +44,14 @@ class TrackListViewModel: NSObject, ObservableObject, SPTAppRemoteDelegate {
         let metronome = Metronome(bpm: trackBPM)
         
         metronome.didStopClosure = {
-            remote.playerAPI?.setRepeatMode(.off)
-            remote.playerAPI?.play(track.uri)
+            playerAPI.setRepeatMode(.off)
+            playerAPI.play(track.uri)
             if let adjustedStartTime = track.startTime {
-                remote.playerAPI?.seek(toPosition: Int(adjustedStartTime))
+                playerAPI.seek(toPosition: Int(adjustedStartTime))
             }
         }
         
-        metronome.start(forBars: 1)
+        metronome.start(forBars: 2)
     }
     
     func appRemote(_ appRemote: SPTAppRemote, didFailConnectionAttemptWithError error: Error?) {
