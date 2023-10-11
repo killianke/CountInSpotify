@@ -15,6 +15,7 @@ struct TrackDetailsView: View {
 
     var body: some View {
         VStack(spacing: 20) {
+            
             AsyncImage(url: viewModel.imageURL) { image in
                 image.resizable()
             } placeholder: {
@@ -27,8 +28,27 @@ struct TrackDetailsView: View {
             Text(viewModel.nameString).font(.title)
             Text(viewModel.artistsString).font(.title2)
             Text(viewModel.albumString).font(.title3)
-            Text("BPM: \(viewModel.bpmString)")
             
+            Spacer()
+
+            Stepper {
+                Text("BPM: \(viewModel.bpmString)")
+            } onIncrement: {
+                viewModel.incrementBPM()
+            } onDecrement: {
+                viewModel.decrementBPM()
+            }
+            .disabled(viewModel.userInteractionDisabled)
+            
+            Stepper {
+                Text("Start time: \(viewModel.startTimeString)")
+            } onIncrement: {
+                viewModel.incrementStartTime()
+            } onDecrement: {
+                viewModel.decrementStartTime()
+            }
+            .disabled(viewModel.userInteractionDisabled)
+
             Spacer()
             
             Button {
@@ -37,13 +57,17 @@ struct TrackDetailsView: View {
                     path.removeLast()
                 }
             } label: {
-                Text("Add to my songs")
-                    .font(.headline)
-                    .foregroundColor(.white)
+                if viewModel.userInteractionDisabled {
+                    ProgressView()
+                } else {
+                    Text("Add to my songs")
+                        .font(.headline)
+                        .foregroundColor(.white)
+                }
             }
             .frame(maxWidth: .infinity, minHeight: 50)
-            .background(viewModel.buttonDisabled ? .gray : .red)
-            .disabled(viewModel.buttonDisabled)
+            .background(viewModel.userInteractionDisabled ? .gray : .red)
+            .disabled(viewModel.userInteractionDisabled)
             .cornerRadius(12)
         }
         .frame(maxHeight: .infinity, alignment: .bottom)

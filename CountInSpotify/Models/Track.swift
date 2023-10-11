@@ -14,7 +14,7 @@ struct Track: Codable, Identifiable {
     var id: String
     var name: String
     var uri: String
-    var startTime: Int?
+    var startTime: Double?
     var bpm: Double?
     
     private enum CodingKeys : String, CodingKey {
