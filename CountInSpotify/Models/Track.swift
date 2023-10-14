@@ -42,6 +42,7 @@ extension Track: Hashable {
 extension Track {
     static let previewContent: Self = Track(album: Album.previewContent,
                                             artists: [Artist.previewContent],
+                                            durationInMs: 60000,
                                             id: "aa1da4cc",
                                             name: "Emotion Sickness",
                                             uri: "spotify:track:0qhGOjVl3uY2N6CAafVmCa")

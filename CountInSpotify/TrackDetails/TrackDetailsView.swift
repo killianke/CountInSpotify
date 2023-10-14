@@ -47,7 +47,12 @@ struct TrackDetailsView: View {
                 viewModel.decrementStartTime()
             }
             .disabled(viewModel.userInteractionDisabled)
-
+            
+            Slider(value: $viewModel.trackStartTime,
+                   in: viewModel.sliderRange,
+                   step: viewModel.sliderStep)
+            .disabled(viewModel.userInteractionDisabled)
+            
             Spacer()
             
             bottomButtons
@@ -96,7 +101,8 @@ struct TrackDetailsView: View {
 
 struct TrackDetailsView_Previews: PreviewProvider {
     static var previews: some View {
-        TrackDetailsView(viewModel: TrackDetailsViewModel(track: .previewContent),
-                         path: .constant(NavigationPath()))
+        let viewModel = TrackDetailsViewModel(track: .previewContent)
+        TrackDetailsView(viewModel: viewModel,
+                         path: .constant(NavigationPath())).environmentObject(TrackStore())
     }
 }

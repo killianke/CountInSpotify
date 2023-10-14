@@ -14,6 +14,12 @@ class TrackDetailsViewModel: ObservableObject {
     @Published var bpmString: String = ""
     @Published var startTimeString: String = "00:00"
     
+    var trackStartTime: Double = 0 {
+        didSet {
+            updateStartTimeString(with: trackStartTime)
+        }
+    }
+    
     private var track: Track
     private var store: TrackStoreProtocol!
     
@@ -67,6 +73,18 @@ class TrackDetailsViewModel: ObservableObject {
         return URL(string: imageObject.url)
     }
     
+    var sliderRange: ClosedRange<Double> {
+        let trackLengthSeconds = Double((track.durationInMs ?? 0) / 1000)
+        let start = 0.0
+        let end = max(trackLengthSeconds, 0)
+        
+        return start...end
+    }
+    
+    var sliderStep: Double {
+        return startTimeIncrement
+    }
+    
     //MARK: Public interface
     
     func setTrackStore(_ store: TrackStoreProtocol) {
@@ -74,6 +92,7 @@ class TrackDetailsViewModel: ObservableObject {
     }
     
     func didTapAddTrack() {
+        track.startTime = trackStartTime
         store.addTrack(track)
     }
 
@@ -90,14 +109,12 @@ class TrackDetailsViewModel: ObservableObject {
     }
     
     func incrementStartTime() {
-        if let startTime = track.startTime {
-            updateStartTime(to: startTime + startTimeIncrement)
-        }
+        updateStartTime(to: trackStartTime + startTimeIncrement)
     }
 
     func decrementStartTime() {
-        if let startTime = track.startTime, startTime > startTimeIncrement {
-            updateStartTime(to: startTime - startTimeIncrement)
+        if trackStartTime > startTimeIncrement {
+            updateStartTime(to: trackStartTime - startTimeIncrement)
         }
     }
     
@@ -135,6 +152,10 @@ class TrackDetailsViewModel: ObservableObject {
     }
     
     private func updateStartTime(to value: Double) {
+        trackStartTime = value
+    }
+    
+    private func updateStartTimeString(with value: Double) -> Void {
         numberFormatter.maximumIntegerDigits = 0
         numberFormatter.minimumFractionDigits = 2
         numberFormatter.maximumFractionDigits = 2
@@ -144,7 +165,6 @@ class TrackDetailsViewModel: ObservableObject {
             return
         }
         startTimeString = formattedTime + decimal
-        track.startTime = value
     }
 }
 
