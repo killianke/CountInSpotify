@@ -29,6 +29,9 @@ struct AddTrackView: View {
         }
         .navigationTitle("Add Songs")
         .navigationBarTitleDisplayMode(.inline)
+        .toolbarColorScheme(.dark, for: .navigationBar)
+        .toolbarBackground(.teal, for: .navigationBar)
+        .toolbarBackground(.visible, for: .navigationBar)
         .searchable(text: $viewModel.searchTerm, prompt: "Search songs")
         .onSubmit(of: .search) {
             Task {
