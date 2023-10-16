@@ -55,36 +55,50 @@ struct TrackDetailsView: View {
     }
     
     var trackSettingsView: some View {
-        Group {
-            Stepper {
-                Text("BPM: \(viewModel.bpmString)")
-            } onIncrement: {
-                viewModel.incrementBPM()
-            } onDecrement: {
-                viewModel.decrementBPM()
+        HStack(alignment: .center) {
+            VStack(alignment: .center) {
+                Button {
+                    print("Play sample")
+                } label: {
+                    Image(systemName: "play.circle.fill")
+                        .resizable()
+                }
+                .frame(width: 44, height: 44)
+                
+                Text("Sample")
+                    .font(.caption2)
             }
-            .disabled(viewModel.userInteractionDisabled)
+            .padding(.trailing, 16)
             
-            Stepper {
-                Text("Start time: \(viewModel.startTimeString)")
-            } onIncrement: {
-                viewModel.incrementStartTime()
-            } onDecrement: {
-                viewModel.decrementStartTime()
+            VStack {
+                Stepper {
+                    Text("BPM: \(viewModel.bpmString)")
+                } onIncrement: {
+                    viewModel.incrementBPM()
+                } onDecrement: {
+                    viewModel.decrementBPM()
+                }
+                .disabled(viewModel.userInteractionDisabled)
+                
+                Stepper {
+                    Text("Start time: \(viewModel.startTimeString)")
+                } onIncrement: {
+                    viewModel.incrementStartTime()
+                } onDecrement: {
+                    viewModel.decrementStartTime()
+                }
+                .disabled(viewModel.userInteractionDisabled)
+                
+                Slider(value: $viewModel.trackStartTime,
+                       in: viewModel.sliderRange,
+                       step: viewModel.sliderStep)
+                .disabled(viewModel.userInteractionDisabled)
             }
-            .disabled(viewModel.userInteractionDisabled)
-            
-            Slider(value: $viewModel.trackStartTime,
-                   in: viewModel.sliderRange,
-                   step: viewModel.sliderStep)
-            .disabled(viewModel.userInteractionDisabled)
-            
-            Button {
-                print("Play sample")
-            } label: {
-                buttonLabel(title: "Play Sample")
-            }.modifier(ButtonStyling(userInteractionDisabled: viewModel.userInteractionDisabled))
         }
+        .foregroundColor(.white)
+        .padding(16)
+        .background(Color.teal)
+        .cornerRadius(12)
     }
     
     private func buttonLabel(title: String) -> AnyView {
