@@ -48,7 +48,7 @@ class TrackListViewModel: NSObject, ObservableObject, SPTAppRemoteDelegate {
             playerAPI.setRepeatMode(.off)
             playerAPI.play(track.uri)
             if let adjustedStartTime = track.startTime {
-                playerAPI.seek(toPosition: Int(adjustedStartTime))
+                playerAPI.seek(toPosition: Int(adjustedStartTime * 1000))
             }
         }
         
