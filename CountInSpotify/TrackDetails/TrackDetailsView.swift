@@ -71,7 +71,7 @@ struct TrackDetailsView: View {
                 Text("Sample")
                     .font(.caption2)
             }
-            .padding(.trailing, 16)
+            .padding(.trailing, 8)
             
             VStack {
                 Stepper {

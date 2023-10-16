@@ -12,7 +12,7 @@ class TrackDetailsViewModel: ObservableObject {
     @Published var error: Error?
     @Published var userInteractionDisabled: Bool = true
     @Published var bpmString: String = ""
-    @Published var startTimeString: String = "00:00"
+    @Published var startTimeString: String = "00:00.00"
     
     var trackStartTime: Double = 0 {
         didSet {
