@@ -14,28 +14,30 @@ struct TrackDetailsView: View {
     @Binding var path: NavigationPath
 
     var body: some View {
-        VStack(spacing: 16) {
-            
-            trackInfoView
-            
-            Spacer()
-
-            trackSettingsView
-            
-            Spacer()
-            
-            Button {
-                viewModel.didTapAddTrack()
-                path.removeLast()
-            } label: {
-                buttonLabel(title: "Add to my songs")
-            }.modifier(ButtonStyling(userInteractionDisabled: viewModel.userInteractionDisabled))
-        }
-        .frame(maxHeight: .infinity, alignment: .bottom)
-        .padding(16)
-        .errorAlert(error: $viewModel.error)
-        .onAppear {
-            viewModel.setTrackStore(store)
+        ZStack {
+            backgroundGradient
+            VStack(spacing: 16) {
+                trackInfoView
+                
+                Spacer()
+                
+                trackSettingsView
+                
+                Spacer()
+                
+                Button {
+                    viewModel.didTapAddTrack()
+                    path.removeLast()
+                } label: {
+                    buttonLabel(title: "Add to my songs")
+                }.modifier(ButtonStyling(userInteractionDisabled: viewModel.userInteractionDisabled))
+            }
+            .frame(maxHeight: .infinity, alignment: .bottom)
+            .padding(16)
+            .errorAlert(error: $viewModel.error)
+            .onAppear {
+                viewModel.setTrackStore(store)
+            }
         }
     }
     
@@ -52,6 +54,7 @@ struct TrackDetailsView: View {
             Text(viewModel.artistsString).font(.body)
             Text(viewModel.albumString).font(.body)
         }
+        .foregroundColor(.white)
     }
     
     var trackSettingsView: some View {
@@ -97,8 +100,15 @@ struct TrackDetailsView: View {
         }
         .foregroundColor(.white)
         .padding(16)
-        .background(Color.teal)
+        .background(Material.ultraThin)
         .cornerRadius(12)
+    }
+    
+    private var backgroundGradient: some View {
+        LinearGradient(gradient: Gradient(colors: [.teal.opacity(0.5), .gray.opacity(0.6)]),
+                       startPoint: .topLeading,
+                       endPoint: .bottomTrailing)
+        .ignoresSafeArea()
     }
     
     private func buttonLabel(title: String) -> AnyView {
@@ -120,7 +130,7 @@ private struct ButtonStyling: ViewModifier {
     func body(content: Content) -> some View {
         content
             .frame(maxWidth: .infinity, minHeight: 50)
-            .background(userInteractionDisabled ? .gray : .red)
+            .background(userInteractionDisabled ? .gray : .teal.opacity(0.7))
             .disabled(userInteractionDisabled)
             .cornerRadius(12)
     }
