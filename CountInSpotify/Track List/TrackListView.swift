@@ -30,7 +30,10 @@ struct TrackListView: View {
                         listView
                     }
                 }
-                .navigationTitle("My Songs")
+                .navigationTitle("Songs")
+                .toolbarColorScheme(.dark, for: .navigationBar)
+                .toolbarBackground(.teal, for: .navigationBar)
+                .toolbarBackground(.visible, for: .navigationBar)
                 .toolbar {
                     Button {
                         path.append(NavigationDestination.addTrack)
@@ -43,6 +46,7 @@ struct TrackListView: View {
                 }
             }
         }
+        .accentColor(.white)
         .scrollContentBackground(.hidden)
         .environmentObject(trackStore)
         .onAppear {
