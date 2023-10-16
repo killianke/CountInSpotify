@@ -22,7 +22,7 @@ struct TrackListView: View {
     var body: some View {
         NavigationStack(path: $path) {
             ZStack {
-                backgroundGradient
+                Style.backgroundGradient
                 Group {
                     if trackStore.tracks.isEmpty {
                         emptyStateView
@@ -70,13 +70,6 @@ struct TrackListView: View {
                     .tint(.blue)
                 }
         }
-    }
-    
-    private var backgroundGradient: some View {
-        LinearGradient(gradient: Gradient(colors: [.teal.opacity(0.5), .gray.opacity(0.6)]),
-                       startPoint: .topLeading,
-                       endPoint: .bottomTrailing)
-        .ignoresSafeArea()
     }
     
     private var emptyStateView: some View {

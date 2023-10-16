@@ -22,6 +22,7 @@
 		AC5968882ABAA0A50067B0D9 /* SpotifyiOS.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AC59687F2ABA996E0067B0D9 /* SpotifyiOS.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		AC59688C2ABC3E440067B0D9 /* UserDefaultsExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC59688B2ABC3E440067B0D9 /* UserDefaultsExtensions.swift */; };
 		AC59688E2AC3A9300067B0D9 /* SpotifyConnectionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC59688D2AC3A9300067B0D9 /* SpotifyConnectionManager.swift */; };
+		AC8FF2992ADD4E0000C8226A /* Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8FF2982ADD4E0000C8226A /* Style.swift */; };
 		AC9024A42AC67B51007EE9A1 /* Metronome.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9024A32AC67B51007EE9A1 /* Metronome.swift */; };
 		AC9024A72AC67F8F007EE9A1 /* sound2.wav in Resources */ = {isa = PBXBuildFile; fileRef = AC9024A52AC67F8E007EE9A1 /* sound2.wav */; };
 		AC9024A82AC67F8F007EE9A1 /* sound1.wav in Resources */ = {isa = PBXBuildFile; fileRef = AC9024A62AC67F8F007EE9A1 /* sound1.wav */; };
@@ -100,6 +101,7 @@
 		AC5968852ABA9F210067B0D9 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		AC59688B2ABC3E440067B0D9 /* UserDefaultsExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsExtensions.swift; sourceTree = "<group>"; };
 		AC59688D2AC3A9300067B0D9 /* SpotifyConnectionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotifyConnectionManager.swift; sourceTree = "<group>"; };
+		AC8FF2982ADD4E0000C8226A /* Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Style.swift; sourceTree = "<group>"; };
 		AC9024A32AC67B51007EE9A1 /* Metronome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Metronome.swift; sourceTree = "<group>"; };
 		AC9024A52AC67F8E007EE9A1 /* sound2.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = sound2.wav; sourceTree = "<group>"; };
 		AC9024A62AC67F8F007EE9A1 /* sound1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = sound1.wav; sourceTree = "<group>"; };
@@ -198,6 +200,7 @@
 				AC59684F2ABA96E80067B0D9 /* AppDelegate.swift */,
 				AC5968512ABA96E80067B0D9 /* SceneDelegate.swift */,
 				AC5968852ABA9F210067B0D9 /* Constants.swift */,
+				AC8FF2982ADD4E0000C8226A /* Style.swift */,
 				AC59688D2AC3A9300067B0D9 /* SpotifyConnectionManager.swift */,
 				AC9024A32AC67B51007EE9A1 /* Metronome.swift */,
 				AC9024F92AD0101A007EE9A1 /* TracksStore.swift */,
@@ -494,6 +497,7 @@
 				AC9024CB2ACA8492007EE9A1 /* Endpoint.swift in Sources */,
 				AC9024F82ACFB4AB007EE9A1 /* ViewExtensions.swift in Sources */,
 				AC9024F62ACF9D5B007EE9A1 /* AudioAnalysis.swift in Sources */,
+				AC8FF2992ADD4E0000C8226A /* Style.swift in Sources */,
 				AC9024D32ACA85CC007EE9A1 /* SpotifyEndpoint.swift in Sources */,
 				AC9024DE2ACABEB3007EE9A1 /* TrackListView.swift in Sources */,
 				AC9024E62ACCE200007EE9A1 /* AddTrackViewModel.swift in Sources */,

@@ -13,11 +13,18 @@ struct AddTrackView: View {
     @StateObject var viewModel = AddTrackViewModel()
     
     var body: some View {
-        List(viewModel.tracks) { track in
-            NavigationLink<TrackRowView, TrackDetailsView> {
-                TrackDetailsView(viewModel: TrackDetailsViewModel(track: track), path: $path)
-            } label: {
-                TrackRowView(viewModel: TrackRowViewModel(track: track))
+        ZStack {
+            Style.backgroundGradient
+            if viewModel.tracks.count == 0 {
+                Color.clear
+            } else {
+                List(viewModel.tracks) { track in
+                    NavigationLink<TrackRowView, TrackDetailsView> {
+                        TrackDetailsView(viewModel: TrackDetailsViewModel(track: track), path: $path)
+                    } label: {
+                        TrackRowView(viewModel: TrackRowViewModel(track: track))
+                    }
+                }
             }
         }
         .navigationTitle("Add Songs")

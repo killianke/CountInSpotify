@@ -15,7 +15,7 @@ struct TrackDetailsView: View {
 
     var body: some View {
         ZStack {
-            backgroundGradient
+            Style.backgroundGradient
             VStack(spacing: 16) {
                 trackInfoView
                 
@@ -102,13 +102,6 @@ struct TrackDetailsView: View {
         .padding(16)
         .background(Material.ultraThin)
         .cornerRadius(12)
-    }
-    
-    private var backgroundGradient: some View {
-        LinearGradient(gradient: Gradient(colors: [.teal.opacity(0.5), .gray.opacity(0.6)]),
-                       startPoint: .topLeading,
-                       endPoint: .bottomTrailing)
-        .ignoresSafeArea()
     }
     
     private func buttonLabel(title: String) -> AnyView {
