@@ -84,7 +84,7 @@ struct TrackDetailsView: View {
                 .disabled(viewModel.userInteractionDisabled)
                 
                 Stepper {
-                    Text("Start time: \(viewModel.startTimeString)")
+                    Text("Start: \(viewModel.startTimeString)")
                 } onIncrement: {
                     viewModel.incrementStartTime()
                 } onDecrement: {
