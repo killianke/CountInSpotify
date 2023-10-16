@@ -21,38 +21,36 @@ struct TrackListView: View {
     
     var body: some View {
         NavigationStack(path: $path) {
-            Group {
-                if trackStore.tracks.isEmpty {
-                    emptyStateView
-                } else {
-                    listView
+            ZStack {
+                backgroundGradient
+                Group {
+                    if trackStore.tracks.isEmpty {
+                        emptyStateView
+                    } else {
+                        listView
+                    }
                 }
-            }
-            .navigationTitle("My Songs")
-            .toolbar {
-                Button {
-                    path.append(NavigationDestination.addTrack)
-                } label: {
-                    Image(systemName: "plus")
+                .navigationTitle("My Songs")
+                .toolbar {
+                    Button {
+                        path.append(NavigationDestination.addTrack)
+                    } label: {
+                        Image(systemName: "plus")
+                    }
                 }
-            }
-            .navigationDestination(for: NavigationDestination.self) { destination in
-                switch destination {
-                case .addTrack:
-                    AddTrackView(path: $path)
-                case .editTrack(track: let track):
-                    //TODO: Add edit navigation
-                    Text("Edit track")
+                .navigationDestination(for: NavigationDestination.self) { destination in
+                    handleNavigation(for: destination)
                 }
             }
         }
+        .scrollContentBackground(.hidden)
         .environmentObject(trackStore)
         .onAppear {
             viewModel.setTrackStore(trackStore)
         }
     }
     
-    var listView: some View {
+    private var listView: some View {
         List(trackStore.tracks) { track in
             TrackRowView(viewModel: TrackRowViewModel(track: track))
                 .onTapGesture {
@@ -74,7 +72,14 @@ struct TrackListView: View {
         }
     }
     
-    var emptyStateView: some View {
+    private var backgroundGradient: some View {
+        LinearGradient(gradient: Gradient(colors: [.teal.opacity(0.5), .gray.opacity(0.6)]),
+                       startPoint: .topLeading,
+                       endPoint: .bottomTrailing)
+        .ignoresSafeArea()
+    }
+    
+    private var emptyStateView: some View {
         VStack(spacing: 50) {
             Text("Nothing to display!").font(.title)
             Button {
@@ -82,6 +87,16 @@ struct TrackListView: View {
             } label: {
                 Text("Add Songs!").font(.headline)
             }
+        }
+    }
+    
+    private func handleNavigation(for destination: NavigationDestination) -> AnyView {
+        switch destination {
+        case .addTrack:
+            return AddTrackView(path: $path).eraseToAnyView()
+        case .editTrack(track: let track):
+            //TODO: Add edit navigation
+            return Text("Edit track: \(track.name)").eraseToAnyView()
         }
     }
 }
