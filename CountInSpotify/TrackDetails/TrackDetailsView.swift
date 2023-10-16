@@ -14,22 +14,48 @@ struct TrackDetailsView: View {
     @Binding var path: NavigationPath
 
     var body: some View {
-        VStack(spacing: 20) {
+        VStack(spacing: 16) {
             
+            trackInfoView
+            
+            Spacer()
+
+            trackSettingsView
+            
+            Spacer()
+            
+            Button {
+                viewModel.didTapAddTrack()
+                path.removeLast()
+            } label: {
+                buttonLabel(title: "Add to my songs")
+            }.modifier(ButtonStyling(userInteractionDisabled: viewModel.userInteractionDisabled))
+        }
+        .frame(maxHeight: .infinity, alignment: .bottom)
+        .padding(16)
+        .errorAlert(error: $viewModel.error)
+        .onAppear {
+            viewModel.setTrackStore(store)
+        }
+    }
+    
+    var trackInfoView: some View {
+        VStack(alignment: .leading) {
             AsyncImage(url: viewModel.imageURL) { image in
                 image.resizable()
             } placeholder: {
                 ProgressView()
             }
             .aspectRatio(contentMode: .fit)
-            .padding([.leading, .trailing], 20)
-                        
-            Text(viewModel.nameString).font(.title)
-            Text(viewModel.artistsString).font(.title2)
-            Text(viewModel.albumString).font(.title3)
             
-            Spacer()
-
+            Text(viewModel.nameString).font(.title2).fontWeight(.semibold)
+            Text(viewModel.artistsString).font(.body)
+            Text(viewModel.albumString).font(.body)
+        }
+    }
+    
+    var trackSettingsView: some View {
+        Group {
             Stepper {
                 Text("BPM: \(viewModel.bpmString)")
             } onIncrement: {
@@ -53,37 +79,12 @@ struct TrackDetailsView: View {
                    step: viewModel.sliderStep)
             .disabled(viewModel.userInteractionDisabled)
             
-            Spacer()
-            
-            bottomButtons
-        }
-        .frame(maxHeight: .infinity, alignment: .bottom)
-        .padding(20)
-        .errorAlert(error: $viewModel.error)
-        .onAppear {
-            viewModel.setTrackStore(store)
-        }
-    }
-    
-    var bottomButtons: some View {
-        Group {
             Button {
                 print("Play sample")
             } label: {
                 buttonLabel(title: "Play Sample")
-            }
-            
-            Button {
-                viewModel.didTapAddTrack()
-                path.removeLast()
-            } label: {
-                buttonLabel(title: "Add to my songs")
-            }
+            }.modifier(ButtonStyling(userInteractionDisabled: viewModel.userInteractionDisabled))
         }
-        .frame(maxWidth: .infinity, minHeight: 50)
-        .background(viewModel.userInteractionDisabled ? .gray : .red)
-        .disabled(viewModel.userInteractionDisabled)
-        .cornerRadius(12)
     }
     
     private func buttonLabel(title: String) -> AnyView {
@@ -96,6 +97,18 @@ struct TrackDetailsView: View {
                 .foregroundColor(.white)
                 .eraseToAnyView()
         }
+    }
+}
+
+private struct ButtonStyling: ViewModifier {
+    var userInteractionDisabled: Bool
+    
+    func body(content: Content) -> some View {
+        content
+            .frame(maxWidth: .infinity, minHeight: 50)
+            .background(userInteractionDisabled ? .gray : .red)
+            .disabled(userInteractionDisabled)
+            .cornerRadius(12)
     }
 }
 
