@@ -23,6 +23,8 @@
 		AC59688C2ABC3E440067B0D9 /* UserDefaultsExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC59688B2ABC3E440067B0D9 /* UserDefaultsExtensions.swift */; };
 		AC59688E2AC3A9300067B0D9 /* SpotifyConnectionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC59688D2AC3A9300067B0D9 /* SpotifyConnectionManager.swift */; };
 		AC8FF2992ADD4E0000C8226A /* Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8FF2982ADD4E0000C8226A /* Style.swift */; };
+		AC8FF29E2ADE056700C8226A /* PlaybackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8FF29D2ADE056700C8226A /* PlaybackView.swift */; };
+		AC8FF2A02ADE057900C8226A /* PlaybackViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8FF29F2ADE057900C8226A /* PlaybackViewModel.swift */; };
 		AC8FF2A22ADE05A700C8226A /* TrackInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8FF2A12ADE05A700C8226A /* TrackInfoView.swift */; };
 		AC8FF2A42ADE05FB00C8226A /* TrackInfoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8FF2A32ADE05FB00C8226A /* TrackInfoViewModel.swift */; };
 		AC9024A42AC67B51007EE9A1 /* Metronome.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9024A32AC67B51007EE9A1 /* Metronome.swift */; };
@@ -104,6 +106,8 @@
 		AC59688B2ABC3E440067B0D9 /* UserDefaultsExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsExtensions.swift; sourceTree = "<group>"; };
 		AC59688D2AC3A9300067B0D9 /* SpotifyConnectionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotifyConnectionManager.swift; sourceTree = "<group>"; };
 		AC8FF2982ADD4E0000C8226A /* Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Style.swift; sourceTree = "<group>"; };
+		AC8FF29D2ADE056700C8226A /* PlaybackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaybackView.swift; sourceTree = "<group>"; };
+		AC8FF29F2ADE057900C8226A /* PlaybackViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaybackViewModel.swift; sourceTree = "<group>"; };
 		AC8FF2A12ADE05A700C8226A /* TrackInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackInfoView.swift; sourceTree = "<group>"; };
 		AC8FF2A32ADE05FB00C8226A /* TrackInfoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackInfoViewModel.swift; sourceTree = "<group>"; };
 		AC9024A32AC67B51007EE9A1 /* Metronome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Metronome.swift; sourceTree = "<group>"; };
@@ -201,6 +205,7 @@
 				AC9024DA2ACABE24007EE9A1 /* Track List */,
 				AC9024E22ACBF187007EE9A1 /* AddTrack */,
 				AC9024F02ACF80A2007EE9A1 /* TrackDetails */,
+				AC8FF29A2ADE050F00C8226A /* Playback */,
 				AC59684F2ABA96E80067B0D9 /* AppDelegate.swift */,
 				AC5968512ABA96E80067B0D9 /* SceneDelegate.swift */,
 				AC5968852ABA9F210067B0D9 /* Constants.swift */,
@@ -259,6 +264,15 @@
 				AC9024A52AC67F8E007EE9A1 /* sound2.wav */,
 			);
 			path = Assets;
+			sourceTree = "<group>";
+		};
+		AC8FF29A2ADE050F00C8226A /* Playback */ = {
+			isa = PBXGroup;
+			children = (
+				AC8FF29D2ADE056700C8226A /* PlaybackView.swift */,
+				AC8FF29F2ADE057900C8226A /* PlaybackViewModel.swift */,
+			);
+			path = Playback;
 			sourceTree = "<group>";
 		};
 		AC9024A92AC6CDDD007EE9A1 /* Models */ = {
@@ -498,6 +512,7 @@
 				AC9024EB2ACE5231007EE9A1 /* TrackRowViewModel.swift in Sources */,
 				AC9024FA2AD0101A007EE9A1 /* TracksStore.swift in Sources */,
 				AC9024AF2AC918A5007EE9A1 /* Track.swift in Sources */,
+				AC8FF29E2ADE056700C8226A /* PlaybackView.swift in Sources */,
 				AC59688C2ABC3E440067B0D9 /* UserDefaultsExtensions.swift in Sources */,
 				AC51BB562AD526BB00E07AC0 /* DiskStorage.swift in Sources */,
 				AC9024CB2ACA8492007EE9A1 /* Endpoint.swift in Sources */,
@@ -515,6 +530,7 @@
 				AC9024C82ACA8492007EE9A1 /* HTTPMethod.swift in Sources */,
 				AC9024DC2ACABE3B007EE9A1 /* ViewController.swift in Sources */,
 				AC5968862ABA9F210067B0D9 /* Constants.swift in Sources */,
+				AC8FF2A02ADE057900C8226A /* PlaybackViewModel.swift in Sources */,
 				AC9024F22ACF80B6007EE9A1 /* TrackDetailsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

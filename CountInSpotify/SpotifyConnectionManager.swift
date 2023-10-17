@@ -78,4 +78,8 @@ final class SpotifyConnectionManager: NSObject, SPTAppRemoteDelegate {
             connectionDelegate?.appRemote(appRemote, didFailConnectionAttemptWithError: error)
         }
     }
+    
+    func playerStateDidChange(_ playerState: SPTAppRemotePlayerState) {
+        print("player state changed")
+    }
 }
