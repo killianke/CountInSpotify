@@ -23,6 +23,8 @@
 		AC59688C2ABC3E440067B0D9 /* UserDefaultsExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC59688B2ABC3E440067B0D9 /* UserDefaultsExtensions.swift */; };
 		AC59688E2AC3A9300067B0D9 /* SpotifyConnectionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC59688D2AC3A9300067B0D9 /* SpotifyConnectionManager.swift */; };
 		AC8FF2992ADD4E0000C8226A /* Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8FF2982ADD4E0000C8226A /* Style.swift */; };
+		AC8FF2A22ADE05A700C8226A /* TrackInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8FF2A12ADE05A700C8226A /* TrackInfoView.swift */; };
+		AC8FF2A42ADE05FB00C8226A /* TrackInfoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8FF2A32ADE05FB00C8226A /* TrackInfoViewModel.swift */; };
 		AC9024A42AC67B51007EE9A1 /* Metronome.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9024A32AC67B51007EE9A1 /* Metronome.swift */; };
 		AC9024A72AC67F8F007EE9A1 /* sound2.wav in Resources */ = {isa = PBXBuildFile; fileRef = AC9024A52AC67F8E007EE9A1 /* sound2.wav */; };
 		AC9024A82AC67F8F007EE9A1 /* sound1.wav in Resources */ = {isa = PBXBuildFile; fileRef = AC9024A62AC67F8F007EE9A1 /* sound1.wav */; };
@@ -102,6 +104,8 @@
 		AC59688B2ABC3E440067B0D9 /* UserDefaultsExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsExtensions.swift; sourceTree = "<group>"; };
 		AC59688D2AC3A9300067B0D9 /* SpotifyConnectionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotifyConnectionManager.swift; sourceTree = "<group>"; };
 		AC8FF2982ADD4E0000C8226A /* Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Style.swift; sourceTree = "<group>"; };
+		AC8FF2A12ADE05A700C8226A /* TrackInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackInfoView.swift; sourceTree = "<group>"; };
+		AC8FF2A32ADE05FB00C8226A /* TrackInfoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackInfoViewModel.swift; sourceTree = "<group>"; };
 		AC9024A32AC67B51007EE9A1 /* Metronome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Metronome.swift; sourceTree = "<group>"; };
 		AC9024A52AC67F8E007EE9A1 /* sound2.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = sound2.wav; sourceTree = "<group>"; };
 		AC9024A62AC67F8F007EE9A1 /* sound1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = sound1.wav; sourceTree = "<group>"; };
@@ -329,6 +333,8 @@
 			children = (
 				AC9024E82ACE5206007EE9A1 /* TrackRowView.swift */,
 				AC9024EA2ACE5231007EE9A1 /* TrackRowViewModel.swift */,
+				AC8FF2A12ADE05A700C8226A /* TrackInfoView.swift */,
+				AC8FF2A32ADE05FB00C8226A /* TrackInfoViewModel.swift */,
 			);
 			path = SharedViews;
 			sourceTree = "<group>";
@@ -500,7 +506,9 @@
 				AC8FF2992ADD4E0000C8226A /* Style.swift in Sources */,
 				AC9024D32ACA85CC007EE9A1 /* SpotifyEndpoint.swift in Sources */,
 				AC9024DE2ACABEB3007EE9A1 /* TrackListView.swift in Sources */,
+				AC8FF2A22ADE05A700C8226A /* TrackInfoView.swift in Sources */,
 				AC9024E62ACCE200007EE9A1 /* AddTrackViewModel.swift in Sources */,
+				AC8FF2A42ADE05FB00C8226A /* TrackInfoViewModel.swift in Sources */,
 				AC9024C92ACA8492007EE9A1 /* HTTPClient.swift in Sources */,
 				AC9024F42ACF80C5007EE9A1 /* TrackDetailsViewModel.swift in Sources */,
 				AC9024CA2ACA8492007EE9A1 /* RequestError.swift in Sources */,

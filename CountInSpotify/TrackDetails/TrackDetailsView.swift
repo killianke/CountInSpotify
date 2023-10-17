@@ -17,7 +17,7 @@ struct TrackDetailsView: View {
         ZStack {
             Style.backgroundGradient
             VStack(spacing: 16) {
-                trackInfoView
+                TrackInfoView(viewModel: viewModel.trackInfoViewModel)
                 
                 Spacer()
                 
@@ -39,22 +39,6 @@ struct TrackDetailsView: View {
                 viewModel.setTrackStore(store)
             }
         }
-    }
-    
-    var trackInfoView: some View {
-        VStack(alignment: .leading) {
-            AsyncImage(url: viewModel.imageURL) { image in
-                image.resizable()
-            } placeholder: {
-                ProgressView()
-            }
-            .aspectRatio(contentMode: .fit)
-            
-            Text(viewModel.nameString).font(.title2).fontWeight(.semibold)
-            Text(viewModel.artistsString).font(.body)
-            Text(viewModel.albumString).font(.body)
-        }
-        .foregroundColor(.white)
     }
     
     var trackSettingsView: some View {
