@@ -11,7 +11,7 @@ final class SpotifyConnectionManager: NSObject, SPTAppRemoteDelegate {
     
     static let shared = SpotifyConnectionManager()
     
-    private let remote: SPTAppRemote = {
+    let remote: SPTAppRemote = {
         let configuration = SPTConfiguration(clientID: Constants.spotifyClientID, redirectURL: Constants.spotifyRedirectURL)
         return SPTAppRemote(configuration: configuration, logLevel: .debug)
     }()

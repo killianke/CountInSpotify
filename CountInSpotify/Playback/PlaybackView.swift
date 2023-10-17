@@ -15,7 +15,7 @@ struct PlaybackView: View {
             Style.backgroundGradient
             VStack(spacing: 16) {
                 TrackInfoView(viewModel: viewModel.trackInfoViewModel)
-            }
+            }.padding(16)
         }
     }
 }

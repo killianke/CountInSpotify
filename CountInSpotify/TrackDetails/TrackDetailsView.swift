@@ -12,6 +12,8 @@ struct TrackDetailsView: View {
     @EnvironmentObject var store: TrackStore
     @StateObject var viewModel: TrackDetailsViewModel
     @Binding var path: NavigationPath
+    
+    @State private var showPlaybackView: Bool = false
 
     var body: some View {
         ZStack {
@@ -34,10 +36,14 @@ struct TrackDetailsView: View {
             }
             .frame(maxHeight: .infinity, alignment: .bottom)
             .padding(16)
-            .errorAlert(error: $viewModel.error)
-            .onAppear {
-                viewModel.setTrackStore(store)
-            }
+
+        }
+        .errorAlert(error: $viewModel.error)
+        .onAppear {
+            viewModel.setTrackStore(store)
+        }
+        .sheet(isPresented: $showPlaybackView) {
+            PlaybackView(viewModel: viewModel.playbackViewModel)
         }
     }
     
@@ -47,7 +53,7 @@ struct TrackDetailsView: View {
             HStack(alignment: .center) {
                 VStack(alignment: .center) {
                     Button {
-                        print("Play sample")
+                        showPlaybackView = true
                     } label: {
                         Image(systemName: "play.circle.fill")
                             .resizable()

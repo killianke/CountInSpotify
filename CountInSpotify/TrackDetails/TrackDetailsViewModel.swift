@@ -17,6 +17,7 @@ class TrackDetailsViewModel: ObservableObject {
     var trackStartTime: Double = 0 {
         didSet {
             updateStartTimeString(with: trackStartTime)
+            track.startTime = trackStartTime
         }
     }
     
@@ -48,7 +49,11 @@ class TrackDetailsViewModel: ObservableObject {
     var trackInfoViewModel: TrackInfoViewModel {
         TrackInfoViewModel(track: track)
     }
-    
+
+    var playbackViewModel: PlaybackViewModel {
+        PlaybackViewModel(track: track)
+    }
+
     var sliderRange: ClosedRange<Double> {
         let trackLengthSeconds = Double((track.durationInMs ?? 0) / 1000)
         let start = 0.0
@@ -68,7 +73,6 @@ class TrackDetailsViewModel: ObservableObject {
     }
     
     func didTapAddTrack() {
-        track.startTime = trackStartTime
         store.addTrack(track)
     }
 
