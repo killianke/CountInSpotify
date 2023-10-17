@@ -42,44 +42,47 @@ struct TrackDetailsView: View {
     }
     
     var trackSettingsView: some View {
-        HStack(alignment: .center) {
-            VStack(alignment: .center) {
-                Button {
-                    print("Play sample")
-                } label: {
-                    Image(systemName: "play.circle.fill")
-                        .resizable()
+        VStack {
+            Text("Configuration").font(.headline)
+            HStack(alignment: .center) {
+                VStack(alignment: .center) {
+                    Button {
+                        print("Play sample")
+                    } label: {
+                        Image(systemName: "play.circle.fill")
+                            .resizable()
+                    }
+                    .frame(width: 44, height: 44)
+                    
+                    Text("Sample")
+                        .font(.caption2)
                 }
-                .frame(width: 44, height: 44)
+                .padding(.trailing, 8)
                 
-                Text("Sample")
-                    .font(.caption2)
-            }
-            .padding(.trailing, 8)
-            
-            VStack {
-                Stepper {
-                    Text("BPM: \(viewModel.bpmString)")
-                } onIncrement: {
-                    viewModel.incrementBPM()
-                } onDecrement: {
-                    viewModel.decrementBPM()
+                VStack {
+                    Stepper {
+                        Text("BPM: \(viewModel.bpmString)")
+                    } onIncrement: {
+                        viewModel.incrementBPM()
+                    } onDecrement: {
+                        viewModel.decrementBPM()
+                    }
+                    .disabled(viewModel.userInteractionDisabled)
+                    
+                    Stepper {
+                        Text("Start: \(viewModel.startTimeString)")
+                    } onIncrement: {
+                        viewModel.incrementStartTime()
+                    } onDecrement: {
+                        viewModel.decrementStartTime()
+                    }
+                    .disabled(viewModel.userInteractionDisabled)
+                    
+                    Slider(value: $viewModel.trackStartTime,
+                           in: viewModel.sliderRange,
+                           step: viewModel.sliderStep)
+                    .disabled(viewModel.userInteractionDisabled)
                 }
-                .disabled(viewModel.userInteractionDisabled)
-                
-                Stepper {
-                    Text("Start: \(viewModel.startTimeString)")
-                } onIncrement: {
-                    viewModel.incrementStartTime()
-                } onDecrement: {
-                    viewModel.decrementStartTime()
-                }
-                .disabled(viewModel.userInteractionDisabled)
-                
-                Slider(value: $viewModel.trackStartTime,
-                       in: viewModel.sliderRange,
-                       step: viewModel.sliderStep)
-                .disabled(viewModel.userInteractionDisabled)
             }
         }
         .foregroundColor(.white)
