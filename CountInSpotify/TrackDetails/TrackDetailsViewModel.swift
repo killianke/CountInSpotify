@@ -34,6 +34,7 @@ class TrackDetailsViewModel: ObservableObject {
     }()
     
     private let service = SpotifyService()
+    private let player = PlayerManager()
     private let bpmIncrement: Double = 0.1
     private let lowerBPMLimit: Double = 30
     private let upperBPMLimit: Double = 300
@@ -96,6 +97,10 @@ class TrackDetailsViewModel: ObservableObject {
         if trackStartTime > startTimeIncrement {
             updateStartTime(to: trackStartTime - startTimeIncrement)
         }
+    }
+    
+    func playSample() {
+        player.playTrack(track)
     }
     
     //MARK: Private funcs

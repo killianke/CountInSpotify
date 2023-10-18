@@ -13,8 +13,6 @@ struct TrackDetailsView: View {
     @StateObject var viewModel: TrackDetailsViewModel
     @Binding var path: NavigationPath
     
-    @State private var showPlaybackView: Bool = false
-
     var body: some View {
         ZStack {
             Style.backgroundGradient
@@ -42,9 +40,6 @@ struct TrackDetailsView: View {
         .onAppear {
             viewModel.setTrackStore(store)
         }
-        .sheet(isPresented: $showPlaybackView) {
-            PlaybackView(viewModel: viewModel.playbackViewModel)
-        }
     }
     
     var trackSettingsView: some View {
@@ -53,7 +48,7 @@ struct TrackDetailsView: View {
             HStack(alignment: .center) {
                 VStack(alignment: .center) {
                     Button {
-                        showPlaybackView = true
+                        viewModel.playSample()
                     } label: {
                         Image(systemName: "play.circle.fill")
                             .resizable()
