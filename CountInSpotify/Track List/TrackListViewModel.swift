@@ -18,7 +18,7 @@ class TrackListViewModel: NSObject, ObservableObject, SPTAppRemoteDelegate {
 
     override init() {
         super.init()
-        SpotifyConnectionManager.shared.connectionDelegate = self
+        SpotifyConnectionManager.shared.remoteDelegate = self
     }
     
     func setTrackStore(_ store: TrackStoreProtocol) {

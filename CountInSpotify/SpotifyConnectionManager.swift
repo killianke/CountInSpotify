@@ -18,7 +18,7 @@ final class SpotifyConnectionManager: NSObject, SPTAppRemoteDelegate {
     }()
     private let maxAuthRetryCount = 1
 
-    weak var connectionDelegate: SPTAppRemoteDelegate?
+    weak var remoteDelegate: SPTAppRemoteDelegate?
     private var authRetryCount = 0
     
     private override init() {
@@ -61,13 +61,13 @@ final class SpotifyConnectionManager: NSObject, SPTAppRemoteDelegate {
     
     func appRemoteDidEstablishConnection(_ appRemote: SPTAppRemote) {
         print("SpotifyConnectionManager: Connected")
-        connectionDelegate?.appRemoteDidEstablishConnection(appRemote)
+        remoteDelegate?.appRemoteDidEstablishConnection(appRemote)
         appRemote.playerAPI?.setRepeatMode(.track) //Repeat silent track
     }
     
     func appRemote(_ appRemote: SPTAppRemote, didDisconnectWithError error: Error?) {
         print("SpotifyConnectionManager: Disconnected")
-        connectionDelegate?.appRemote(appRemote, didDisconnectWithError: error)
+        remoteDelegate?.appRemote(appRemote, didDisconnectWithError: error)
     }
     
     func appRemote(_ appRemote: SPTAppRemote, didFailConnectionAttemptWithError error: Error?) {
@@ -76,11 +76,7 @@ final class SpotifyConnectionManager: NSObject, SPTAppRemoteDelegate {
             authRetryCount += 1
             self.remote.authorizeAndPlayURI(Constants.spotifySilentTrackId)
         } else {
-            connectionDelegate?.appRemote(appRemote, didFailConnectionAttemptWithError: error)
+            remoteDelegate?.appRemote(appRemote, didFailConnectionAttemptWithError: error)
         }
-    }
-    
-    func playerStateDidChange(_ playerState: SPTAppRemotePlayerState) {
-        print("player state changed")
     }
 }

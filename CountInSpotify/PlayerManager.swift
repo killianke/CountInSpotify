@@ -25,7 +25,7 @@ class PlayerManager: NSObject, ObservableObject, SPTAppRemoteDelegate {
     
     override init() {
         super.init()
-        SpotifyConnectionManager.shared.connectionDelegate = self
+        SpotifyConnectionManager.shared.remoteDelegate = self
         spotifyRemote = SpotifyConnectionManager.shared.remote
     }
     
