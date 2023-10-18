@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SpotifyiOS
 
 final class SpotifyConnectionManager: NSObject, SPTAppRemoteDelegate {
     
