@@ -29,7 +29,7 @@ class PlayerManager: NSObject, ObservableObject, SPTAppRemoteDelegate {
         spotifyRemote = SpotifyConnectionManager.shared.remote
     }
     
-    func playTrack(_ track: Track) {
+    func playTrack(_ track: Track, for duration: TimeInterval? = nil) {
         guard let remote = spotifyRemote, remote.isConnected,
                 let playerAPI = remote.playerAPI else {
             
@@ -38,6 +38,10 @@ class PlayerManager: NSObject, ObservableObject, SPTAppRemoteDelegate {
                 pendingPlayTrack = { self.playTrack(track) }
             }
             return
+        }
+        
+        if let delay = duration {
+            perform(#selector(stopPlaying), with: nil, afterDelay: delay)
         }
 
         pendingPlayTrack = nil
@@ -66,6 +70,14 @@ class PlayerManager: NSObject, ObservableObject, SPTAppRemoteDelegate {
         }
         
         metronome.start(forBars: 2)
+    }
+    
+    @objc func stopPlaying() {
+        //Pausing player will make remote disconnect
+        if let playerAPI = spotifyRemote?.playerAPI {
+            playerAPI.play(Constants.spotifySilentTrackId)
+            playerAPI.setRepeatMode(.track)
+        }
     }
     
     //MARK: SPTAppRemoteDelegate
