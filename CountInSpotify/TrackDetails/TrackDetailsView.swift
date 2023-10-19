@@ -47,13 +47,18 @@ struct TrackDetailsView: View {
             Text("Configuration").font(.headline)
             HStack(alignment: .center) {
                 VStack(alignment: .center) {
-                    Button {
-                        viewModel.playSample()
-                    } label: {
-                        Image(systemName: "play.circle.fill")
-                            .resizable()
+                    ZStack {
+                        CircularProgressView(progress: viewModel.sampleProgress)
+                            .frame(width: 50, height: 50)
+                        
+                        Button {
+                            viewModel.playSample()
+                        } label: {
+                            Image(systemName: "play.circle.fill")
+                                .resizable()
+                        }
+                        .frame(width: 44, height: 44)
                     }
-                    .frame(width: 44, height: 44)
                     
                     Text("Sample")
                         .font(.caption2)

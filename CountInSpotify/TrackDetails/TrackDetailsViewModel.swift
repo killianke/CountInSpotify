@@ -13,6 +13,7 @@ class TrackDetailsViewModel: ObservableObject {
     @Published var userInteractionDisabled: Bool = true
     @Published var bpmString: String = ""
     @Published var startTimeString: String = "00:00.00"
+    @Published var sampleProgress: Double = 0.0
     
     var trackStartTime: Double = 0 {
         didSet {
@@ -23,6 +24,7 @@ class TrackDetailsViewModel: ObservableObject {
     
     private var track: Track
     private var store: TrackStoreProtocol!
+    private var progressTimer: Timer?
     
     private lazy var numberFormatter = NumberFormatter()
     private lazy var timeFormatter: DateComponentsFormatter = {
@@ -101,7 +103,23 @@ class TrackDetailsViewModel: ObservableObject {
     }
     
     func playSample() {
+        guard track.bpm != nil else {
+            return
+        }
+        
         player.playTrack(track, for: sampleDuration)
+        sampleProgress = 0
+        progressTimer?.invalidate()
+        
+        let timeInterval = 0.1
+        let progressInterval = 1 / (sampleDuration / timeInterval)
+        progressTimer = Timer.scheduledTimer(withTimeInterval: timeInterval, repeats: true) { timer in
+            self.sampleProgress += progressInterval
+            if self.sampleProgress >= 1 {
+                self.sampleProgress = 0
+                timer.invalidate()
+            }
+        }
     }
     
     //MARK: Private funcs
