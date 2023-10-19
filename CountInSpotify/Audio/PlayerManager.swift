@@ -22,6 +22,7 @@ class PlayerManager: NSObject, ObservableObject, SPTAppRemoteDelegate {
     
     private var spotifyRemote: SPTAppRemote?
     private var pendingPlayTrack: (()->())?
+    private var stopPlaybackTask: DispatchWorkItem?
     
     override init() {
         super.init()
@@ -40,12 +41,17 @@ class PlayerManager: NSObject, ObservableObject, SPTAppRemoteDelegate {
             return
         }
         
-        if let delay = duration {
-            perform(#selector(stopPlaying), with: nil, afterDelay: delay)
-        }
-
+        stopPlaybackTask?.cancel()
         pendingPlayTrack = nil
         playerAPI.play(Constants.spotifySilentTrackId)
+        
+        if let delay = duration {
+            stopPlaybackTask = DispatchWorkItem {
+                playerAPI.play(Constants.spotifySilentTrackId)
+                playerAPI.setRepeatMode(.track)
+            }
+            DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + delay, execute: stopPlaybackTask!)
+        }
                 
         do {
             try AVAudioSession.sharedInstance().setCategory(.playback, options: .mixWithOthers)
