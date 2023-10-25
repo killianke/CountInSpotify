@@ -28,16 +28,17 @@ extension View {
 }
 
 private struct LocalizedAlertError: LocalizedError {
-    let underlyingError: LocalizedError
+    let underlyingError: NSError
+    
     var errorDescription: String? {
-        underlyingError.errorDescription
+        underlyingError.localizedDescription
     }
     var recoverySuggestion: String? {
-        underlyingError.recoverySuggestion
+        underlyingError.localizedRecoverySuggestion
     }
 
     init?(error: Error?) {
-        guard let localizedError = error as? LocalizedError else { return nil }
+        guard let localizedError = error as? NSError else { return nil }
         underlyingError = localizedError
     }
 }

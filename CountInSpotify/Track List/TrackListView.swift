@@ -9,8 +9,7 @@ import SwiftUI
 
 struct TrackListView: View {
     
-    let viewModel = TrackListViewModel()
-    
+    @StateObject var viewModel = TrackListViewModel()
     @StateObject var trackStore = TrackStore()
     @State private var path = NavigationPath()
     
@@ -52,6 +51,7 @@ struct TrackListView: View {
         .onAppear {
             viewModel.setTrackStore(trackStore)
         }
+        .errorAlert(error: $viewModel.error)
     }
     
     private var listView: some View {
