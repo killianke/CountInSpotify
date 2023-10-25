@@ -15,12 +15,17 @@ struct AddTrackView: View {
     var body: some View {
         ZStack {
             Style.backgroundGradient
+            
             if viewModel.searchTracks.count > 0 {
                 list(with: viewModel.searchTracks, headerText: "Search Results")
             } else if viewModel.recentTracks.count > 0 {
                 list(with: viewModel.recentTracks, headerText: "Recently Played")
             } else {
                 Color.clear
+            }
+            
+            if viewModel.loading {
+                LoadingIndicatorView()
             }
         }
         .navigationTitle("Add Songs")
