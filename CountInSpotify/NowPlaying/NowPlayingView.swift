@@ -7,8 +7,8 @@
 
 import SwiftUI
 
-struct PlaybackView: View {
-    @StateObject var viewModel: PlaybackViewModel
+struct NowPlayingView: View {
+    @StateObject var viewModel: NowPlayingViewModel
 
     var body: some View {
         ZStack {
@@ -22,6 +22,6 @@ struct PlaybackView: View {
 
 struct PlaybackView_Previews: PreviewProvider {
     static var previews: some View {
-        PlaybackView(viewModel: PlaybackViewModel(track: .previewContent))
+        NowPlayingView(viewModel: NowPlayingViewModel(track: .previewContent))
     }
 }
