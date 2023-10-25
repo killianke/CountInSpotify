@@ -40,7 +40,7 @@ class TrackDetailsViewModel: ObservableObject {
     private let bpmIncrement: Double = 0.1
     private let lowerBPMLimit: Double = 30
     private let upperBPMLimit: Double = 300
-    private let startTimeIncrement: Double = 0.25
+    private let startTimeIncrement: Double = 0.1
     private let sampleDuration: TimeInterval = 15.0
 
     init(track: Track) {
