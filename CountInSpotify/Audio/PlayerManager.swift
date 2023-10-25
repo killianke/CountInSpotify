@@ -9,40 +9,22 @@ import Foundation
 import CoreAudioKit
 import SpotifyiOS
 
-class PlayerManager: NSObject, ObservableObject, SPTAppRemoteDelegate {
-    
-    @Published var error: Error? {
-        didSet {
-            if error == nil {
-                connecting = false
-            }
-        }
-    }
-    @Published var connecting: Bool = false
-    
+class PlayerManager: NSObject {
+        
     private var spotifyRemote: SPTAppRemote?
-    private var pendingPlayTrack: (()->())?
     private var stopPlaybackTask: DispatchWorkItem?
     
-    override init() {
-        super.init()
-        SpotifyConnectionManager.shared.remoteDelegate = self
-        spotifyRemote = SpotifyConnectionManager.shared.remote
+    func setRemote(_ remote: SPTAppRemote) {
+        self.spotifyRemote = remote
     }
     
-    func playTrack(_ track: Track, for duration: TimeInterval? = nil) {
+    func playTrack(_ track: Track, for duration: TimeInterval? = nil, countInBars: Int = 1) {
         guard let remote = spotifyRemote, remote.isConnected,
                 let playerAPI = remote.playerAPI else {
-            
-            if error == nil {
-                connecting = true
-                pendingPlayTrack = { self.playTrack(track) }
-            }
             return
         }
         
         stopPlaybackTask?.cancel()
-        pendingPlayTrack = nil
         playerAPI.play(Constants.spotifySilentTrackId)
         
         if let delay = duration {
@@ -75,7 +57,7 @@ class PlayerManager: NSObject, ObservableObject, SPTAppRemoteDelegate {
             }
         }
         
-        metronome.start(forBars: 2)
+        metronome.start(forBars: countInBars)
     }
     
     @objc func stopPlaying() {
@@ -84,20 +66,5 @@ class PlayerManager: NSObject, ObservableObject, SPTAppRemoteDelegate {
             playerAPI.play(Constants.spotifySilentTrackId)
             playerAPI.setRepeatMode(.track)
         }
-    }
-    
-    //MARK: SPTAppRemoteDelegate
-    
-    @objc func appRemoteDidEstablishConnection(_ appRemote: SPTAppRemote) {
-        self.spotifyRemote = appRemote
-        pendingPlayTrack?()
-    }
-    
-    @objc func appRemote(_ appRemote: SPTAppRemote, didFailConnectionAttemptWithError error: Error?) {
-        self.error = error
-    }
-    
-    @objc func appRemote(_ appRemote: SPTAppRemote, didDisconnectWithError error: Error?) {
-        self.error = error
     }
 }

@@ -16,7 +16,6 @@ class NowPlayingViewModel: ObservableObject {
 
     init(track: Track) {
         self.track = track
-        playback.error = error
         playback.playTrack(track)
     }
     

@@ -6,8 +6,9 @@
 //
 
 import Foundation
+import SpotifyiOS
 
-class TrackDetailsViewModel: ObservableObject {
+class TrackDetailsViewModel: NSObject, ObservableObject, SPTAppRemoteDelegate {
     
     @Published var error: Error?
     @Published var userInteractionDisabled: Bool = true
@@ -24,6 +25,7 @@ class TrackDetailsViewModel: ObservableObject {
     
     private var track: Track
     private var store: TrackStoreProtocol!
+    private var spotifyRemote: SPTAppRemote?
     private var progressTimer: Timer?
     
     private lazy var numberFormatter = NumberFormatter()
@@ -45,7 +47,10 @@ class TrackDetailsViewModel: ObservableObject {
 
     init(track: Track) {
         self.track = track
+        super.init()
         fetchTrackInfo()
+        SpotifyConnectionManager.shared.remoteDelegate = self
+        player.setRemote(SpotifyConnectionManager.shared.remote)
     }
     
     //MARK: Computed properties
@@ -165,6 +170,21 @@ class TrackDetailsViewModel: ObservableObject {
             return
         }
         startTimeString = formattedTime + decimal
+    }
+    
+    //MARK: SPTAppRemoteDelegate
+
+    func appRemoteDidEstablishConnection(_ appRemote: SPTAppRemote) {
+        self.spotifyRemote = appRemote
+        player.setRemote(appRemote)
+    }
+
+    func appRemote(_ appRemote: SPTAppRemote, didFailConnectionAttemptWithError error: Error?) {
+        self.error = error
+    }
+
+    func appRemote(_ appRemote: SPTAppRemote, didDisconnectWithError error: Error?) {
+        self.error = error
     }
 }
 
