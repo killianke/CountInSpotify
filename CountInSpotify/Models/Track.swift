@@ -48,10 +48,6 @@ extension Track {
                                             uri: "spotify:track:0qhGOjVl3uY2N6CAafVmCa")
 }
 
-struct TopTracksResponse: Codable {
-    var items: [Track]
-}
-
 /*
  {
  "album": { See SpotifyAlbum },

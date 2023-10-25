@@ -24,13 +24,13 @@ class AddTrackViewModel: ObservableObject {
     private let limit = 20
     private let service = SpotifyService()
     
-    func fetchTopTracks() async {
-        let result = await service.getTopTracks()
+    func fetchRecentlyPlayedTracks() async {
+        let result = await service.getRecentTracks()
         
         switch result {
-        case .success(let object):
+        case .success(let response):
             DispatchQueue.main.async {
-                self.recentTracks = object.items
+                self.recentTracks = response.items.map { $0.track }
             }
         case .failure(let error):
             DispatchQueue.main.async {

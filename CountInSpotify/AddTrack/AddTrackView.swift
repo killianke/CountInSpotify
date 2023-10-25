@@ -29,7 +29,7 @@ struct AddTrackView: View {
         .toolbarBackground(.teal, for: .navigationBar)
         .toolbarBackground(.visible, for: .navigationBar)
         .task {
-            await viewModel.fetchTopTracks()
+            await viewModel.fetchRecentlyPlayedTracks()
         }
         .searchable(text: $viewModel.searchTerm, prompt: "Search songs")
         .onSubmit(of: .search) {
