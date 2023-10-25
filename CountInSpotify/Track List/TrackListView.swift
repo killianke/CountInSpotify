@@ -55,24 +55,30 @@ struct TrackListView: View {
     }
     
     private var listView: some View {
-        List(trackStore.tracks) { track in
-            TrackRowView(viewModel: TrackRowViewModel(track: track))
-                .onTapGesture {
-                    viewModel.playTrack(track)
+        List {
+            Section {
+                ForEach(trackStore.tracks) { track in
+                    TrackRowView(viewModel: TrackRowViewModel(track: track))
+                        .onTapGesture {
+                            viewModel.playTrack(track)
+                        }
+                        .swipeActions {
+                            Button(role: .destructive) {
+                                viewModel.deleteTrack(track)
+                            } label: {
+                                Label("Delete", systemImage: "trash.fill")
+                            }
+                            Button {
+                                path.append(NavigationDestination.editTrack(track: track))
+                            } label: {
+                                Label("Edit", systemImage: "slider.horizontal.3")
+                            }
+                            .tint(.blue)
+                        }
                 }
-                .swipeActions {
-                    Button(role: .destructive) {
-                        viewModel.deleteTrack(track)
-                    } label: {
-                        Label("Delete", systemImage: "trash.fill")
-                    }
-                    Button {
-                        path.append(NavigationDestination.editTrack(track: track))
-                    } label: {
-                        Label("Edit", systemImage: "slider.horizontal.3")
-                    }
-                    .tint(.blue)
-                }
+            } header: {
+                Color.clear
+            }
         }
     }
     
