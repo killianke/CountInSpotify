@@ -32,7 +32,7 @@ final class SpotifyConnectionManager: NSObject, SPTAppRemoteDelegate {
             if isActive {
                 self.remote.connect()
             } else {
-                self.remote.authorizeAndPlayURI(Constants.spotifySilentTrackId)
+                self.authorizeWithRequiredScope()
             }
         }
     }
@@ -56,6 +56,14 @@ final class SpotifyConnectionManager: NSObject, SPTAppRemoteDelegate {
         }
         return false
     }
+    
+    private func authorizeWithRequiredScope() {
+        self.remote.authorizeAndPlayURI(
+            Constants.spotifySilentTrackId,
+            asRadio: false,
+            additionalScopes: ["user-top-read"]
+        )
+    }
 
     //MARK: - SPTAppRemoteDelegate
     
@@ -74,7 +82,7 @@ final class SpotifyConnectionManager: NSObject, SPTAppRemoteDelegate {
         if let err = error as? NSError, err.code == Constants.spotifyAuthErrorCode, authRetryCount < maxAuthRetryCount {
             //Retry authentication
             authRetryCount += 1
-            self.remote.authorizeAndPlayURI(Constants.spotifySilentTrackId)
+            authorizeWithRequiredScope()
         } else {
             remoteDelegate?.appRemote(appRemote, didFailConnectionAttemptWithError: error)
         }

@@ -8,6 +8,7 @@
 import Foundation
 
 enum SpotifyEndpoint {
+    case topTracks
     case search(query: String, offset: Int, limit: Int)
     case audioAnalysis(trackID: String)
 }
@@ -20,6 +21,8 @@ extension SpotifyEndpoint: Endpoint {
     
     var path: String {
         switch self {
+        case .topTracks:
+            return "/v1/me/top/tracks"
         case .search:
             return "/v1/search"
         case .audioAnalysis(trackID: let trackID):
@@ -29,7 +32,9 @@ extension SpotifyEndpoint: Endpoint {
 
     var method: RequestMethod {
         switch self {
-        case .search, .audioAnalysis(trackID: _):
+        case .topTracks,
+                .search,
+                .audioAnalysis(trackID: _):
             return .get
         }
     }
