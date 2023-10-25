@@ -15,16 +15,12 @@ struct AddTrackView: View {
     var body: some View {
         ZStack {
             Style.backgroundGradient
-            if viewModel.tracks.count == 0 {
-                Color.clear
+            if viewModel.searchTracks.count > 0 {
+                list(with: viewModel.searchTracks, headerText: "Search Results")
+            } else if viewModel.recentTracks.count > 0 {
+                list(with: viewModel.recentTracks, headerText: "Recently Played")
             } else {
-                List(viewModel.tracks) { track in
-                    NavigationLink<TrackRowView, TrackDetailsView> {
-                        TrackDetailsView(viewModel: TrackDetailsViewModel(track: track), path: $path)
-                    } label: {
-                        TrackRowView(viewModel: TrackRowViewModel(track: track))
-                    }
-                }
+                Color.clear
             }
         }
         .navigationTitle("Add Songs")
@@ -32,6 +28,9 @@ struct AddTrackView: View {
         .toolbarColorScheme(.dark, for: .navigationBar)
         .toolbarBackground(.teal, for: .navigationBar)
         .toolbarBackground(.visible, for: .navigationBar)
+        .task {
+            await viewModel.fetchTopTracks()
+        }
         .searchable(text: $viewModel.searchTerm, prompt: "Search songs")
         .onSubmit(of: .search) {
             Task {
@@ -39,6 +38,22 @@ struct AddTrackView: View {
             }
         }
         .errorAlert(error: $viewModel.error)
+    }
+    
+    private func list(with items: [Track], headerText: String) -> some View {
+        List {
+            Section {
+                ForEach(items) { track in
+                    NavigationLink<TrackRowView, TrackDetailsView> {
+                        TrackDetailsView(viewModel: TrackDetailsViewModel(track: track), path: $path)
+                    } label: {
+                        TrackRowView(viewModel: TrackRowViewModel(track: track))
+                    }
+                }
+            } header: {
+                Text(headerText).foregroundColor(.white)
+            }
+        }
     }
 }
 
