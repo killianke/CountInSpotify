@@ -97,15 +97,14 @@ struct TrackDetailsView: View {
         .cornerRadius(12)
     }
     
-    private func buttonLabel(title: String) -> AnyView {
+    @ViewBuilder
+    private func buttonLabel(title: String) -> some View {
         if viewModel.userInteractionDisabled {
-            return ProgressView()
-                .eraseToAnyView()
+            ProgressView()
         } else {
-            return Text(title)
+            Text(title)
                 .font(.headline)
                 .foregroundColor(.white)
-                .eraseToAnyView()
         }
     }
 }
