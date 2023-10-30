@@ -35,4 +35,11 @@ class TrackRowViewModel {
     var albumString: String {
         track.album.name
     }
+    
+    var imageURL: URL? {
+        guard let imageObject = track.album.images.first(where: { $0.size == .medium }) else {
+            return nil
+        }
+        return URL(string: imageObject.url)
+    }
 }

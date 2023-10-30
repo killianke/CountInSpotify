@@ -12,10 +12,20 @@ struct TrackRowView: View {
     let viewModel: TrackRowViewModel
     
     var body: some View {
-        VStack(alignment: .leading) {
-            Text(viewModel.nameString).font(.headline)
-            Text(viewModel.artistsString).font(.caption)
-            Text(viewModel.albumString).font(.caption2)
+        HStack(spacing: 16) {
+            AsyncImage(url: viewModel.imageURL) { image in
+                image.resizable()
+            } placeholder: {
+                Color.gray
+            }
+            .frame(width: 50, height: 50)
+            .cornerRadius(4)
+            
+            VStack(alignment: .leading) {
+                Text(viewModel.nameString).font(.headline)
+                Text(viewModel.artistsString).font(.caption)
+                Text(viewModel.albumString).font(.caption2)
+            }
         }
     }
 }
