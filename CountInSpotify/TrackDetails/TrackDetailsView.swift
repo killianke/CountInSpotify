@@ -26,10 +26,10 @@ struct TrackDetailsView: View {
                 Spacer()
                 
                 Button {
-                    viewModel.didTapAddTrack()
+                    viewModel.didTapActionButton()
                     path.removeLast()
                 } label: {
-                    buttonLabel(title: "Add to my songs")
+                    buttonLabel(title: viewModel.actionButtonTitle)
                 }.modifier(ButtonStyling(userInteractionDisabled: viewModel.userInteractionDisabled))
             }
             .frame(maxHeight: .infinity, alignment: .bottom)

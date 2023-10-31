@@ -6,9 +6,11 @@
 //
 
 import Foundation
+import UIKit
 
 protocol TrackStoreProtocol {
     func addTrack(_ track: Track)
+    func updateTrack(_ track: Track)
     func deleteTrack(_ track: Track)
 }
 
@@ -38,6 +40,12 @@ final class TrackStore: ObservableObject, TrackStoreProtocol {
     
     func addTrack(_ track: Track) {
         tracks.append(track)
+    }
+    
+    func updateTrack(_ track: Track) {
+        if let index = tracks.firstIndex(where: { $0.id == track.id }) {
+            tracks[index] = track
+        }
     }
     
     func deleteTrack(_ track: Track) {

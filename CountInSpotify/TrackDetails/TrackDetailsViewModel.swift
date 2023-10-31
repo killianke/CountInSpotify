@@ -36,6 +36,7 @@ class TrackDetailsViewModel: NSObject, ObservableObject, SPTAppRemoteDelegate {
         return formatter
     }()
     
+    private let editing: Bool
     private let service = SpotifyService()
     private let player = PlayerManager()
     private let bpmIncrement: Double = 0.1
@@ -44,9 +45,11 @@ class TrackDetailsViewModel: NSObject, ObservableObject, SPTAppRemoteDelegate {
     private let startTimeIncrement: Double = 0.1
     private let sampleDuration: TimeInterval = 15.0
 
-    init(track: Track) {
+    init(track: Track, isEditing: Bool = false) {
+        self.editing = isEditing
         self.track = track
         super.init()
+        setInitialState(for: track)
         fetchTrackInfo()
         SpotifyConnectionManager.shared.remoteDelegate = self
         player.setRemote(SpotifyConnectionManager.shared.remote)
@@ -70,14 +73,26 @@ class TrackDetailsViewModel: NSObject, ObservableObject, SPTAppRemoteDelegate {
         return startTimeIncrement
     }
     
+    var actionButtonTitle: String {
+        if editing {
+            return "Update song settings"
+        } else {
+            return "Add to my songs"
+        }
+    }
+    
     //MARK: Public interface
     
     func setTrackStore(_ store: TrackStoreProtocol) {
         self.store = store
     }
     
-    func didTapAddTrack() {
-        store.addTrack(track)
+    func didTapActionButton() {
+        if editing {
+            store.updateTrack(track)
+        } else {
+            store.addTrack(track)
+        }
     }
 
     func incrementBPM() {
@@ -125,6 +140,16 @@ class TrackDetailsViewModel: NSObject, ObservableObject, SPTAppRemoteDelegate {
     }
     
     //MARK: Private funcs
+    
+    private func setInitialState(for track: Track) {
+        if let existingBpm = track.bpm {
+            updateBPM(to: existingBpm)
+        }
+        
+        if let existingStartTime = track.startTime {
+            updateStartTime(to: existingStartTime)
+        }
+    }
 
     private func fetchTrackInfo() {
         Task {
@@ -135,9 +160,12 @@ class TrackDetailsViewModel: NSObject, ObservableObject, SPTAppRemoteDelegate {
                 case .success(let analysis):
                     self.userInteractionDisabled = false
                     
-                    self.updateBPM(to: analysis.track.tempo.round(nearest: self.bpmIncrement))
-                    self.updateStartTime(to: 0.0)
-                    
+                    if self.track.bpm == nil {
+                        self.updateBPM(to: analysis.track.tempo.round(nearest: self.bpmIncrement))
+                    }
+                    if self.track.startTime == nil {
+                        self.updateStartTime(to: 0.0)
+                    }
                 case .failure(let error):
                     self.error = error
                 }

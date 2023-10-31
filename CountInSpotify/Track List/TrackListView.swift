@@ -98,8 +98,8 @@ struct TrackListView: View {
         case .addTrack:
             return AddTrackView(path: $path).eraseToAnyView()
         case .editTrack(track: let track):
-            //TODO: Add edit navigation
-            return Text("Edit track: \(track.name)").eraseToAnyView()
+            let viewModel = TrackDetailsViewModel(track: track, isEditing: true)
+            return TrackDetailsView(viewModel: viewModel, path: $path).eraseToAnyView()
         }
     }
 }
