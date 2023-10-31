@@ -94,12 +94,14 @@ class TrackDetailsViewModel: NSObject, ObservableObject, SPTAppRemoteDelegate {
     }
     
     func incrementStartTime() {
-        updateStartTime(to: trackStartTime + startTimeIncrement)
+        let incrementedTime = trackStartTime + startTimeIncrement
+        updateStartTime(to: incrementedTime.round(nearest: startTimeIncrement))
     }
 
     func decrementStartTime() {
+        let decrementedTime = trackStartTime - startTimeIncrement
         if trackStartTime > startTimeIncrement {
-            updateStartTime(to: trackStartTime - startTimeIncrement)
+            updateStartTime(to: decrementedTime.round(nearest: startTimeIncrement))
         }
     }
     
