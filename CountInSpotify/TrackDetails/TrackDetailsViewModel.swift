@@ -15,8 +15,7 @@ class TrackDetailsViewModel: NSObject, ObservableObject, SPTAppRemoteDelegate {
     @Published var bpmString: String = ""
     @Published var startTimeString: String = "00:00.00"
     @Published var sampleProgress: Double = 0.0
-    
-    var trackStartTime: Double = 0 {
+    @Published var trackStartTime: Double = 0 {
         didSet {
             updateStartTimeString(with: trackStartTime)
             track.startTime = trackStartTime
@@ -149,7 +148,7 @@ class TrackDetailsViewModel: NSObject, ObservableObject, SPTAppRemoteDelegate {
     private func updateBPM(to value: Double) {
         track.bpm = value
         
-        numberFormatter.maximumIntegerDigits = .max
+        numberFormatter.maximumIntegerDigits = 10
         numberFormatter.minimumFractionDigits = 1
         numberFormatter.maximumFractionDigits = 1
 
