@@ -11,12 +11,12 @@ typealias Handler<T> = (Result<T, Error>) -> Void
 
 protocol ReadableStorage {
     func fetchValue(for key: String) throws -> Data
-    func fetchValue(for key: String, handler: @escaping Handler<Data>)
+    func fetchValueAsync(for key: String) async throws -> Data
 }
 
 protocol WritableStorage {
     func save(value: Data, for key: String) throws
-    func save(value: Data, for key: String, handler: @escaping Handler<Data>)
+    func saveAsync(value: Data, for key: String) async throws -> Data
 }
 
 typealias Storage = ReadableStorage & WritableStorage
@@ -51,17 +51,14 @@ extension DiskStorage: WritableStorage {
         }
     }
     
-    func save(value: Data, for key: String, handler: @escaping Handler<Data>) {
-        queue.async {
-            do {
-                try self.save(value: value, for: key)
-                handler(.success(value))
-            } catch {
-                handler(.failure(error))
-            }
+    func saveAsync(value: Data, for key: String) async throws -> Data {
+        let writeTask = Task(priority: .background) {
+            try self.save(value: value, for: key)
+            return value
         }
+        return try await writeTask.value
     }
-    
+
     private func createFolders(in url: URL) throws {
         let folderUrl = url.deletingLastPathComponent()
         if !fileManager.fileExists(atPath: folderUrl.path) {
@@ -83,9 +80,10 @@ extension DiskStorage: ReadableStorage {
         return data
     }
 
-    func fetchValue(for key: String, handler: @escaping Handler<Data>) {
-        queue.async {
-            handler(Result { try self.fetchValue(for: key) })
+    func fetchValueAsync(for key: String) async throws -> Data {
+        let fetchTask = Task(priority: .userInitiated) {
+            try self.fetchValue(for: key)
         }
+        return try await fetchTask.value
     }
 }

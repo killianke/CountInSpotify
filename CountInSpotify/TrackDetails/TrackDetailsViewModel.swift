@@ -155,7 +155,7 @@ class TrackDetailsViewModel: NSObject, ObservableObject, SPTAppRemoteDelegate {
         Task {
             let result = await service.getAudioAnalysisForTrack(withId: track.id)
             
-            DispatchQueue.main.async {
+            await MainActor.run {
                 switch result {
                 case .success(let analysis):
                     self.userInteractionDisabled = false

@@ -55,26 +55,27 @@ final class TrackStore: ObservableObject, TrackStoreProtocol {
         }
     }
 
+    @MainActor
     @objc private func appWillMoveToBackground() {
-        storage.save(tracks, for: storageKey, errorHandler: { writeError in
-            DispatchQueue.main.async {
+        Task {
+            do {
+                try await storage.saveAsync(tracks, for: storageKey)
+            } catch let writeError {
                 self.error = writeError
             }
-        })
+        }
     }
     
+    @MainActor
     @objc private func appDidBecomeActive() {
         fetching = true
-        storage.fetch(for: storageKey) { (result: Result<[Track], Error>) in
-            DispatchQueue.main.async {
-                self.fetching = false
-                
-                switch result {
-                case .success(let object):
-                    self.tracks = object
-                case .failure(let readError):
-                    self.error = readError
-                }
+        
+        Task {
+            do {
+                tracks = try await storage.fetchAsync(for: storageKey)
+                fetching = false
+            } catch let readError {
+                self.error = readError
             }
         }
     }

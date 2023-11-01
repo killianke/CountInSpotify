@@ -25,44 +25,34 @@ class AddTrackViewModel: ObservableObject {
     private let limit = 20
     private let service = SpotifyService()
     
+    @MainActor
     func fetchRecentlyPlayedTracks() async {
-        DispatchQueue.main.async {
-            self.loading = true
-        }
+        self.loading = true
         let result = await service.getRecentTracks()
         
         switch result {
         case .success(let response):
-            DispatchQueue.main.async {
-                self.loading = false
-                self.recentTracks = response.items.map { $0.track }
-            }
+            self.loading = false
+            self.recentTracks = response.items.map { $0.track }
         case .failure(let error):
-            DispatchQueue.main.async {
-                self.loading = false
-                self.error = error
-            }
+            self.loading = false
+            self.error = error
         }
     }
     
+    @MainActor
     func performSearch() async {
-        DispatchQueue.main.async {
-            self.loading = true
-        }
+        self.loading = true
         let searchResult = await service.searchTracks(with: searchTerm,
                                                       offset: offset,
                                                       limit: limit)
         switch searchResult {
         case .success(let result):
-            DispatchQueue.main.async {
-                self.loading = false
-                self.searchTracks = result.tracks?.items ?? []
-            }
+            self.loading = false
+            self.searchTracks = result.tracks?.items ?? []
         case .failure(let error):
-            DispatchQueue.main.async {
-                self.loading = false
-                self.error = error
-            }
+            self.loading = false
+            self.error = error
         }
     }
 }
