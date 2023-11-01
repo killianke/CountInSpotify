@@ -115,7 +115,7 @@ private struct ButtonStyling: ViewModifier {
     func body(content: Content) -> some View {
         content
             .frame(maxWidth: .infinity, minHeight: 50)
-            .background(userInteractionDisabled ? .gray : .teal.opacity(0.7))
+            .background(userInteractionDisabled ? .gray : Style.accentColor.opacity(0.7))
             .disabled(userInteractionDisabled)
             .cornerRadius(12)
     }

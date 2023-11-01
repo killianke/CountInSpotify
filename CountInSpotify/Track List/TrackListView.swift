@@ -32,7 +32,7 @@ struct TrackListView: View {
                 }
                 .navigationTitle("Songs")
                 .toolbarColorScheme(.dark, for: .navigationBar)
-                .toolbarBackground(.teal, for: .navigationBar)
+                .toolbarBackground(Style.accentColor, for: .navigationBar)
                 .toolbarBackground(.visible, for: .navigationBar)
                 .toolbar {
                     Button {

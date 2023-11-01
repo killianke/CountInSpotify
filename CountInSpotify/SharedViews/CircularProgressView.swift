@@ -10,7 +10,7 @@ import SwiftUI
 struct CircularProgressView: View {
     let progress: CGFloat
     
-    let color: Color = .teal
+    let color: Color = Style.accentColor
     let strokeWidth: CGFloat = 5.0
     
     var body: some View {
