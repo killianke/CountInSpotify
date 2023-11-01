@@ -8,9 +8,15 @@
 import Foundation
 
 enum SpotifyEndpoint {
-    case recentTracks
+    case topTracks(timeRange: TopTracksTimeRange?)
     case search(query: String, offset: Int, limit: Int)
     case audioAnalysis(trackID: String)
+    
+    enum TopTracksTimeRange: String {
+        case shortTerm = "short_term"
+        case mediumTerm = "medium_term"
+        case longTerm = "long_term"
+    }
 }
 
 extension SpotifyEndpoint: Endpoint {
@@ -21,8 +27,8 @@ extension SpotifyEndpoint: Endpoint {
     
     var path: String {
         switch self {
-        case .recentTracks:
-            return "/v1/me/player/recently-played"
+        case .topTracks:
+            return "/v1/me/top/tracks"
         case .search:
             return "/v1/search"
         case .audioAnalysis(trackID: let trackID):
@@ -32,7 +38,7 @@ extension SpotifyEndpoint: Endpoint {
 
     var method: RequestMethod {
         switch self {
-        case .recentTracks,
+        case .topTracks,
                 .search,
                 .audioAnalysis(trackID: _):
             return .get
@@ -58,6 +64,13 @@ extension SpotifyEndpoint: Endpoint {
                 URLQueryItem(name: "limit", value: "\(limit)"),
                 URLQueryItem(name: "offset", value: "\(offset)"),
                 URLQueryItem(name: "type", value: "track")
+            ]
+        case .topTracks(let timeRange):
+            guard let range = timeRange else {
+                return nil
+            }
+            return [
+                URLQueryItem(name: "time_range", value: range.rawValue),
             ]
         default:
             return nil

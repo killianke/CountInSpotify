@@ -16,7 +16,7 @@ class AddTrackViewModel: ObservableObject {
         }
     }
     @Published var loading: Bool = false
-    @Published var recentTracks: [Track] = []
+    @Published var topTracks: [Track] = []
     @Published var searchTracks: [Track] = []
     @Published var error: Error?
     
@@ -26,14 +26,14 @@ class AddTrackViewModel: ObservableObject {
     private let service = SpotifyService()
     
     @MainActor
-    func fetchRecentlyPlayedTracks() async {
+    func fetchTopTracks() async {
         self.loading = true
-        let result = await service.getRecentTracks()
-        
+        let result = await service.getTopTracks()
+
         switch result {
         case .success(let response):
             self.loading = false
-            self.recentTracks = response.items.map { $0.track }
+            self.topTracks = response.items
         case .failure(let error):
             self.loading = false
             self.error = error

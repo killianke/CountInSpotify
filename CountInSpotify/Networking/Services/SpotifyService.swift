@@ -8,17 +8,17 @@
 import Foundation
 
 protocol SpotifyServiceable {
-    func getRecentTracks() async -> Result<RecentlyPlayedResponse, RequestError>
+    func getTopTracks() async -> Result<TopTracksResponse, RequestError>
     func searchTracks(with query: String, offset: Int, limit: Int) async -> Result<SearchResult, RequestError>
     func getAudioAnalysisForTrack(withId trackId: String) async -> Result<AudioAnalysis, RequestError>
 }
 
 struct SpotifyService: HTTPClient, SpotifyServiceable {
     
-    func getRecentTracks() async -> Result<RecentlyPlayedResponse, RequestError> {
+    func getTopTracks() async -> Result<TopTracksResponse, RequestError> {
         return await sendRequest(
-            endpoint: SpotifyEndpoint.recentTracks,
-            responseModel: RecentlyPlayedResponse.self
+            endpoint: SpotifyEndpoint.topTracks(timeRange: .shortTerm),
+            responseModel: TopTracksResponse.self
         )
     }
     

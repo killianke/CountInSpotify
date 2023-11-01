@@ -18,8 +18,8 @@ struct AddTrackView: View {
             
             if viewModel.searchTracks.count > 0 {
                 list(with: viewModel.searchTracks, headerText: "Search Results")
-            } else if viewModel.recentTracks.count > 0 {
-                list(with: viewModel.recentTracks, headerText: "Recently Played")
+            } else if viewModel.topTracks.count > 0 {
+                list(with: viewModel.topTracks, headerText: "Recent Favourites")
             } else {
                 Color.clear
             }
@@ -34,7 +34,7 @@ struct AddTrackView: View {
         .toolbarBackground(.teal, for: .navigationBar)
         .toolbarBackground(.visible, for: .navigationBar)
         .task {
-            await viewModel.fetchRecentlyPlayedTracks()
+            await viewModel.fetchTopTracks()
         }
         .searchable(text: $viewModel.searchTerm, prompt: "Search songs")
         .onSubmit(of: .search) {

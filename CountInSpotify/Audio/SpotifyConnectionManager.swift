@@ -61,7 +61,7 @@ final class SpotifyConnectionManager: NSObject, SPTAppRemoteDelegate {
         self.remote.authorizeAndPlayURI(
             Constants.spotifySilentTrackId,
             asRadio: false,
-            additionalScopes: ["user-read-recently-played"]
+            additionalScopes: ["user-top-read"]
         )
     }
 
