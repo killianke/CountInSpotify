@@ -22,8 +22,9 @@ struct TrackListView: View {
         NavigationStack(path: $path) {
             ZStack {
                 Style.backgroundGradient
+                
                 Group {
-                    if trackStore.tracks.isEmpty {
+                    if shouldShowEmptyState {
                         emptyStateView
                     } else {
                         listView
@@ -42,6 +43,10 @@ struct TrackListView: View {
                 }
                 .navigationDestination(for: NavigationDestination.self) { destination in
                     handleNavigation(for: destination)
+                }
+                
+                if trackStore.fetching {
+                    LoadingIndicatorView()
                 }
             }
         }
@@ -80,6 +85,10 @@ struct TrackListView: View {
                 Color.clear
             }
         }
+    }
+    
+    private var shouldShowEmptyState: Bool {
+        trackStore.tracks.isEmpty && !trackStore.fetching
     }
     
     private var emptyStateView: some View {

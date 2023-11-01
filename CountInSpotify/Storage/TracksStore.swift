@@ -17,6 +17,7 @@ protocol TrackStoreProtocol {
 final class TrackStore: ObservableObject, TrackStoreProtocol {
     
     @Published var tracks: [Track] = []
+    @Published var fetching: Bool = false
     @Published var error: Error?
     
     private let storage = CodableStorage(storage: DiskStorage())
@@ -55,18 +56,26 @@ final class TrackStore: ObservableObject, TrackStoreProtocol {
     }
 
     @objc private func appWillMoveToBackground() {
-        do {
-            try storage.save(tracks, for: storageKey)
-        } catch let writeError {
-            error = writeError
-        }
+        storage.save(tracks, for: storageKey, errorHandler: { writeError in
+            DispatchQueue.main.async {
+                self.error = writeError
+            }
+        })
     }
     
     @objc private func appDidBecomeActive() {
-        do {
-            self.tracks = try storage.fetch(for: storageKey)
-        } catch let readError {
-            error = readError
+        fetching = true
+        storage.fetch(for: storageKey) { (result: Result<[Track], Error>) in
+            DispatchQueue.main.async {
+                self.fetching = false
+                
+                switch result {
+                case .success(let object):
+                    self.tracks = object
+                case .failure(let readError):
+                    self.error = readError
+                }
+            }
         }
     }
 }
