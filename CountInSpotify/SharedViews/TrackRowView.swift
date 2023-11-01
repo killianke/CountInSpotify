@@ -19,7 +19,6 @@ struct TrackRowView: View {
                 Color.gray
             }
             .frame(width: 50, height: 50)
-            .cornerRadius(4)
             
             VStack(alignment: .leading) {
                 Text(viewModel.nameString).font(.headline)
