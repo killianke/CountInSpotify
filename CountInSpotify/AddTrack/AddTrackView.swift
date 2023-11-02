@@ -10,7 +10,7 @@ import SwiftUI
 struct AddTrackView: View {
     
     @Binding var path: NavigationPath
-    @StateObject var viewModel = AddTrackViewModel()
+    @StateObject var viewModel: AddTrackViewModel
     
     var body: some View {
         ZStack {
@@ -50,7 +50,7 @@ struct AddTrackView: View {
             Section {
                 ForEach(items) { track in
                     NavigationLink<TrackRowView, TrackDetailsView> {
-                        TrackDetailsView(viewModel: TrackDetailsViewModel(track: track), path: $path)
+                        TrackDetailsView(viewModel: TrackDetailsViewModel(track: track, service: SpotifyService()), path: $path)
                     } label: {
                         TrackRowView(viewModel: TrackRowViewModel(track: track))
                     }
@@ -64,6 +64,6 @@ struct AddTrackView: View {
 
 struct AddTrackView_Previews: PreviewProvider {
     static var previews: some View {
-        AddTrackView(path: .constant(NavigationPath()))
+        AddTrackView(path: .constant(NavigationPath()), viewModel: AddTrackViewModel(service: MockSpotifyService()))
     }
 }

@@ -105,9 +105,10 @@ struct TrackListView: View {
     private func handleNavigation(for destination: NavigationDestination) -> AnyView {
         switch destination {
         case .addTrack:
-            return AddTrackView(path: $path).eraseToAnyView()
+            let viewModel = AddTrackViewModel(service: SpotifyService())
+            return AddTrackView(path: $path, viewModel: viewModel).eraseToAnyView()
         case .editTrack(track: let track):
-            let viewModel = TrackDetailsViewModel(track: track, isEditing: true)
+            let viewModel = TrackDetailsViewModel(track: track, service: SpotifyService(), isEditing: true)
             return TrackDetailsView(viewModel: viewModel, path: $path).eraseToAnyView()
         }
     }

@@ -123,7 +123,8 @@ private struct ButtonStyling: ViewModifier {
 
 struct TrackDetailsView_Previews: PreviewProvider {
     static var previews: some View {
-        let viewModel = TrackDetailsViewModel(track: .previewContent)
+        let viewModel = TrackDetailsViewModel(track: .previewContent,
+                                              service: MockSpotifyService())
         TrackDetailsView(viewModel: viewModel,
                          path: .constant(NavigationPath())).environmentObject(TrackStore())
     }

@@ -23,7 +23,11 @@ class AddTrackViewModel: ObservableObject {
     private var offset = 0
 
     private let limit = 20
-    private let service = SpotifyService()
+    private let service: SpotifyServiceable
+    
+    init(service: SpotifyServiceable) {
+        self.service = service
+    }
     
     @MainActor
     func fetchTopTracks() async {

@@ -37,7 +37,7 @@ class TrackDetailsViewModel: NSObject, ObservableObject, SPTAppRemoteDelegate {
     }()
     
     private let editing: Bool
-    private let service = SpotifyService()
+    private let service: SpotifyServiceable
     private let player = PlayerManager()
     private let bpmIncrement: Double = 0.1
     private let lowerBPMLimit: Double = 30
@@ -45,9 +45,10 @@ class TrackDetailsViewModel: NSObject, ObservableObject, SPTAppRemoteDelegate {
     private let startTimeIncrement: Double = 0.1
     private let sampleDuration: TimeInterval = 15.0
 
-    init(track: Track, isEditing: Bool = false) {
+    init(track: Track, service: SpotifyServiceable, isEditing: Bool = false) {
         self.editing = isEditing
         self.track = track
+        self.service = service
         super.init()
         setInitialState(for: track)
         fetchTrackInfo()

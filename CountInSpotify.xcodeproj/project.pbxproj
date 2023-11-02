@@ -54,6 +54,7 @@
 		AC9024F62ACF9D5B007EE9A1 /* AudioAnalysis.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9024F52ACF9D5B007EE9A1 /* AudioAnalysis.swift */; };
 		AC9024F82ACFB4AB007EE9A1 /* ViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9024F72ACFB4AB007EE9A1 /* ViewExtensions.swift */; };
 		AC9024FA2AD0101A007EE9A1 /* TracksStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9024F92AD0101A007EE9A1 /* TracksStore.swift */; };
+		ACA8AF782AF328AF009EA479 /* MockSpotifyService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACA8AF772AF328AF009EA479 /* MockSpotifyService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -139,6 +140,7 @@
 		AC9024F52ACF9D5B007EE9A1 /* AudioAnalysis.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioAnalysis.swift; sourceTree = "<group>"; };
 		AC9024F72ACFB4AB007EE9A1 /* ViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExtensions.swift; sourceTree = "<group>"; };
 		AC9024F92AD0101A007EE9A1 /* TracksStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TracksStore.swift; sourceTree = "<group>"; };
+		ACA8AF772AF328AF009EA479 /* MockSpotifyService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockSpotifyService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -331,6 +333,7 @@
 		AC9024CF2ACA84B0007EE9A1 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				ACA8AF762AF32895009EA479 /* Mocks */,
 				AC9024D42ACA8829007EE9A1 /* SpotifyService.swift */,
 			);
 			path = Services;
@@ -374,6 +377,14 @@
 				AC9024F32ACF80C5007EE9A1 /* TrackDetailsViewModel.swift */,
 			);
 			path = TrackDetails;
+			sourceTree = "<group>";
+		};
+		ACA8AF762AF32895009EA479 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				ACA8AF772AF328AF009EA479 /* MockSpotifyService.swift */,
+			);
+			path = Mocks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -512,6 +523,7 @@
 			files = (
 				AC8FF2AD2AE92FF000C8226A /* LoadingIndicatorView.swift in Sources */,
 				AC5968502ABA96E80067B0D9 /* AppDelegate.swift in Sources */,
+				ACA8AF782AF328AF009EA479 /* MockSpotifyService.swift in Sources */,
 				AC59688E2AC3A9300067B0D9 /* SpotifyConnectionManager.swift in Sources */,
 				AC8FF2A62ADE2E0900C8226A /* PlayerManager.swift in Sources */,
 				AC9024B32AC91D43007EE9A1 /* Artist.swift in Sources */,
