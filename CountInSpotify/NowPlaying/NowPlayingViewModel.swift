@@ -7,16 +7,21 @@
 
 import Foundation
 
-class NowPlayingViewModel: ObservableObject {
+class NowPlayingViewModel: ObservableObject, Identifiable {
     
     @Published var error: Error?
     
     private let track: Track
-    private let playback = PlayerManager()
+    private let player = PlayerManager()
 
-    init(track: Track) {
+    init(track: Track, remote: SPTAppRemote) {
         self.track = track
-        playback.playTrack(track)
+        player.setRemote(remote)
+        player.playTrack(track)
+    }
+    
+    func restartTapped() {
+        player.playTrack(track)
     }
     
     //MARK: Computed properties

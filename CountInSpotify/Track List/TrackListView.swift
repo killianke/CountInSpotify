@@ -56,6 +56,9 @@ struct TrackListView: View {
         .onAppear {
             viewModel.setTrackStore(trackStore)
         }
+        .sheet(item: $viewModel.nowPlayingViewModel) { viewModel in
+            NowPlayingView(viewModel: viewModel)
+        }
         .errorAlert(error: $viewModel.error)
     }
     

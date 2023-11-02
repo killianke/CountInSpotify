@@ -12,16 +12,15 @@ import SpotifyiOS
 class TrackListViewModel: NSObject, ObservableObject, SPTAppRemoteDelegate {
     
     @Published var error: Error?
+    @Published var nowPlayingViewModel: NowPlayingViewModel?
     
-    private var spotifyRemote: SPTAppRemote?
+    private var spotifyRemote: SPTAppRemote
     private var store: TrackStoreProtocol!
     
-    private let player = PlayerManager()
-
     override init() {
+        self.spotifyRemote = SpotifyConnectionManager.shared.remote
         super.init()
         SpotifyConnectionManager.shared.remoteDelegate = self
-        player.setRemote(SpotifyConnectionManager.shared.remote)
     }
     
     func setTrackStore(_ store: TrackStoreProtocol) {
@@ -29,7 +28,7 @@ class TrackListViewModel: NSObject, ObservableObject, SPTAppRemoteDelegate {
     }
     
     func playTrack(_ track: Track) {
-        player.playTrack(track)
+        nowPlayingViewModel = NowPlayingViewModel(track: track, remote: spotifyRemote)
     }
     
     func deleteTrack(_ track: Track) {
@@ -40,7 +39,6 @@ class TrackListViewModel: NSObject, ObservableObject, SPTAppRemoteDelegate {
 
     func appRemoteDidEstablishConnection(_ appRemote: SPTAppRemote) {
         self.spotifyRemote = appRemote
-        player.setRemote(appRemote)
     }
 
     func appRemote(_ appRemote: SPTAppRemote, didFailConnectionAttemptWithError error: Error?) {
