@@ -29,7 +29,7 @@ class TrackListViewModel: NSObject, ObservableObject, SPTAppRemoteDelegate {
     }
     
     func playTrack(_ track: Track) {
-        player.playTrack(track, countInBars: 2)
+        player.playTrack(track)
     }
     
     func deleteTrack(_ track: Track) {

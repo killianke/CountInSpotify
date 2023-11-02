@@ -18,7 +18,7 @@ class PlayerManager: NSObject {
         self.spotifyRemote = remote
     }
     
-    func playTrack(_ track: Track, for duration: TimeInterval? = nil, countInBars: Int = 1) {
+    func playTrack(_ track: Track, for duration: TimeInterval? = nil) {
         guard let remote = spotifyRemote, remote.isConnected,
                 let playerAPI = remote.playerAPI else {
             return
@@ -57,7 +57,7 @@ class PlayerManager: NSObject {
             }
         }
         
-        metronome.start(forBars: countInBars)
+        metronome.start(forBars: track.countInBars)
     }
     
     @objc func stopPlaying() {

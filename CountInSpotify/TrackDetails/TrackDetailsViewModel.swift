@@ -13,6 +13,7 @@ class TrackDetailsViewModel: NSObject, ObservableObject, SPTAppRemoteDelegate {
     @Published var error: Error?
     @Published var userInteractionDisabled: Bool = true
     @Published var bpmString: String = ""
+    @Published var countInBarsString: String = ""
     @Published var startTimeString: String = "00:00.00"
     @Published var sampleProgress: Double = 0.0
     @Published var trackStartTime: Double = 0 {
@@ -39,11 +40,12 @@ class TrackDetailsViewModel: NSObject, ObservableObject, SPTAppRemoteDelegate {
     private let editing: Bool
     private let service: SpotifyServiceable
     private let player = PlayerManager()
+    private let maxCountInBars: Int = 4
     private let bpmIncrement: Double = 0.1
     private let lowerBPMLimit: Double = 30
     private let upperBPMLimit: Double = 300
     private let startTimeIncrement: Double = 0.1
-    private let sampleDuration: TimeInterval = 15.0
+    private let sampleDuration: TimeInterval = 10.0
 
     init(track: Track, service: SpotifyServiceable, isEditing: Bool = false) {
         self.editing = isEditing
@@ -95,6 +97,20 @@ class TrackDetailsViewModel: NSObject, ObservableObject, SPTAppRemoteDelegate {
             store.addTrack(track)
         }
     }
+    
+    func incrementBars() {
+        let countInBars = track.countInBars
+        if countInBars < maxCountInBars {
+            updateCountInBars(to: countInBars + 1)
+        }
+    }
+
+    func decrementBars() {
+        let countInBars = track.countInBars
+        if countInBars > 1 {
+            updateCountInBars(to: countInBars - 1)
+        }
+    }
 
     func incrementBPM() {
         if let bpm = track.bpm, bpm < upperBPMLimit {
@@ -125,12 +141,15 @@ class TrackDetailsViewModel: NSObject, ObservableObject, SPTAppRemoteDelegate {
             return
         }
         
-        player.playTrack(track, for: sampleDuration)
+        let countInDuration = getCountInDuration(for: track) ?? 0
+        let totalDuration = countInDuration + sampleDuration
+        
+        player.playTrack(track, for: totalDuration)
         sampleProgress = 0
         progressTimer?.invalidate()
         
         let timeInterval = 0.1
-        let progressInterval = 1 / (sampleDuration / timeInterval)
+        let progressInterval = 1 / (totalDuration / timeInterval)
         progressTimer = Timer.scheduledTimer(withTimeInterval: timeInterval, repeats: true) { timer in
             self.sampleProgress += progressInterval
             if self.sampleProgress >= 1 {
@@ -140,9 +159,21 @@ class TrackDetailsViewModel: NSObject, ObservableObject, SPTAppRemoteDelegate {
         }
     }
     
+    func getCountInDuration(for track: Track) -> TimeInterval? {
+        guard let bpm = track.bpm else {
+            return nil
+        }
+        let beatDuration = 60 / bpm
+        let barDuration = beatDuration * 4
+        let bars = track.countInBars
+        return barDuration * Double(bars)
+    }
+    
     //MARK: Private funcs
     
     private func setInitialState(for track: Track) {
+        updateCountInBars(to: track.countInBars)
+
         if let existingBpm = track.bpm {
             updateBPM(to: existingBpm)
         }
@@ -172,6 +203,11 @@ class TrackDetailsViewModel: NSObject, ObservableObject, SPTAppRemoteDelegate {
                 }
             }
         }
+    }
+    
+    private func updateCountInBars(to value: Int) {
+        track.countInBars = value
+        countInBarsString = "\(value)"
     }
 
     private func updateBPM(to value: Double) {

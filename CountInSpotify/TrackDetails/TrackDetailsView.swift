@@ -67,6 +67,15 @@ struct TrackDetailsView: View {
                 
                 VStack {
                     Stepper {
+                        Text("Count In Bars: \(viewModel.countInBarsString)")
+                    } onIncrement: {
+                        viewModel.incrementBars()
+                    } onDecrement: {
+                        viewModel.decrementBars()
+                    }
+                    .disabled(viewModel.userInteractionDisabled)
+                    
+                    Stepper {
                         Text("BPM: \(viewModel.bpmString)")
                     } onIncrement: {
                         viewModel.incrementBPM()

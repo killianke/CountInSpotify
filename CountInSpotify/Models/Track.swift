@@ -16,6 +16,7 @@ struct Track: Codable, Identifiable {
     var uri: String
     var startTime: Double?
     var bpm: Double?
+    var countInBars: Int = 1
     
     private enum CodingKeys : String, CodingKey {
         case album
