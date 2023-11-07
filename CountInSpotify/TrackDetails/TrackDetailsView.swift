@@ -30,7 +30,7 @@ struct TrackDetailsView: View {
                     path.removeLast()
                 } label: {
                     buttonLabel(title: viewModel.actionButtonTitle)
-                }.modifier(ButtonStyling(userInteractionDisabled: viewModel.userInteractionDisabled))
+                }.modifier(Style.ButtonModifier(userInteractionDisabled: viewModel.userInteractionDisabled))
             }
             .frame(maxHeight: .infinity, alignment: .bottom)
             .padding(16)
@@ -115,18 +115,6 @@ struct TrackDetailsView: View {
                 .font(.headline)
                 .foregroundColor(.white)
         }
-    }
-}
-
-private struct ButtonStyling: ViewModifier {
-    var userInteractionDisabled: Bool
-    
-    func body(content: Content) -> some View {
-        content
-            .frame(maxWidth: .infinity, minHeight: 50)
-            .background(userInteractionDisabled ? .gray : Style.accentColor.opacity(0.7))
-            .disabled(userInteractionDisabled)
-            .cornerRadius(12)
     }
 }
 

@@ -24,11 +24,16 @@ struct NowPlayingView: View {
                 Button {
                     viewModel.playToggled()
                 } label: {
-                    Label(viewModel.playButtonData.title, systemImage: viewModel.playButtonData.image)
-                        .font(.headline)
-                        .foregroundColor(.white)
+                    if viewModel.playButtonDisabled {
+                        ProgressView()
+                            .tint(.white)
+                    } else {
+                        Label(viewModel.playButtonData.title, systemImage: viewModel.playButtonData.image)
+                            .font(.headline)
+                            .foregroundColor(.white)
+                    }
                 }
-                .modifier(ButtonStyling())
+                .modifier(Style.ButtonModifier(userInteractionDisabled: viewModel.playButtonDisabled))
                 
                 Button {
                     viewModel.restartTapped()
@@ -37,19 +42,10 @@ struct NowPlayingView: View {
                         .font(.headline)
                         .foregroundColor(.white)
                 }
-                .modifier(ButtonStyling())
+                .modifier(Style.ButtonModifier())
             }
             .padding(16)
         }
-    }
-}
-
-private struct ButtonStyling: ViewModifier {
-    func body(content: Content) -> some View {
-        content
-            .frame(maxWidth: .infinity, minHeight: 50)
-            .background(Style.accentColor.opacity(0.7))
-            .cornerRadius(12)
     }
 }
 

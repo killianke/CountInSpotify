@@ -18,4 +18,16 @@ struct Style {
                        endPoint: .bottomTrailing)
         .ignoresSafeArea()
     }()
+    
+    struct ButtonModifier: ViewModifier {
+        var userInteractionDisabled: Bool = false
+        
+        func body(content: Content) -> some View {
+            content
+                .frame(maxWidth: .infinity, minHeight: 50)
+                .background(userInteractionDisabled ? .gray : Style.accentColor.opacity(0.7))
+                .disabled(userInteractionDisabled)
+                .cornerRadius(12)
+        }
+    }
 }

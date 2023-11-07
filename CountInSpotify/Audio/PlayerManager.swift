@@ -9,8 +9,10 @@ import Foundation
 import CoreAudioKit
 import SpotifyiOS
 
-class PlayerManager: NSObject {
+class PlayerManager {
         
+    @Published var isCountingIn: Bool = false
+    
     private var spotifyRemote: SPTAppRemote?
     private var stopPlaybackTask: DispatchWorkItem?
     private var currentTrack: Track?
@@ -26,10 +28,10 @@ class PlayerManager: NSObject {
     
     func playTrack(_ track: Track, for duration: TimeInterval? = nil) {
         guard let remote = spotifyRemote, remote.isConnected,
-                let playerAPI = remote.playerAPI else {
+                let playerAPI = remote.playerAPI, !isCountingIn else {
             return
         }
-        
+                
         currentTrack = track
         pausedTime = nil
         stopPlaybackTask?.cancel()
@@ -62,12 +64,18 @@ class PlayerManager: NSObject {
                 let startTimeMilliseconds = Int(adjustedStartTime * 1000)
                 playerAPI.seek(toPosition: startTimeMilliseconds)
             }
+            self.isCountingIn = false
         }
         
+        isCountingIn = true
         metronome.start(forBars: track.countInBars)
     }
     
     func pause() {
+        guard !isCountingIn else {
+            return
+        }
+
         spotifyRemote?.playerAPI?.getPlayerState({ result, error in
             if let state = result as? SPTAppRemotePlayerState {
                 self.pausedTime = state.playbackPosition

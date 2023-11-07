@@ -10,6 +10,7 @@ import Foundation
 class NowPlayingViewModel: ObservableObject, Identifiable {
     
     @Published var error: Error?
+    @Published var playButtonDisabled: Bool = true
     @Published var playButtonData: (title: String, image: String)
     
     private let track: Track
@@ -20,6 +21,8 @@ class NowPlayingViewModel: ObservableObject, Identifiable {
         player.setRemote(remote)
         player.playTrack(track)
         playButtonData = ("Pause", "pause")
+        
+        player.$isCountingIn.assign(to: &$playButtonDisabled)
     }
     
     func restartTapped() {
