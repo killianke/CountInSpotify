@@ -33,7 +33,7 @@ struct NowPlayingView: View {
                             .foregroundColor(.white)
                     }
                 }
-                .modifier(Style.Modifiers.DefaultButton(userInteractionDisabled: viewModel.playButtonDisabled))
+                .modifier(Style.Modifiers.FullWidthButton(userInteractionDisabled: viewModel.playButtonDisabled))
                 
                 Button {
                     viewModel.restartTapped()
@@ -42,7 +42,7 @@ struct NowPlayingView: View {
                         .font(.headline)
                         .foregroundColor(.white)
                 }
-                .modifier(Style.Modifiers.DefaultButton())
+                .modifier(Style.Modifiers.FullWidthButton())
             }
             .padding(16)
         }

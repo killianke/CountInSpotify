@@ -30,7 +30,7 @@ struct TrackDetailsView: View {
                     path.removeLast()
                 } label: {
                     buttonLabel(title: viewModel.actionButtonTitle)
-                }.modifier(Style.Modifiers.DefaultButton(userInteractionDisabled: viewModel.userInteractionDisabled))
+                }.modifier(Style.Modifiers.FullWidthButton(userInteractionDisabled: viewModel.userInteractionDisabled))
             }
             .frame(maxHeight: .infinity, alignment: .bottom)
             .padding(16)

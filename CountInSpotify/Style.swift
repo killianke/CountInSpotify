@@ -15,7 +15,7 @@ struct Style {
     }
     
     struct Modifiers {
-        struct DefaultButton: ViewModifier {
+        struct FullWidthButton: ViewModifier {
             var userInteractionDisabled: Bool = false
             
             func body(content: Content) -> some View {
