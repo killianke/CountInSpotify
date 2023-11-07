@@ -21,8 +21,8 @@ struct TrackListView: View {
     var body: some View {
         NavigationStack(path: $path) {
             ZStack {
-                Style.backgroundGradient
-                
+                BackgroundGradientView()
+
                 Group {
                     if shouldShowEmptyState {
                         emptyStateView

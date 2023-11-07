@@ -15,7 +15,7 @@ struct TrackDetailsView: View {
     
     var body: some View {
         ZStack {
-            Style.backgroundGradient
+            BackgroundGradientView()
             VStack(spacing: 16) {
                 TrackInfoView(viewModel: viewModel.trackInfoViewModel)
                 

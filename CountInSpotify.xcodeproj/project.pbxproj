@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AC355B8A2AF9FCB3000CE340 /* BackgroundGradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC355B892AF9FCB3000CE340 /* BackgroundGradientView.swift */; };
 		AC51BB562AD526BB00E07AC0 /* DiskStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC51BB552AD526BB00E07AC0 /* DiskStorage.swift */; };
 		AC51BB582AD5284000E07AC0 /* CodableStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC51BB572AD5284000E07AC0 /* CodableStorage.swift */; };
 		AC5968502ABA96E80067B0D9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC59684F2ABA96E80067B0D9 /* AppDelegate.swift */; };
@@ -89,6 +90,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		AC355B892AF9FCB3000CE340 /* BackgroundGradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundGradientView.swift; sourceTree = "<group>"; };
 		AC51BB552AD526BB00E07AC0 /* DiskStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiskStorage.swift; sourceTree = "<group>"; };
 		AC51BB572AD5284000E07AC0 /* CodableStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodableStorage.swift; sourceTree = "<group>"; };
 		AC59684C2ABA96E80067B0D9 /* CountInSpotify.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CountInSpotify.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -366,6 +368,7 @@
 				AC8FF2A32ADE05FB00C8226A /* TrackInfoViewModel.swift */,
 				AC8FF2A82ADF8FFE00C8226A /* CircularProgressView.swift */,
 				AC8FF2AC2AE92FF000C8226A /* LoadingIndicatorView.swift */,
+				AC355B892AF9FCB3000CE340 /* BackgroundGradientView.swift */,
 			);
 			path = SharedViews;
 			sourceTree = "<group>";
@@ -529,6 +532,7 @@
 				AC9024B32AC91D43007EE9A1 /* Artist.swift in Sources */,
 				AC9024D52ACA8829007EE9A1 /* SpotifyService.swift in Sources */,
 				AC51BB582AD5284000E07AC0 /* CodableStorage.swift in Sources */,
+				AC355B8A2AF9FCB3000CE340 /* BackgroundGradientView.swift in Sources */,
 				AC9024D92ACAA927007EE9A1 /* SearchResult.swift in Sources */,
 				AC9024E92ACE5206007EE9A1 /* TrackRowView.swift in Sources */,
 				AC9024A42AC67B51007EE9A1 /* Metronome.swift in Sources */,

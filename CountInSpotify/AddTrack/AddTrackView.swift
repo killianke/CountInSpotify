@@ -14,7 +14,7 @@ struct AddTrackView: View {
     
     var body: some View {
         ZStack {
-            Style.backgroundGradient
+            BackgroundGradientView()
             
             if viewModel.searchTracks.count > 0 {
                 list(with: viewModel.searchTracks, headerText: "Search Results")

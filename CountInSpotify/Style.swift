@@ -27,11 +27,4 @@ struct Style {
             }
         }
     }
-    
-    static let backgroundGradient: some View = {
-        LinearGradient(gradient: Gradient(colors: [Style.Colors.accentColor.opacity(0.5), .gray.opacity(0.6)]),
-                       startPoint: .topLeading,
-                       endPoint: .bottomTrailing)
-        .ignoresSafeArea()
-    }()
 }

@@ -12,8 +12,8 @@ struct NowPlayingView: View {
 
     var body: some View {
         ZStack {
-            Style.backgroundGradient
-            
+            BackgroundGradientView()
+
             VStack(spacing: 16) {
                 Spacer()
                 
