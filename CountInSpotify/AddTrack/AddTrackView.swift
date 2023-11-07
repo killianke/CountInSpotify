@@ -31,7 +31,7 @@ struct AddTrackView: View {
         .navigationTitle("Add Songs")
         .navigationBarTitleDisplayMode(.inline)
         .toolbarColorScheme(.dark, for: .navigationBar)
-        .toolbarBackground(Style.accentColor, for: .navigationBar)
+        .toolbarBackground(Style.Colors.accentColor, for: .navigationBar)
         .toolbarBackground(.visible, for: .navigationBar)
         .task {
             await viewModel.fetchTopTracks()

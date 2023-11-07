@@ -10,7 +10,7 @@ import SwiftUI
 struct LoadingIndicatorView: View {
     var body: some View {
         ZStack {
-            Style.accentColor
+            Style.Colors.accentColor
                 .opacity(0.75)
                 .cornerRadius(12)
                 .frame(width: 80, height: 80, alignment: .center)
