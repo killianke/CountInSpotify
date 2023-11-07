@@ -16,27 +16,46 @@ struct NowPlayingView: View {
             
             VStack(spacing: 16) {
                 Spacer()
+                
                 TrackInfoView(viewModel: viewModel.trackInfoViewModel)
+                
                 Spacer()
+                
                 Button {
-                    viewModel.restartTapped()
+                    viewModel.playToggled()
                 } label: {
-                    Label("Restart", systemImage: "restart.circle.fill")
+                    Label(viewModel.playButtonData.title, systemImage: viewModel.playButtonData.image)
                         .font(.headline)
                         .foregroundColor(.white)
                 }
-                .frame(maxWidth: .infinity, minHeight: 50)
-                .background(Style.accentColor.opacity(0.7))
-                .cornerRadius(12)
+                .modifier(ButtonStyling())
+                
+                Button {
+                    viewModel.restartTapped()
+                } label: {
+                    Label("Restart", systemImage: "restart")
+                        .font(.headline)
+                        .foregroundColor(.white)
+                }
+                .modifier(ButtonStyling())
             }
             .padding(16)
         }
     }
 }
 
+private struct ButtonStyling: ViewModifier {
+    func body(content: Content) -> some View {
+        content
+            .frame(maxWidth: .infinity, minHeight: 50)
+            .background(Style.accentColor.opacity(0.7))
+            .cornerRadius(12)
+    }
+}
+
 struct PlaybackView_Previews: PreviewProvider {
     static var previews: some View {
-        let viewModel = NowPlayingViewModel(track: .previewContent, remote: SpotifyConnectionManager.shared.remote)
+        let viewModel = NowPlayingViewModel(track: Track.previewContent, remote: SpotifyConnectionManager.shared.remote)
         NowPlayingView(viewModel: viewModel)
     }
 }

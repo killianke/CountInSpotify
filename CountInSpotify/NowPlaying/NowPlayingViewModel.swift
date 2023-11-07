@@ -10,6 +10,7 @@ import Foundation
 class NowPlayingViewModel: ObservableObject, Identifiable {
     
     @Published var error: Error?
+    @Published var playButtonData: (title: String, image: String)
     
     private let track: Track
     private let player = PlayerManager()
@@ -18,10 +19,21 @@ class NowPlayingViewModel: ObservableObject, Identifiable {
         self.track = track
         player.setRemote(remote)
         player.playTrack(track)
+        playButtonData = ("Pause", "pause")
     }
     
     func restartTapped() {
         player.playTrack(track)
+    }
+    
+    func playToggled() {
+        if player.isPaused {
+            player.resume()
+            playButtonData = ("Pause", "pause")
+        } else {
+            player.pause()
+            playButtonData = ("Play", "play")
+        }
     }
     
     //MARK: Computed properties
