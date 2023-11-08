@@ -9,10 +9,28 @@ import Foundation
 import CoreAudioKit
 import SpotifyiOS
 
-class PlayerManager {
+protocol PlayerManagerProtocol {
+    func setRemote(_ remote: SPTAppRemote)
+    func playTrack(_ track: Track, for duration: TimeInterval?)
+    func playTrack(_ track: Track)
+    func pause()
+    func resume()
+    
+    var isPaused: Bool { get }
+    var isCountingInPublisher: Published<Bool>.Publisher { get }
+}
+
+extension PlayerManagerProtocol {
+    func playTrack(_ track: Track) {
+        playTrack(track, for: nil)
+    }
+}
+
+class PlayerManager: PlayerManagerProtocol {
         
     @Published var isCountingIn: Bool = false
-    
+    var isCountingInPublisher: Published<Bool>.Publisher { $isCountingIn } //Work-around
+
     private var spotifyRemote: SPTAppRemote?
     private var stopPlaybackTask: DispatchWorkItem?
     private var currentTrack: Track?
@@ -26,7 +44,7 @@ class PlayerManager {
         self.spotifyRemote = remote
     }
     
-    func playTrack(_ track: Track, for duration: TimeInterval? = nil) {
+    func playTrack(_ track: Track, for duration: TimeInterval?) {
         guard let remote = spotifyRemote, remote.isConnected,
                 let playerAPI = remote.playerAPI, !isCountingIn else {
             return

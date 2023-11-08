@@ -121,6 +121,7 @@ struct TrackDetailsView: View {
 struct TrackDetailsView_Previews: PreviewProvider {
     static var previews: some View {
         let viewModel = TrackDetailsViewModel(track: .previewContent,
+                                              player: PlayerManager(),
                                               service: MockSpotifyService())
         TrackDetailsView(viewModel: viewModel,
                          path: .constant(NavigationPath())).environmentObject(TrackStore())

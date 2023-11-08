@@ -50,7 +50,7 @@ struct AddTrackView: View {
             Section {
                 ForEach(items) { track in
                     NavigationLink<TrackRowView, TrackDetailsView> {
-                        TrackDetailsView(viewModel: TrackDetailsViewModel(track: track, service: SpotifyService()), path: $path)
+                        TrackDetailsView(viewModel: TrackDetailsViewModel(track: track), path: $path)
                     } label: {
                         TrackRowView(viewModel: TrackRowViewModel(track: track))
                     }

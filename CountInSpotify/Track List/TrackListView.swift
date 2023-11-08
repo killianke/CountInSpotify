@@ -111,7 +111,7 @@ struct TrackListView: View {
             let viewModel = AddTrackViewModel(service: SpotifyService())
             return AddTrackView(path: $path, viewModel: viewModel).eraseToAnyView()
         case .editTrack(track: let track):
-            let viewModel = TrackDetailsViewModel(track: track, service: SpotifyService(), isEditing: true)
+            let viewModel = TrackDetailsViewModel(track: track, isEditing: true)
             return TrackDetailsView(viewModel: viewModel, path: $path).eraseToAnyView()
         }
     }

@@ -25,7 +25,6 @@ class TrackDetailsViewModel: NSObject, ObservableObject, SPTAppRemoteDelegate {
     
     private var track: Track
     private var store: TrackStoreProtocol!
-    private var spotifyRemote: SPTAppRemote?
     private var progressTimer: Timer?
     
     private lazy var numberFormatter = NumberFormatter()
@@ -39,7 +38,7 @@ class TrackDetailsViewModel: NSObject, ObservableObject, SPTAppRemoteDelegate {
     
     private let editing: Bool
     private let service: SpotifyServiceable
-    private let player = PlayerManager()
+    private let player: PlayerManagerProtocol
     private let maxCountInBars: Int = 4
     private let bpmIncrement: Double = 0.1
     private let lowerBPMLimit: Double = 30
@@ -47,11 +46,18 @@ class TrackDetailsViewModel: NSObject, ObservableObject, SPTAppRemoteDelegate {
     private let startTimeIncrement: Double = 0.1
     private let sampleDuration: TimeInterval = 10.0
 
-    init(track: Track, service: SpotifyServiceable, isEditing: Bool = false) {
+    init(track: Track,
+         isEditing: Bool = false,
+         player: PlayerManagerProtocol = PlayerManager(),
+         service: SpotifyServiceable = SpotifyService()) {
+        
         self.editing = isEditing
         self.track = track
+        self.player = player
         self.service = service
+        
         super.init()
+        
         setInitialState(for: track)
         fetchTrackInfo()
         SpotifyConnectionManager.shared.remoteDelegate = self
@@ -241,7 +247,6 @@ class TrackDetailsViewModel: NSObject, ObservableObject, SPTAppRemoteDelegate {
     //MARK: SPTAppRemoteDelegate
 
     func appRemoteDidEstablishConnection(_ appRemote: SPTAppRemote) {
-        self.spotifyRemote = appRemote
         player.setRemote(appRemote)
     }
 

@@ -14,15 +14,20 @@ class NowPlayingViewModel: ObservableObject, Identifiable {
     @Published var playButtonData: (title: String, image: String)
     
     private let track: Track
-    private let player = PlayerManager()
+    private let player: PlayerManagerProtocol
 
-    init(track: Track, remote: SPTAppRemote) {
+    init(track: Track,
+         remote: SPTAppRemote,
+         player: PlayerManagerProtocol = PlayerManager()) {
+        
         self.track = track
+        self.player = player
+        
         player.setRemote(remote)
         player.playTrack(track)
         playButtonData = ("Pause", "pause")
         
-        player.$isCountingIn.assign(to: &$playButtonDisabled)
+        player.isCountingInPublisher.assign(to: &$playButtonDisabled)
     }
     
     func restartTapped() {
