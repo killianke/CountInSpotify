@@ -16,6 +16,7 @@ struct TrackDetailsView: View {
     var body: some View {
         ZStack {
             BackgroundGradientView()
+            
             VStack(spacing: 16) {
                 TrackInfoView(viewModel: viewModel.trackInfoViewModel)
                 
@@ -34,7 +35,13 @@ struct TrackDetailsView: View {
             }
             .frame(maxHeight: .infinity, alignment: .bottom)
             .padding(16)
-
+            
+            if viewModel.presentAppStore {
+                StoreView(
+                    showStoreView: $viewModel.presentAppStore,
+                    appId: viewModel.appStoreListingId
+                )
+            }
         }
         .errorAlert(error: $viewModel.error)
         .onAppear {

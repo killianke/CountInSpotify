@@ -22,7 +22,10 @@ class TrackDetailsViewModel: NSObject, ObservableObject, SpotifyConnectionDelega
             track.startTime = trackStartTime
         }
     }
+    @Published var presentAppStore: Bool = false
     
+    let appStoreListingId = "\(SPTAppRemote.spotifyItunesItemIdentifier())"
+
     private var track: Track
     private var store: TrackStoreProtocol!
     private var progressTimer: Timer?
@@ -259,7 +262,7 @@ class TrackDetailsViewModel: NSObject, ObservableObject, SpotifyConnectionDelega
     }
     
     func spotifyAppNotInstalled() {
-        //TODO: Implement
+        presentAppStore = true
     }
 }
 
