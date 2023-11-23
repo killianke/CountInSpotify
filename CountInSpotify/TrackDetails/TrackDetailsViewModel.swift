@@ -8,7 +8,7 @@
 import Foundation
 import SpotifyiOS
 
-class TrackDetailsViewModel: NSObject, ObservableObject, SPTAppRemoteDelegate {
+class TrackDetailsViewModel: NSObject, ObservableObject, SpotifyConnectionDelegate {
     
     @Published var error: Error?
     @Published var userInteractionDisabled: Bool = true
@@ -256,6 +256,10 @@ class TrackDetailsViewModel: NSObject, ObservableObject, SPTAppRemoteDelegate {
 
     func appRemote(_ appRemote: SPTAppRemote, didDisconnectWithError error: Error?) {
         self.error = error
+    }
+    
+    func spotifyAppNotInstalled() {
+        //TODO: Implement
     }
 }
 

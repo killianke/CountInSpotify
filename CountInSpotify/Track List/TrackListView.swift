@@ -59,6 +59,12 @@ struct TrackListView: View {
         .sheet(item: $viewModel.nowPlayingViewModel) { viewModel in
             NowPlayingView(viewModel: viewModel)
         }
+        .sheet(isPresented: $viewModel.presentAppStore) {
+            StoreView(
+                showStoreView: $viewModel.presentAppStore,
+                appId: viewModel.appStoreListingId
+            )
+        }.background(Color.clear)
         .errorAlert(error: $viewModel.error)
     }
     

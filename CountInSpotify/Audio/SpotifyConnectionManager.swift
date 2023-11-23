@@ -8,6 +8,10 @@
 import Foundation
 import SpotifyiOS
 
+protocol SpotifyConnectionDelegate: SPTAppRemoteDelegate {
+    func spotifyAppNotInstalled()
+}
+
 final class SpotifyConnectionManager: NSObject, SPTAppRemoteDelegate {
     
     static let shared = SpotifyConnectionManager()
@@ -18,7 +22,7 @@ final class SpotifyConnectionManager: NSObject, SPTAppRemoteDelegate {
     }()
     private let maxAuthRetryCount = 1
 
-    weak var remoteDelegate: SPTAppRemoteDelegate?
+    weak var remoteDelegate: SpotifyConnectionDelegate?
     private var authRetryCount = 0
     
     private override init() {
@@ -58,11 +62,15 @@ final class SpotifyConnectionManager: NSObject, SPTAppRemoteDelegate {
     }
     
     private func authorizeWithRequiredScope() {
-        self.remote.authorizeAndPlayURI(
+        let appInstalled = self.remote.authorizeAndPlayURI(
             Constants.spotifySilentTrackId,
             asRadio: false,
             additionalScopes: ["user-top-read"]
         )
+        
+        if !appInstalled {
+            remoteDelegate?.spotifyAppNotInstalled()
+        }
     }
 
     //MARK: - SPTAppRemoteDelegate

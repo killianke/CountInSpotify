@@ -9,10 +9,13 @@ import Foundation
 import CoreAudioKit
 import SpotifyiOS
 
-class TrackListViewModel: NSObject, ObservableObject, SPTAppRemoteDelegate {
+class TrackListViewModel: NSObject, ObservableObject, SpotifyConnectionDelegate {
     
     @Published var error: Error?
     @Published var nowPlayingViewModel: NowPlayingViewModel?
+    @Published var presentAppStore: Bool = false
+    
+    let appStoreListingId = "\(SPTAppRemote.spotifyItunesItemIdentifier())"
     
     private var spotifyRemote: SPTAppRemote
     private var store: TrackStoreProtocol!
@@ -47,5 +50,9 @@ class TrackListViewModel: NSObject, ObservableObject, SPTAppRemoteDelegate {
 
     func appRemote(_ appRemote: SPTAppRemote, didDisconnectWithError error: Error?) {
         self.error = error
+    }
+    
+    func spotifyAppNotInstalled() {
+        presentAppStore = true
     }
 }
