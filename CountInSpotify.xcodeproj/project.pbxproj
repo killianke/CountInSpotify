@@ -56,6 +56,7 @@
 		AC9024F82ACFB4AB007EE9A1 /* ViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9024F72ACFB4AB007EE9A1 /* ViewExtensions.swift */; };
 		AC9024FA2AD0101A007EE9A1 /* TracksStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9024F92AD0101A007EE9A1 /* TracksStore.swift */; };
 		ACA8AF782AF328AF009EA479 /* MockSpotifyService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACA8AF772AF328AF009EA479 /* MockSpotifyService.swift */; };
+		ACEDB0BF2B0D80410024DB3D /* StoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACEDB0BE2B0D80410024DB3D /* StoreView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -143,6 +144,7 @@
 		AC9024F72ACFB4AB007EE9A1 /* ViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExtensions.swift; sourceTree = "<group>"; };
 		AC9024F92AD0101A007EE9A1 /* TracksStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TracksStore.swift; sourceTree = "<group>"; };
 		ACA8AF772AF328AF009EA479 /* MockSpotifyService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockSpotifyService.swift; sourceTree = "<group>"; };
+		ACEDB0BE2B0D80410024DB3D /* StoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -205,8 +207,8 @@
 		AC59684E2ABA96E80067B0D9 /* CountInSpotify */ = {
 			isa = PBXGroup;
 			children = (
-				AC51BB542AD5267A00E07AC0 /* Storage */,
 				AC59688F2AC3B6B80067B0D9 /* Assets */,
+				AC51BB542AD5267A00E07AC0 /* Storage */,
 				AC59688A2ABC3E2B0067B0D9 /* Extensions */,
 				AC9024A92AC6CDDD007EE9A1 /* Models */,
 				AC9024B42AC95580007EE9A1 /* Networking */,
@@ -369,6 +371,7 @@
 				AC8FF2A82ADF8FFE00C8226A /* CircularProgressView.swift */,
 				AC8FF2AC2AE92FF000C8226A /* LoadingIndicatorView.swift */,
 				AC355B892AF9FCB3000CE340 /* BackgroundGradientView.swift */,
+				ACEDB0BE2B0D80410024DB3D /* StoreView.swift */,
 			);
 			path = SharedViews;
 			sourceTree = "<group>";
@@ -560,6 +563,7 @@
 				AC8FF2A92ADF8FFE00C8226A /* CircularProgressView.swift in Sources */,
 				AC9024CA2ACA8492007EE9A1 /* RequestError.swift in Sources */,
 				AC9024C82ACA8492007EE9A1 /* HTTPMethod.swift in Sources */,
+				ACEDB0BF2B0D80410024DB3D /* StoreView.swift in Sources */,
 				AC9024DC2ACABE3B007EE9A1 /* ViewController.swift in Sources */,
 				AC5968862ABA9F210067B0D9 /* Constants.swift in Sources */,
 				AC8FF2A02ADE057900C8226A /* NowPlayingViewModel.swift in Sources */,
