@@ -42,4 +42,11 @@ class TrackInfoViewModel {
         }
         return URL(string: imageObject.url)
     }
+    
+    func spotifyAttributionTapped() {
+        if let url = URL(string: track.uri),
+            UIApplication.shared.canOpenURL(url) {
+            UIApplication.shared.open(url)
+        }
+    }
 }

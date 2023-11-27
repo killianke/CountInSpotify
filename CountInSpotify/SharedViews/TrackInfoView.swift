@@ -24,7 +24,7 @@ struct TrackInfoView: View {
                 Text(viewModel.artistsString).font(.body)
                 Text(viewModel.albumString).font(.body)
                 Button {
-                    print("Spotify selected")
+                    viewModel.spotifyAttributionTapped()
                 } label: {
                     Image("Spotify_Logo_RGB_White")
                         .resizable()
