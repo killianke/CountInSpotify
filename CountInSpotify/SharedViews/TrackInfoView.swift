@@ -11,7 +11,13 @@ struct TrackInfoView: View {
     let viewModel: TrackInfoViewModel
 
     var body: some View {
-        VStack(alignment: .leading) {
+        VStack(alignment: .center) {
+            Image("Spotify_Logo_RGB_White")
+                .resizable()
+                .aspectRatio(contentMode: .fit)
+                .frame(maxHeight: 24)
+                .padding(.bottom, 12)
+            
             AsyncImage(url: viewModel.imageURL) { image in
                 image.resizable()
             } placeholder: {
@@ -19,9 +25,13 @@ struct TrackInfoView: View {
             }
             .aspectRatio(contentMode: .fit)
             
-            Text(viewModel.nameString).font(.title2).fontWeight(.semibold)
-            Text(viewModel.artistsString).font(.body)
-            Text(viewModel.albumString).font(.body)
+            VStack(alignment: .leading) {
+                Text(viewModel.nameString).font(.title2).fontWeight(.semibold)
+                Text(viewModel.artistsString).font(.body)
+                Text(viewModel.albumString).font(.body)
+            }
+            .padding([.leading, .trailing], 16)
+            .frame(maxWidth: .infinity, alignment: .leading)
         }
         .foregroundColor(.white)
     }
@@ -29,6 +39,9 @@ struct TrackInfoView: View {
 
 struct TrackInfoView_Previews: PreviewProvider {
     static var previews: some View {
-        TrackInfoView(viewModel: TrackInfoViewModel(track: .previewContent))
+        ZStack {
+            Color.teal
+            TrackInfoView(viewModel: TrackInfoViewModel(track: .previewContent))
+        }
     }
 }
