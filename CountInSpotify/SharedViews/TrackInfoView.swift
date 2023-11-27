@@ -12,12 +12,6 @@ struct TrackInfoView: View {
 
     var body: some View {
         VStack(alignment: .center) {
-            Image("Spotify_Logo_RGB_White")
-                .resizable()
-                .aspectRatio(contentMode: .fit)
-                .frame(maxHeight: 24)
-                .padding(.bottom, 12)
-            
             AsyncImage(url: viewModel.imageURL) { image in
                 image.resizable()
             } placeholder: {
@@ -29,6 +23,14 @@ struct TrackInfoView: View {
                 Text(viewModel.nameString).font(.title2).fontWeight(.semibold)
                 Text(viewModel.artistsString).font(.body)
                 Text(viewModel.albumString).font(.body)
+                Button {
+                    print("Spotify selected")
+                } label: {
+                    Image("Spotify_Logo_RGB_White")
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .frame(maxHeight: 20)
+                }
             }
             .padding([.leading, .trailing], 16)
             .frame(maxWidth: .infinity, alignment: .leading)

@@ -19,9 +19,7 @@ struct TrackDetailsView: View {
             
             VStack(spacing: 16) {
                 TrackInfoView(viewModel: viewModel.trackInfoViewModel)
-                
-                Spacer()
-                
+                                
                 trackSettingsView
                 
                 Spacer()
