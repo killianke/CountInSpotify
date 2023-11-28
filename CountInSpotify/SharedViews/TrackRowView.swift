@@ -35,9 +35,7 @@ struct TrackRowView: View {
 
 struct TrackRowView_Previews: PreviewProvider {
     static var previews: some View {
-        ZStack {
-            Color.white
             TrackRowView(viewModel: TrackRowViewModel(track: .previewContent))
-        }
+            .previewLayout(.sizeThatFits)
     }
 }
