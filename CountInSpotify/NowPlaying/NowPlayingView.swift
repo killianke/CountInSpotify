@@ -28,7 +28,8 @@ struct NowPlayingView: View {
                         ProgressView()
                             .tint(.white)
                     } else {
-                        Label(viewModel.playButtonData.title, systemImage: viewModel.playButtonData.image)
+                        let stringKey = LocalizedStringKey(stringLiteral: viewModel.playButtonData.title)
+                        Label(stringKey, systemImage: viewModel.playButtonData.image)
                             .font(.headline)
                             .foregroundColor(.white)
                     }

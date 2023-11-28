@@ -45,7 +45,7 @@ struct AddTrackView: View {
         .errorAlert(error: $viewModel.error)
     }
     
-    private func list(with items: [Track], headerText: String) -> some View {
+    private func list(with items: [Track], headerText: LocalizedStringKey) -> some View {
         List {
             Section {
                 ForEach(items) { track in

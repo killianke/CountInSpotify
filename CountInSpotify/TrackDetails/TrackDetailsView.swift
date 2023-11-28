@@ -28,7 +28,7 @@ struct TrackDetailsView: View {
                     viewModel.didTapActionButton()
                     path.removeLast()
                 } label: {
-                    buttonLabel(title: viewModel.actionButtonTitle)
+                    buttonLabel(title: LocalizedStringKey(stringLiteral: viewModel.actionButtonTitle))
                 }.modifier(Style.Modifiers.FullWidthButton(userInteractionDisabled: viewModel.userInteractionDisabled))
             }
             .frame(maxHeight: .infinity, alignment: .bottom)
@@ -112,7 +112,7 @@ struct TrackDetailsView: View {
     }
     
     @ViewBuilder
-    private func buttonLabel(title: String) -> some View {
+    private func buttonLabel(title: LocalizedStringKey) -> some View {
         if viewModel.userInteractionDisabled {
             ProgressView()
         } else {
