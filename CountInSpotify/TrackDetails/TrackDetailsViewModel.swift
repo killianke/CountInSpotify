@@ -26,7 +26,7 @@ class TrackDetailsViewModel: NSObject, ObservableObject, SpotifyConnectionDelega
     
     let appStoreListingId = "\(SPTAppRemote.spotifyItunesItemIdentifier())"
 
-    private var track: Track
+    private(set) var track: Track
     private var store: TrackStoreProtocol!
     private var progressTimer: Timer?
     
@@ -123,13 +123,15 @@ class TrackDetailsViewModel: NSObject, ObservableObject, SpotifyConnectionDelega
 
     func incrementBPM() {
         if let bpm = track.bpm, bpm < upperBPMLimit {
-            updateBPM(to: bpm + bpmIncrement)
+            let incrementedBPM = bpm + bpmIncrement
+            updateBPM(to: incrementedBPM.round(nearest: bpmIncrement))
         }
     }
 
     func decrementBPM() {
         if let bpm = track.bpm, bpm > lowerBPMLimit {
-            updateBPM(to: bpm - bpmIncrement)
+            let incrementedBPM = bpm - bpmIncrement
+            updateBPM(to: incrementedBPM.round(nearest: bpmIncrement))
         }
     }
     
@@ -140,7 +142,7 @@ class TrackDetailsViewModel: NSObject, ObservableObject, SpotifyConnectionDelega
 
     func decrementStartTime() {
         let decrementedTime = trackStartTime - startTimeIncrement
-        if trackStartTime > startTimeIncrement {
+        if trackStartTime >= startTimeIncrement {
             updateStartTime(to: decrementedTime.round(nearest: startTimeIncrement))
         }
     }
@@ -154,11 +156,16 @@ class TrackDetailsViewModel: NSObject, ObservableObject, SpotifyConnectionDelega
         let totalDuration = countInDuration + sampleDuration
         
         player.playTrack(track, for: totalDuration)
+        
+        incrementProgress(for: totalDuration)
+    }
+    
+    func incrementProgress(for duration: TimeInterval) {
         sampleProgress = 0
         progressTimer?.invalidate()
         
         let timeInterval = 0.1
-        let progressInterval = 1 / (totalDuration / timeInterval)
+        let progressInterval = 1 / (duration / timeInterval)
         progressTimer = Timer.scheduledTimer(withTimeInterval: timeInterval, repeats: true) { timer in
             self.sampleProgress += progressInterval
             if self.sampleProgress >= 1 {

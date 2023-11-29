@@ -14,7 +14,6 @@
 		AC5968522ABA96E80067B0D9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5968512ABA96E80067B0D9 /* SceneDelegate.swift */; };
 		AC5968592ABA96EB0067B0D9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC5968582ABA96EB0067B0D9 /* Assets.xcassets */; };
 		AC59685C2ABA96EB0067B0D9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC59685A2ABA96EB0067B0D9 /* LaunchScreen.storyboard */; };
-		AC5968672ABA96EB0067B0D9 /* CountInSpotifyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5968662ABA96EB0067B0D9 /* CountInSpotifyTests.swift */; };
 		AC5968712ABA96EB0067B0D9 /* CountInSpotifyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5968702ABA96EB0067B0D9 /* CountInSpotifyUITests.swift */; };
 		AC5968732ABA96EC0067B0D9 /* CountInSpotifyUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5968722ABA96EC0067B0D9 /* CountInSpotifyUITestsLaunchTests.swift */; };
 		AC5968862ABA9F210067B0D9 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5968852ABA9F210067B0D9 /* Constants.swift */; };
@@ -22,6 +21,9 @@
 		AC5968882ABAA0A50067B0D9 /* SpotifyiOS.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AC59687F2ABA996E0067B0D9 /* SpotifyiOS.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		AC59688C2ABC3E440067B0D9 /* UserDefaultsExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC59688B2ABC3E440067B0D9 /* UserDefaultsExtensions.swift */; };
 		AC59688E2AC3A9300067B0D9 /* SpotifyConnectionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC59688D2AC3A9300067B0D9 /* SpotifyConnectionManager.swift */; };
+		AC7D0A772B16BEC900BDB7EB /* TrackDetailsViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC7D0A762B16BEC900BDB7EB /* TrackDetailsViewModelTests.swift */; };
+		AC7D0A7A2B16C33C00BDB7EB /* MockPlayerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC7D0A792B16C33C00BDB7EB /* MockPlayerManager.swift */; };
+		AC7D0A7C2B16EA4B00BDB7EB /* MockTrackStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC7D0A7B2B16EA4B00BDB7EB /* MockTrackStore.swift */; };
 		AC8FF2992ADD4E0000C8226A /* Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8FF2982ADD4E0000C8226A /* Style.swift */; };
 		AC8FF29E2ADE056700C8226A /* NowPlayingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8FF29D2ADE056700C8226A /* NowPlayingView.swift */; };
 		AC8FF2A02ADE057900C8226A /* NowPlayingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8FF29F2ADE057900C8226A /* NowPlayingViewModel.swift */; };
@@ -101,7 +103,6 @@
 		AC59685B2ABA96EB0067B0D9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AC59685D2ABA96EB0067B0D9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AC5968622ABA96EB0067B0D9 /* CountInSpotifyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CountInSpotifyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		AC5968662ABA96EB0067B0D9 /* CountInSpotifyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountInSpotifyTests.swift; sourceTree = "<group>"; };
 		AC59686C2ABA96EB0067B0D9 /* CountInSpotifyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CountInSpotifyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC5968702ABA96EB0067B0D9 /* CountInSpotifyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountInSpotifyUITests.swift; sourceTree = "<group>"; };
 		AC5968722ABA96EC0067B0D9 /* CountInSpotifyUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountInSpotifyUITestsLaunchTests.swift; sourceTree = "<group>"; };
@@ -110,6 +111,9 @@
 		AC5968852ABA9F210067B0D9 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		AC59688B2ABC3E440067B0D9 /* UserDefaultsExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsExtensions.swift; sourceTree = "<group>"; };
 		AC59688D2AC3A9300067B0D9 /* SpotifyConnectionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotifyConnectionManager.swift; sourceTree = "<group>"; };
+		AC7D0A762B16BEC900BDB7EB /* TrackDetailsViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackDetailsViewModelTests.swift; sourceTree = "<group>"; };
+		AC7D0A792B16C33C00BDB7EB /* MockPlayerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockPlayerManager.swift; sourceTree = "<group>"; };
+		AC7D0A7B2B16EA4B00BDB7EB /* MockTrackStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockTrackStore.swift; sourceTree = "<group>"; };
 		AC8FF2982ADD4E0000C8226A /* Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Style.swift; sourceTree = "<group>"; };
 		AC8FF29D2ADE056700C8226A /* NowPlayingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NowPlayingView.swift; sourceTree = "<group>"; };
 		AC8FF29F2ADE057900C8226A /* NowPlayingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NowPlayingViewModel.swift; sourceTree = "<group>"; };
@@ -234,7 +238,8 @@
 		AC5968652ABA96EB0067B0D9 /* CountInSpotifyTests */ = {
 			isa = PBXGroup;
 			children = (
-				AC5968662ABA96EB0067B0D9 /* CountInSpotifyTests.swift */,
+				AC7D0A762B16BEC900BDB7EB /* TrackDetailsViewModelTests.swift */,
+				AC7D0A782B16C31800BDB7EB /* Mocks */,
 			);
 			path = CountInSpotifyTests;
 			sourceTree = "<group>";
@@ -272,6 +277,15 @@
 				AC9024A52AC67F8E007EE9A1 /* sound2.wav */,
 			);
 			path = Assets;
+			sourceTree = "<group>";
+		};
+		AC7D0A782B16C31800BDB7EB /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				AC7D0A792B16C33C00BDB7EB /* MockPlayerManager.swift */,
+				AC7D0A7B2B16EA4B00BDB7EB /* MockTrackStore.swift */,
+			);
+			path = Mocks;
 			sourceTree = "<group>";
 		};
 		AC8FF29A2ADE050F00C8226A /* NowPlaying */ = {
@@ -575,7 +589,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AC5968672ABA96EB0067B0D9 /* CountInSpotifyTests.swift in Sources */,
+				AC7D0A7C2B16EA4B00BDB7EB /* MockTrackStore.swift in Sources */,
+				AC7D0A7A2B16C33C00BDB7EB /* MockPlayerManager.swift in Sources */,
+				AC7D0A772B16BEC900BDB7EB /* TrackDetailsViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
