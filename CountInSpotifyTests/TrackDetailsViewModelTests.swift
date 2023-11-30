@@ -179,6 +179,7 @@ final class TrackDetailsViewModelTests: XCTestCase {
         testSubject.playSample()
         
         XCTAssertNotNil(mockPlayer.currentlyPlayingTrack)
+        XCTAssertEqual(mockPlayer.currentlyPlayingTrack?.id, track.id)
         XCTAssertEqual(mockPlayer.limitedPlayDuration, 14)
     }
     
