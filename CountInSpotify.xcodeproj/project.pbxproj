@@ -381,10 +381,8 @@
 		AC9024E72ACE51DB007EE9A1 /* SharedViews */ = {
 			isa = PBXGroup;
 			children = (
-				AC9024E82ACE5206007EE9A1 /* TrackRowView.swift */,
-				AC9024EA2ACE5231007EE9A1 /* TrackRowViewModel.swift */,
-				AC8FF2A12ADE05A700C8226A /* TrackInfoView.swift */,
-				AC8FF2A32ADE05FB00C8226A /* TrackInfoViewModel.swift */,
+				AC9A27A12B45176A0060AA2D /* TrackRowView */,
+				AC9A27A22B45177B0060AA2D /* TrackInfoView */,
 				AC8FF2A82ADF8FFE00C8226A /* CircularProgressView.swift */,
 				AC8FF2AC2AE92FF000C8226A /* LoadingIndicatorView.swift */,
 				AC355B892AF9FCB3000CE340 /* BackgroundGradientView.swift */,
@@ -400,6 +398,24 @@
 				AC9024F32ACF80C5007EE9A1 /* TrackDetailsViewModel.swift */,
 			);
 			path = TrackDetails;
+			sourceTree = "<group>";
+		};
+		AC9A27A12B45176A0060AA2D /* TrackRowView */ = {
+			isa = PBXGroup;
+			children = (
+				AC9024E82ACE5206007EE9A1 /* TrackRowView.swift */,
+				AC9024EA2ACE5231007EE9A1 /* TrackRowViewModel.swift */,
+			);
+			path = TrackRowView;
+			sourceTree = "<group>";
+		};
+		AC9A27A22B45177B0060AA2D /* TrackInfoView */ = {
+			isa = PBXGroup;
+			children = (
+				AC8FF2A12ADE05A700C8226A /* TrackInfoView.swift */,
+				AC8FF2A32ADE05FB00C8226A /* TrackInfoViewModel.swift */,
+			);
+			path = TrackInfoView;
 			sourceTree = "<group>";
 		};
 		ACA8AF762AF32895009EA479 /* Mocks */ = {
