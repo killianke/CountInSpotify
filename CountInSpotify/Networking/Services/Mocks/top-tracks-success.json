@@ -1,0 +1,1698 @@
+{
+  "items": [
+    {
+      "album": {
+        "album_type": "ALBUM",
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/4pejUc4iciQfgdX6OKulQn"
+            },
+            "href": "https://api.spotify.com/v1/artists/4pejUc4iciQfgdX6OKulQn",
+            "id": "4pejUc4iciQfgdX6OKulQn",
+            "name": "Queens of the Stone Age",
+            "type": "artist",
+            "uri": "spotify:artist:4pejUc4iciQfgdX6OKulQn"
+          }
+        ],
+        "available_markets": [
+          "IE",
+          "NZ",
+          "US"
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/album/2ZTDmH94OLjeNaOvT7Ngwk"
+        },
+        "href": "https://api.spotify.com/v1/albums/2ZTDmH94OLjeNaOvT7Ngwk",
+        "id": "2ZTDmH94OLjeNaOvT7Ngwk",
+        "images": [
+          {
+            "height": 640,
+            "url": "https://i.scdn.co/image/ab67616d0000b273df1999f84b4c1981ba570d17",
+            "width": 640
+          },
+          {
+            "height": 300,
+            "url": "https://i.scdn.co/image/ab67616d00001e02df1999f84b4c1981ba570d17",
+            "width": 300
+          },
+          {
+            "height": 64,
+            "url": "https://i.scdn.co/image/ab67616d00004851df1999f84b4c1981ba570d17",
+            "width": 64
+          }
+        ],
+        "name": "In Times New Roman...",
+        "release_date": "2023-06-16",
+        "release_date_precision": "day",
+        "total_tracks": 10,
+        "type": "album",
+        "uri": "spotify:album:2ZTDmH94OLjeNaOvT7Ngwk"
+      },
+      "artists": [
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/4pejUc4iciQfgdX6OKulQn"
+          },
+          "href": "https://api.spotify.com/v1/artists/4pejUc4iciQfgdX6OKulQn",
+          "id": "4pejUc4iciQfgdX6OKulQn",
+          "name": "Queens of the Stone Age",
+          "type": "artist",
+          "uri": "spotify:artist:4pejUc4iciQfgdX6OKulQn"
+        }
+      ],
+      "available_markets": [
+        "IE",
+        "NZ",
+        "US"
+      ],
+      "disc_number": 1,
+      "duration_ms": 318851,
+      "explicit": true,
+      "external_ids": {
+        "isrc": "USMTD2200632"
+      },
+      "external_urls": {
+        "spotify": "https://open.spotify.com/track/6MDDZHn6rkbrziCNlcPQFT"
+      },
+      "href": "https://api.spotify.com/v1/tracks/6MDDZHn6rkbrziCNlcPQFT",
+      "id": "6MDDZHn6rkbrziCNlcPQFT",
+      "is_local": false,
+      "name": "Made to Parade",
+      "popularity": 52,
+      "preview_url": "https://p.scdn.co/mp3-preview/feced476fcba8a4147b976369c9e88f12878366b?cid=0ad54630510047d288157ea602078764",
+      "track_number": 5,
+      "type": "track",
+      "uri": "spotify:track:6MDDZHn6rkbrziCNlcPQFT"
+    },
+    {
+      "album": {
+        "album_type": "ALBUM",
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/22bE4uQ6baNwSHPVcDxLCe"
+            },
+            "href": "https://api.spotify.com/v1/artists/22bE4uQ6baNwSHPVcDxLCe",
+            "id": "22bE4uQ6baNwSHPVcDxLCe",
+            "name": "The Rolling Stones",
+            "type": "artist",
+            "uri": "spotify:artist:22bE4uQ6baNwSHPVcDxLCe"
+          }
+        ],
+        "available_markets": [
+          "IE",
+          "NZ",
+          "US"
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/album/29m6DinzdaD0OPqWKGyMdz"
+        },
+        "href": "https://api.spotify.com/v1/albums/29m6DinzdaD0OPqWKGyMdz",
+        "id": "29m6DinzdaD0OPqWKGyMdz",
+        "images": [
+          {
+            "height": 640,
+            "url": "https://i.scdn.co/image/ab67616d0000b273a1d9c9969f2a7ed27e449a3c",
+            "width": 640
+          },
+          {
+            "height": 300,
+            "url": "https://i.scdn.co/image/ab67616d00001e02a1d9c9969f2a7ed27e449a3c",
+            "width": 300
+          },
+          {
+            "height": 64,
+            "url": "https://i.scdn.co/image/ab67616d00004851a1d9c9969f2a7ed27e449a3c",
+            "width": 64
+          }
+        ],
+        "name": "Sticky Fingers (Remastered)",
+        "release_date": "1971-04-23",
+        "release_date_precision": "day",
+        "total_tracks": 10,
+        "type": "album",
+        "uri": "spotify:album:29m6DinzdaD0OPqWKGyMdz"
+      },
+      "artists": [
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/22bE4uQ6baNwSHPVcDxLCe"
+          },
+          "href": "https://api.spotify.com/v1/artists/22bE4uQ6baNwSHPVcDxLCe",
+          "id": "22bE4uQ6baNwSHPVcDxLCe",
+          "name": "The Rolling Stones",
+          "type": "artist",
+          "uri": "spotify:artist:22bE4uQ6baNwSHPVcDxLCe"
+        }
+      ],
+      "available_markets": [
+        "IE",
+        "NZ",
+        "US"
+      ],
+      "disc_number": 1,
+      "duration_ms": 228666,
+      "explicit": false,
+      "external_ids": {
+        "isrc": "GBUM70909464"
+      },
+      "external_urls": {
+        "spotify": "https://open.spotify.com/track/61UuPxxYUvacEH6SHIK3sU"
+      },
+      "href": "https://api.spotify.com/v1/tracks/61UuPxxYUvacEH6SHIK3sU",
+      "id": "61UuPxxYUvacEH6SHIK3sU",
+      "is_local": false,
+      "name": "Brown Sugar - Remastered 2009",
+      "popularity": 68,
+      "preview_url": "https://p.scdn.co/mp3-preview/e8b678401beb3949b176617a9a0406389b211223?cid=0ad54630510047d288157ea602078764",
+      "track_number": 1,
+      "type": "track",
+      "uri": "spotify:track:61UuPxxYUvacEH6SHIK3sU"
+    },
+    {
+      "album": {
+        "album_type": "ALBUM",
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/3qm84nBOXUEQ2vnTfUTTFC"
+            },
+            "href": "https://api.spotify.com/v1/artists/3qm84nBOXUEQ2vnTfUTTFC",
+            "id": "3qm84nBOXUEQ2vnTfUTTFC",
+            "name": "Guns N' Roses",
+            "type": "artist",
+            "uri": "spotify:artist:3qm84nBOXUEQ2vnTfUTTFC"
+          }
+        ],
+        "available_markets": [
+          "IE",
+          "NZ",
+          "US"
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/album/3edmYBHOTxfz8NxJE1QmTP"
+        },
+        "href": "https://api.spotify.com/v1/albums/3edmYBHOTxfz8NxJE1QmTP",
+        "id": "3edmYBHOTxfz8NxJE1QmTP",
+        "images": [
+          {
+            "height": 640,
+            "url": "https://i.scdn.co/image/ab67616d0000b2737e1774622a9c5f52b7dd1c33",
+            "width": 640
+          },
+          {
+            "height": 300,
+            "url": "https://i.scdn.co/image/ab67616d00001e027e1774622a9c5f52b7dd1c33",
+            "width": 300
+          },
+          {
+            "height": 64,
+            "url": "https://i.scdn.co/image/ab67616d000048517e1774622a9c5f52b7dd1c33",
+            "width": 64
+          }
+        ],
+        "name": "Appetite For Destruction (Super Deluxe Edition)",
+        "release_date": "1987-07-21",
+        "release_date_precision": "day",
+        "total_tracks": 51,
+        "type": "album",
+        "uri": "spotify:album:3edmYBHOTxfz8NxJE1QmTP"
+      },
+      "artists": [
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/3qm84nBOXUEQ2vnTfUTTFC"
+          },
+          "href": "https://api.spotify.com/v1/artists/3qm84nBOXUEQ2vnTfUTTFC",
+          "id": "3qm84nBOXUEQ2vnTfUTTFC",
+          "name": "Guns N' Roses",
+          "type": "artist",
+          "uri": "spotify:artist:3qm84nBOXUEQ2vnTfUTTFC"
+        }
+      ],
+      "available_markets": [
+        "IE",
+        "NZ",
+        "US"
+      ],
+      "disc_number": 2,
+      "duration_ms": 354880,
+      "explicit": true,
+      "external_ids": {
+        "isrc": "USGF18819805"
+      },
+      "external_urls": {
+        "spotify": "https://open.spotify.com/track/1OEoNpiyqBghuEUaT6Je6U"
+      },
+      "href": "https://api.spotify.com/v1/tracks/1OEoNpiyqBghuEUaT6Je6U",
+      "id": "1OEoNpiyqBghuEUaT6Je6U",
+      "is_local": false,
+      "name": "Patience",
+      "popularity": 73,
+      "preview_url": "https://p.scdn.co/mp3-preview/aa518333649e885035d7ce62b6a78eac7205cb9d?cid=0ad54630510047d288157ea602078764",
+      "track_number": 7,
+      "type": "track",
+      "uri": "spotify:track:1OEoNpiyqBghuEUaT6Je6U"
+    },
+    {
+      "album": {
+        "album_type": "SINGLE",
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/3zmfs9cQwzJl575W1ZYXeT"
+            },
+            "href": "https://api.spotify.com/v1/artists/3zmfs9cQwzJl575W1ZYXeT",
+            "id": "3zmfs9cQwzJl575W1ZYXeT",
+            "name": "Men I Trust",
+            "type": "artist",
+            "uri": "spotify:artist:3zmfs9cQwzJl575W1ZYXeT"
+          }
+        ],
+        "available_markets": [
+          "IE",
+          "NZ",
+          "US"
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/album/0FpoXXhnwamDJbLSWLRgvN"
+        },
+        "href": "https://api.spotify.com/v1/albums/0FpoXXhnwamDJbLSWLRgvN",
+        "id": "0FpoXXhnwamDJbLSWLRgvN",
+        "images": [
+          {
+            "height": 640,
+            "url": "https://i.scdn.co/image/ab67616d0000b273d656b18c4468ee151d885b81",
+            "width": 640
+          },
+          {
+            "height": 300,
+            "url": "https://i.scdn.co/image/ab67616d00001e02d656b18c4468ee151d885b81",
+            "width": 300
+          },
+          {
+            "height": 64,
+            "url": "https://i.scdn.co/image/ab67616d00004851d656b18c4468ee151d885b81",
+            "width": 64
+          }
+        ],
+        "name": "Billie Toppy",
+        "release_date": "2022-09-28",
+        "release_date_precision": "day",
+        "total_tracks": 1,
+        "type": "album",
+        "uri": "spotify:album:0FpoXXhnwamDJbLSWLRgvN"
+      },
+      "artists": [
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/3zmfs9cQwzJl575W1ZYXeT"
+          },
+          "href": "https://api.spotify.com/v1/artists/3zmfs9cQwzJl575W1ZYXeT",
+          "id": "3zmfs9cQwzJl575W1ZYXeT",
+          "name": "Men I Trust",
+          "type": "artist",
+          "uri": "spotify:artist:3zmfs9cQwzJl575W1ZYXeT"
+        }
+      ],
+      "available_markets": [
+        "IE",
+        "NZ",
+        "US"
+      ],
+      "disc_number": 1,
+      "duration_ms": 195289,
+      "explicit": false,
+      "external_ids": {
+        "isrc": "QZNWX2227540"
+      },
+      "external_urls": {
+        "spotify": "https://open.spotify.com/track/5jyj2XKWILHQxDoz59ddCT"
+      },
+      "href": "https://api.spotify.com/v1/tracks/5jyj2XKWILHQxDoz59ddCT",
+      "id": "5jyj2XKWILHQxDoz59ddCT",
+      "is_local": false,
+      "name": "Billie Toppy",
+      "popularity": 63,
+      "preview_url": "https://p.scdn.co/mp3-preview/c6de1ae1cbddfc776328d9611e784f5aed23f383?cid=0ad54630510047d288157ea602078764",
+      "track_number": 1,
+      "type": "track",
+      "uri": "spotify:track:5jyj2XKWILHQxDoz59ddCT"
+    },
+    {
+      "album": {
+        "album_type": "SINGLE",
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/45dkTj5sMRSjrmBSBeiHym"
+            },
+            "href": "https://api.spotify.com/v1/artists/45dkTj5sMRSjrmBSBeiHym",
+            "id": "45dkTj5sMRSjrmBSBeiHym",
+            "name": "Tate McRae",
+            "type": "artist",
+            "uri": "spotify:artist:45dkTj5sMRSjrmBSBeiHym"
+          }
+        ],
+        "available_markets": [
+          "IE",
+          "NZ",
+          "US"
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/album/3UOV8XvCwMKaATRNXrYCjN"
+        },
+        "href": "https://api.spotify.com/v1/albums/3UOV8XvCwMKaATRNXrYCjN",
+        "id": "3UOV8XvCwMKaATRNXrYCjN",
+        "images": [
+          {
+            "height": 640,
+            "url": "https://i.scdn.co/image/ab67616d0000b27322fd802bc61db666c7c81aa8",
+            "width": 640
+          },
+          {
+            "height": 300,
+            "url": "https://i.scdn.co/image/ab67616d00001e0222fd802bc61db666c7c81aa8",
+            "width": 300
+          },
+          {
+            "height": 64,
+            "url": "https://i.scdn.co/image/ab67616d0000485122fd802bc61db666c7c81aa8",
+            "width": 64
+          }
+        ],
+        "name": "greedy",
+        "release_date": "2023-09-15",
+        "release_date_precision": "day",
+        "total_tracks": 1,
+        "type": "album",
+        "uri": "spotify:album:3UOV8XvCwMKaATRNXrYCjN"
+      },
+      "artists": [
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/45dkTj5sMRSjrmBSBeiHym"
+          },
+          "href": "https://api.spotify.com/v1/artists/45dkTj5sMRSjrmBSBeiHym",
+          "id": "45dkTj5sMRSjrmBSBeiHym",
+          "name": "Tate McRae",
+          "type": "artist",
+          "uri": "spotify:artist:45dkTj5sMRSjrmBSBeiHym"
+        }
+      ],
+      "available_markets": [
+        "IE",
+        "NZ",
+        "US"
+      ],
+      "disc_number": 1,
+      "duration_ms": 131872,
+      "explicit": true,
+      "external_ids": {
+        "isrc": "USRC12301932"
+      },
+      "external_urls": {
+        "spotify": "https://open.spotify.com/track/3rUGC1vUpkDG9CZFHMur1t"
+      },
+      "href": "https://api.spotify.com/v1/tracks/3rUGC1vUpkDG9CZFHMur1t",
+      "id": "3rUGC1vUpkDG9CZFHMur1t",
+      "is_local": false,
+      "name": "greedy",
+      "popularity": 98,
+      "preview_url": "https://p.scdn.co/mp3-preview/ca7bdcb691fb64a5af8a3253b89356390664fcf1?cid=0ad54630510047d288157ea602078764",
+      "track_number": 1,
+      "type": "track",
+      "uri": "spotify:track:3rUGC1vUpkDG9CZFHMur1t"
+    },
+    {
+      "album": {
+        "album_type": "ALBUM",
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/1fEwGqdphBrvv5Vx79PjUi"
+            },
+            "href": "https://api.spotify.com/v1/artists/1fEwGqdphBrvv5Vx79PjUi",
+            "id": "1fEwGqdphBrvv5Vx79PjUi",
+            "name": "The Stunning",
+            "type": "artist",
+            "uri": "spotify:artist:1fEwGqdphBrvv5Vx79PjUi"
+          }
+        ],
+        "available_markets": [
+          "IE",
+          "NZ",
+          "US"
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/album/4XTjph4BK5o2kNGfmn69G4"
+        },
+        "href": "https://api.spotify.com/v1/albums/4XTjph4BK5o2kNGfmn69G4",
+        "id": "4XTjph4BK5o2kNGfmn69G4",
+        "images": [
+          {
+            "height": 640,
+            "url": "https://i.scdn.co/image/ab67616d0000b273ae1c5d9aee0f14adf28feeed",
+            "width": 640
+          },
+          {
+            "height": 300,
+            "url": "https://i.scdn.co/image/ab67616d00001e02ae1c5d9aee0f14adf28feeed",
+            "width": 300
+          },
+          {
+            "height": 64,
+            "url": "https://i.scdn.co/image/ab67616d00004851ae1c5d9aee0f14adf28feeed",
+            "width": 64
+          }
+        ],
+        "name": "Paradise in the Picturehouse",
+        "release_date": "1990-05-09",
+        "release_date_precision": "day",
+        "total_tracks": 12,
+        "type": "album",
+        "uri": "spotify:album:4XTjph4BK5o2kNGfmn69G4"
+      },
+      "artists": [
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/1fEwGqdphBrvv5Vx79PjUi"
+          },
+          "href": "https://api.spotify.com/v1/artists/1fEwGqdphBrvv5Vx79PjUi",
+          "id": "1fEwGqdphBrvv5Vx79PjUi",
+          "name": "The Stunning",
+          "type": "artist",
+          "uri": "spotify:artist:1fEwGqdphBrvv5Vx79PjUi"
+        }
+      ],
+      "available_markets": [
+        "IE",
+        "NZ",
+        "US"
+      ],
+      "disc_number": 1,
+      "duration_ms": 206413,
+      "explicit": false,
+      "external_ids": {
+        "isrc": "IEAAK0300001"
+      },
+      "external_urls": {
+        "spotify": "https://open.spotify.com/track/7sroqRA4g1eBgjyuazSgN7"
+      },
+      "href": "https://api.spotify.com/v1/tracks/7sroqRA4g1eBgjyuazSgN7",
+      "id": "7sroqRA4g1eBgjyuazSgN7",
+      "is_local": false,
+      "name": "Brewing Up a Storm",
+      "popularity": 48,
+      "preview_url": "https://p.scdn.co/mp3-preview/cb6531b252966372dd3143f54e85f580f5c6ef39?cid=0ad54630510047d288157ea602078764",
+      "track_number": 1,
+      "type": "track",
+      "uri": "spotify:track:7sroqRA4g1eBgjyuazSgN7"
+    },
+    {
+      "album": {
+        "album_type": "ALBUM",
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/4pejUc4iciQfgdX6OKulQn"
+            },
+            "href": "https://api.spotify.com/v1/artists/4pejUc4iciQfgdX6OKulQn",
+            "id": "4pejUc4iciQfgdX6OKulQn",
+            "name": "Queens of the Stone Age",
+            "type": "artist",
+            "uri": "spotify:artist:4pejUc4iciQfgdX6OKulQn"
+          }
+        ],
+        "available_markets": [
+          "IE",
+          "NZ",
+          "US"
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/album/0PSTqZ8cInMb1Wr68Uqdwp"
+        },
+        "href": "https://api.spotify.com/v1/albums/0PSTqZ8cInMb1Wr68Uqdwp",
+        "id": "0PSTqZ8cInMb1Wr68Uqdwp",
+        "images": [
+          {
+            "height": 640,
+            "url": "https://i.scdn.co/image/ab67616d0000b2739092d41ad0fc7ed16068efe2",
+            "width": 640
+          },
+          {
+            "height": 300,
+            "url": "https://i.scdn.co/image/ab67616d00001e029092d41ad0fc7ed16068efe2",
+            "width": 300
+          },
+          {
+            "height": 64,
+            "url": "https://i.scdn.co/image/ab67616d000048519092d41ad0fc7ed16068efe2",
+            "width": 64
+          }
+        ],
+        "name": "Queens of the Stone Age",
+        "release_date": "1998-09-22",
+        "release_date_precision": "day",
+        "total_tracks": 14,
+        "type": "album",
+        "uri": "spotify:album:0PSTqZ8cInMb1Wr68Uqdwp"
+      },
+      "artists": [
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/4pejUc4iciQfgdX6OKulQn"
+          },
+          "href": "https://api.spotify.com/v1/artists/4pejUc4iciQfgdX6OKulQn",
+          "id": "4pejUc4iciQfgdX6OKulQn",
+          "name": "Queens of the Stone Age",
+          "type": "artist",
+          "uri": "spotify:artist:4pejUc4iciQfgdX6OKulQn"
+        }
+      ],
+      "available_markets": [
+        "IE",
+        "NZ",
+        "US"
+      ],
+      "disc_number": 1,
+      "duration_ms": 202680,
+      "explicit": false,
+      "external_ids": {
+        "isrc": "GBCEL1001085"
+      },
+      "external_urls": {
+        "spotify": "https://open.spotify.com/track/60wTHSJ0PxxwZDiSLiFaQX"
+      },
+      "href": "https://api.spotify.com/v1/tracks/60wTHSJ0PxxwZDiSLiFaQX",
+      "id": "60wTHSJ0PxxwZDiSLiFaQX",
+      "is_local": false,
+      "name": "If Only",
+      "popularity": 61,
+      "preview_url": "https://p.scdn.co/mp3-preview/b6b19b68a410cb679214a092fb05cfb11d588344?cid=0ad54630510047d288157ea602078764",
+      "track_number": 3,
+      "type": "track",
+      "uri": "spotify:track:60wTHSJ0PxxwZDiSLiFaQX"
+    },
+    {
+      "album": {
+        "album_type": "ALBUM",
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/4pejUc4iciQfgdX6OKulQn"
+            },
+            "href": "https://api.spotify.com/v1/artists/4pejUc4iciQfgdX6OKulQn",
+            "id": "4pejUc4iciQfgdX6OKulQn",
+            "name": "Queens of the Stone Age",
+            "type": "artist",
+            "uri": "spotify:artist:4pejUc4iciQfgdX6OKulQn"
+          }
+        ],
+        "available_markets": [
+          "GB",
+          "IE"
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/album/3wKSN4J9IZ1fhsaAqC2jB5"
+        },
+        "href": "https://api.spotify.com/v1/albums/3wKSN4J9IZ1fhsaAqC2jB5",
+        "id": "3wKSN4J9IZ1fhsaAqC2jB5",
+        "images": [
+          {
+            "height": 640,
+            "url": "https://i.scdn.co/image/ab67616d0000b273266cbcf19f025b5706eadc21",
+            "width": 640
+          },
+          {
+            "height": 300,
+            "url": "https://i.scdn.co/image/ab67616d00001e02266cbcf19f025b5706eadc21",
+            "width": 300
+          },
+          {
+            "height": 64,
+            "url": "https://i.scdn.co/image/ab67616d00004851266cbcf19f025b5706eadc21",
+            "width": 64
+          }
+        ],
+        "name": "Era Vulgaris",
+        "release_date": "2007-01-01",
+        "release_date_precision": "day",
+        "total_tracks": 14,
+        "type": "album",
+        "uri": "spotify:album:3wKSN4J9IZ1fhsaAqC2jB5"
+      },
+      "artists": [
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/4pejUc4iciQfgdX6OKulQn"
+          },
+          "href": "https://api.spotify.com/v1/artists/4pejUc4iciQfgdX6OKulQn",
+          "id": "4pejUc4iciQfgdX6OKulQn",
+          "name": "Queens of the Stone Age",
+          "type": "artist",
+          "uri": "spotify:artist:4pejUc4iciQfgdX6OKulQn"
+        }
+      ],
+      "available_markets": [
+        "GB",
+        "IE"
+      ],
+      "disc_number": 1,
+      "duration_ms": 290493,
+      "explicit": false,
+      "external_ids": {
+        "isrc": "USUM70734881"
+      },
+      "external_urls": {
+        "spotify": "https://open.spotify.com/track/4hwQDO9saWsuwGvHp4oE1Z"
+      },
+      "href": "https://api.spotify.com/v1/tracks/4hwQDO9saWsuwGvHp4oE1Z",
+      "id": "4hwQDO9saWsuwGvHp4oE1Z",
+      "is_local": false,
+      "name": "Make It Wit Chu",
+      "popularity": 52,
+      "preview_url": "https://p.scdn.co/mp3-preview/86990a75a8f23709785c5e21a0606b5f290e99d8?cid=0ad54630510047d288157ea602078764",
+      "track_number": 7,
+      "type": "track",
+      "uri": "spotify:track:4hwQDO9saWsuwGvHp4oE1Z"
+    },
+    {
+      "album": {
+        "album_type": "ALBUM",
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/4pejUc4iciQfgdX6OKulQn"
+            },
+            "href": "https://api.spotify.com/v1/artists/4pejUc4iciQfgdX6OKulQn",
+            "id": "4pejUc4iciQfgdX6OKulQn",
+            "name": "Queens of the Stone Age",
+            "type": "artist",
+            "uri": "spotify:artist:4pejUc4iciQfgdX6OKulQn"
+          }
+        ],
+        "available_markets": [
+          "IE",
+          "NZ",
+          "US"
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/album/2ZTDmH94OLjeNaOvT7Ngwk"
+        },
+        "href": "https://api.spotify.com/v1/albums/2ZTDmH94OLjeNaOvT7Ngwk",
+        "id": "2ZTDmH94OLjeNaOvT7Ngwk",
+        "images": [
+          {
+            "height": 640,
+            "url": "https://i.scdn.co/image/ab67616d0000b273df1999f84b4c1981ba570d17",
+            "width": 640
+          },
+          {
+            "height": 300,
+            "url": "https://i.scdn.co/image/ab67616d00001e02df1999f84b4c1981ba570d17",
+            "width": 300
+          },
+          {
+            "height": 64,
+            "url": "https://i.scdn.co/image/ab67616d00004851df1999f84b4c1981ba570d17",
+            "width": 64
+          }
+        ],
+        "name": "In Times New Roman...",
+        "release_date": "2023-06-16",
+        "release_date_precision": "day",
+        "total_tracks": 10,
+        "type": "album",
+        "uri": "spotify:album:2ZTDmH94OLjeNaOvT7Ngwk"
+      },
+      "artists": [
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/4pejUc4iciQfgdX6OKulQn"
+          },
+          "href": "https://api.spotify.com/v1/artists/4pejUc4iciQfgdX6OKulQn",
+          "id": "4pejUc4iciQfgdX6OKulQn",
+          "name": "Queens of the Stone Age",
+          "type": "artist",
+          "uri": "spotify:artist:4pejUc4iciQfgdX6OKulQn"
+        }
+      ],
+      "available_markets": [
+        "IE",
+        "NZ",
+        "US"
+      ],
+      "disc_number": 1,
+      "duration_ms": 271076,
+      "explicit": true,
+      "external_ids": {
+        "isrc": "USMTD2200636"
+      },
+      "external_urls": {
+        "spotify": "https://open.spotify.com/track/5a8V2ZeVLj8ktvodCa1m80"
+      },
+      "href": "https://api.spotify.com/v1/tracks/5a8V2ZeVLj8ktvodCa1m80",
+      "id": "5a8V2ZeVLj8ktvodCa1m80",
+      "is_local": false,
+      "name": "Emotion Sickness",
+      "popularity": 54,
+      "preview_url": "https://p.scdn.co/mp3-preview/93a8849b63d53633b6f4b0e8395af9d090a7885f?cid=0ad54630510047d288157ea602078764",
+      "track_number": 9,
+      "type": "track",
+      "uri": "spotify:track:5a8V2ZeVLj8ktvodCa1m80"
+    },
+    {
+      "album": {
+        "album_type": "ALBUM",
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/4TKTii6gnOnUXQHyuo9JaD"
+            },
+            "href": "https://api.spotify.com/v1/artists/4TKTii6gnOnUXQHyuo9JaD",
+            "id": "4TKTii6gnOnUXQHyuo9JaD",
+            "name": "Sheryl Crow",
+            "type": "artist",
+            "uri": "spotify:artist:4TKTii6gnOnUXQHyuo9JaD"
+          }
+        ],
+        "available_markets": [
+          "IE",
+          "NZ",
+          "US"
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/album/6jVP5U8VtHnVpaHXAXdOE7"
+        },
+        "href": "https://api.spotify.com/v1/albums/6jVP5U8VtHnVpaHXAXdOE7",
+        "id": "6jVP5U8VtHnVpaHXAXdOE7",
+        "images": [
+          {
+            "height": 640,
+            "url": "https://i.scdn.co/image/ab67616d0000b2737bd2c060cec23df69c3835bb",
+            "width": 640
+          },
+          {
+            "height": 300,
+            "url": "https://i.scdn.co/image/ab67616d00001e027bd2c060cec23df69c3835bb",
+            "width": 300
+          },
+          {
+            "height": 64,
+            "url": "https://i.scdn.co/image/ab67616d000048517bd2c060cec23df69c3835bb",
+            "width": 64
+          }
+        ],
+        "name": "The Globe Sessions",
+        "release_date": "1998-09-21",
+        "release_date_precision": "day",
+        "total_tracks": 13,
+        "type": "album",
+        "uri": "spotify:album:6jVP5U8VtHnVpaHXAXdOE7"
+      },
+      "artists": [
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/4TKTii6gnOnUXQHyuo9JaD"
+          },
+          "href": "https://api.spotify.com/v1/artists/4TKTii6gnOnUXQHyuo9JaD",
+          "id": "4TKTii6gnOnUXQHyuo9JaD",
+          "name": "Sheryl Crow",
+          "type": "artist",
+          "uri": "spotify:artist:4TKTii6gnOnUXQHyuo9JaD"
+        }
+      ],
+      "available_markets": [
+        "IE",
+        "NZ",
+        "US"
+      ],
+      "disc_number": 1,
+      "duration_ms": 248240,
+      "explicit": false,
+      "external_ids": {
+        "isrc": "USAM19800172"
+      },
+      "external_urls": {
+        "spotify": "https://open.spotify.com/track/3BOywlNj1muD3sU9aMYRiA"
+      },
+      "href": "https://api.spotify.com/v1/tracks/3BOywlNj1muD3sU9aMYRiA",
+      "id": "3BOywlNj1muD3sU9aMYRiA",
+      "is_local": false,
+      "name": "My Favorite Mistake",
+      "popularity": 48,
+      "preview_url": "https://p.scdn.co/mp3-preview/b900e4134d871c5d1a9a948755424e9b7f9058fe?cid=0ad54630510047d288157ea602078764",
+      "track_number": 1,
+      "type": "track",
+      "uri": "spotify:track:3BOywlNj1muD3sU9aMYRiA"
+    },
+    {
+      "album": {
+        "album_type": "ALBUM",
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/4pejUc4iciQfgdX6OKulQn"
+            },
+            "href": "https://api.spotify.com/v1/artists/4pejUc4iciQfgdX6OKulQn",
+            "id": "4pejUc4iciQfgdX6OKulQn",
+            "name": "Queens of the Stone Age",
+            "type": "artist",
+            "uri": "spotify:artist:4pejUc4iciQfgdX6OKulQn"
+          }
+        ],
+        "available_markets": [
+          "IE",
+          "NZ",
+          "US"
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/album/2ZTDmH94OLjeNaOvT7Ngwk"
+        },
+        "href": "https://api.spotify.com/v1/albums/2ZTDmH94OLjeNaOvT7Ngwk",
+        "id": "2ZTDmH94OLjeNaOvT7Ngwk",
+        "images": [
+          {
+            "height": 640,
+            "url": "https://i.scdn.co/image/ab67616d0000b273df1999f84b4c1981ba570d17",
+            "width": 640
+          },
+          {
+            "height": 300,
+            "url": "https://i.scdn.co/image/ab67616d00001e02df1999f84b4c1981ba570d17",
+            "width": 300
+          },
+          {
+            "height": 64,
+            "url": "https://i.scdn.co/image/ab67616d00004851df1999f84b4c1981ba570d17",
+            "width": 64
+          }
+        ],
+        "name": "In Times New Roman...",
+        "release_date": "2023-06-16",
+        "release_date_precision": "day",
+        "total_tracks": 10,
+        "type": "album",
+        "uri": "spotify:album:2ZTDmH94OLjeNaOvT7Ngwk"
+      },
+      "artists": [
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/4pejUc4iciQfgdX6OKulQn"
+          },
+          "href": "https://api.spotify.com/v1/artists/4pejUc4iciQfgdX6OKulQn",
+          "id": "4pejUc4iciQfgdX6OKulQn",
+          "name": "Queens of the Stone Age",
+          "type": "artist",
+          "uri": "spotify:artist:4pejUc4iciQfgdX6OKulQn"
+        }
+      ],
+      "available_markets": [
+        "IE",
+        "NZ",
+        "US"
+      ],
+      "disc_number": 1,
+      "duration_ms": 263209,
+      "explicit": true,
+      "external_ids": {
+        "isrc": "USMTD2200628"
+      },
+      "external_urls": {
+        "spotify": "https://open.spotify.com/track/1kJzk6H4zQOIwjq6PMeWid"
+      },
+      "href": "https://api.spotify.com/v1/tracks/1kJzk6H4zQOIwjq6PMeWid",
+      "id": "1kJzk6H4zQOIwjq6PMeWid",
+      "is_local": false,
+      "name": "Obscenery",
+      "popularity": 55,
+      "preview_url": "https://p.scdn.co/mp3-preview/a14119747738bd5f01a4e4efd7f73b940a16b101?cid=0ad54630510047d288157ea602078764",
+      "track_number": 1,
+      "type": "track",
+      "uri": "spotify:track:1kJzk6H4zQOIwjq6PMeWid"
+    },
+    {
+      "album": {
+        "album_type": "ALBUM",
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/2qk9voo8llSGYcZ6xrBzKx"
+            },
+            "href": "https://api.spotify.com/v1/artists/2qk9voo8llSGYcZ6xrBzKx",
+            "id": "2qk9voo8llSGYcZ6xrBzKx",
+            "name": "Kings of Leon",
+            "type": "artist",
+            "uri": "spotify:artist:2qk9voo8llSGYcZ6xrBzKx"
+          }
+        ],
+        "available_markets": [
+          "IE",
+          "NZ",
+          "US"
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/album/2137zeBGNgOWP4D96q6qxd"
+        },
+        "href": "https://api.spotify.com/v1/albums/2137zeBGNgOWP4D96q6qxd",
+        "id": "2137zeBGNgOWP4D96q6qxd",
+        "images": [
+          {
+            "height": 640,
+            "url": "https://i.scdn.co/image/ab67616d0000b273b2df9dc89c5c0cfbe79c129d",
+            "width": 640
+          },
+          {
+            "height": 300,
+            "url": "https://i.scdn.co/image/ab67616d00001e02b2df9dc89c5c0cfbe79c129d",
+            "width": 300
+          },
+          {
+            "height": 64,
+            "url": "https://i.scdn.co/image/ab67616d00004851b2df9dc89c5c0cfbe79c129d",
+            "width": 64
+          }
+        ],
+        "name": "Youth And Young Manhood",
+        "release_date": "2003-08-19",
+        "release_date_precision": "day",
+        "total_tracks": 12,
+        "type": "album",
+        "uri": "spotify:album:2137zeBGNgOWP4D96q6qxd"
+      },
+      "artists": [
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/2qk9voo8llSGYcZ6xrBzKx"
+          },
+          "href": "https://api.spotify.com/v1/artists/2qk9voo8llSGYcZ6xrBzKx",
+          "id": "2qk9voo8llSGYcZ6xrBzKx",
+          "name": "Kings of Leon",
+          "type": "artist",
+          "uri": "spotify:artist:2qk9voo8llSGYcZ6xrBzKx"
+        }
+      ],
+      "available_markets": [
+        "IE",
+        "NZ",
+        "US"
+      ],
+      "disc_number": 1,
+      "duration_ms": 168840,
+      "explicit": true,
+      "external_ids": {
+        "isrc": "USRC10300881"
+      },
+      "external_urls": {
+        "spotify": "https://open.spotify.com/track/3iUUve7vVMnS4zHLWpv3mh"
+      },
+      "href": "https://api.spotify.com/v1/tracks/3iUUve7vVMnS4zHLWpv3mh",
+      "id": "3iUUve7vVMnS4zHLWpv3mh",
+      "is_local": false,
+      "name": "Genius",
+      "popularity": 40,
+      "preview_url": "https://p.scdn.co/mp3-preview/c9ad0c6d7c2769ccd6c79c4028b85de39f4be259?cid=0ad54630510047d288157ea602078764",
+      "track_number": 9,
+      "type": "track",
+      "uri": "spotify:track:3iUUve7vVMnS4zHLWpv3mh"
+    },
+    {
+      "album": {
+        "album_type": "COMPILATION",
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/0LyfQWJT6nXafLPZqxe9Of"
+            },
+            "href": "https://api.spotify.com/v1/artists/0LyfQWJT6nXafLPZqxe9Of",
+            "id": "0LyfQWJT6nXafLPZqxe9Of",
+            "name": "Various Artists",
+            "type": "artist",
+            "uri": "spotify:artist:0LyfQWJT6nXafLPZqxe9Of"
+          }
+        ],
+        "available_markets": [],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/album/5i9znXMK0Ni5hrHCdSDZY9"
+        },
+        "href": "https://api.spotify.com/v1/albums/5i9znXMK0Ni5hrHCdSDZY9",
+        "id": "5i9znXMK0Ni5hrHCdSDZY9",
+        "images": [
+          {
+            "height": 640,
+            "url": "https://i.scdn.co/image/ab67616d0000b273fb58053b88368dfaf0cfc8b5",
+            "width": 640
+          },
+          {
+            "height": 300,
+            "url": "https://i.scdn.co/image/ab67616d00001e02fb58053b88368dfaf0cfc8b5",
+            "width": 300
+          },
+          {
+            "height": 64,
+            "url": "https://i.scdn.co/image/ab67616d00004851fb58053b88368dfaf0cfc8b5",
+            "width": 64
+          }
+        ],
+        "name": "Jay & Silent Bob Reboot (Original Motion Picture Soundtrack)",
+        "release_date": "2019-10-18",
+        "release_date_precision": "day",
+        "total_tracks": 26,
+        "type": "album",
+        "uri": "spotify:album:5i9znXMK0Ni5hrHCdSDZY9"
+      },
+      "artists": [
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/2EOrSEDPcZ9feKWSi8Fpdi"
+          },
+          "href": "https://api.spotify.com/v1/artists/2EOrSEDPcZ9feKWSi8Fpdi",
+          "id": "2EOrSEDPcZ9feKWSi8Fpdi",
+          "name": "Q Lazzarus",
+          "type": "artist",
+          "uri": "spotify:artist:2EOrSEDPcZ9feKWSi8Fpdi"
+        }
+      ],
+      "available_markets": [],
+      "disc_number": 1,
+      "duration_ms": 385804,
+      "explicit": false,
+      "external_ids": {
+        "isrc": "QMFME1337712"
+      },
+      "external_urls": {
+        "spotify": "https://open.spotify.com/track/4Xxl9oOQeTPg7t2NrcCZk1"
+      },
+      "href": "https://api.spotify.com/v1/tracks/4Xxl9oOQeTPg7t2NrcCZk1",
+      "id": "4Xxl9oOQeTPg7t2NrcCZk1",
+      "is_local": false,
+      "name": "Goodbye Horses",
+      "popularity": 35,
+      "preview_url": null,
+      "track_number": 2,
+      "type": "track",
+      "uri": "spotify:track:4Xxl9oOQeTPg7t2NrcCZk1"
+    },
+    {
+      "album": {
+        "album_type": "ALBUM",
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/4pejUc4iciQfgdX6OKulQn"
+            },
+            "href": "https://api.spotify.com/v1/artists/4pejUc4iciQfgdX6OKulQn",
+            "id": "4pejUc4iciQfgdX6OKulQn",
+            "name": "Queens of the Stone Age",
+            "type": "artist",
+            "uri": "spotify:artist:4pejUc4iciQfgdX6OKulQn"
+          }
+        ],
+        "available_markets": [
+          "IE",
+          "NZ",
+          "US"
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/album/7vuIN24G18PAUAvjnICyA6"
+        },
+        "href": "https://api.spotify.com/v1/albums/7vuIN24G18PAUAvjnICyA6",
+        "id": "7vuIN24G18PAUAvjnICyA6",
+        "images": [
+          {
+            "height": 640,
+            "url": "https://i.scdn.co/image/ab67616d0000b27389401ba9a9c231e2add35ae8",
+            "width": 640
+          },
+          {
+            "height": 300,
+            "url": "https://i.scdn.co/image/ab67616d00001e0289401ba9a9c231e2add35ae8",
+            "width": 300
+          },
+          {
+            "height": 64,
+            "url": "https://i.scdn.co/image/ab67616d0000485189401ba9a9c231e2add35ae8",
+            "width": 64
+          }
+        ],
+        "name": "Villains",
+        "release_date": "2017-08-25",
+        "release_date_precision": "day",
+        "total_tracks": 9,
+        "type": "album",
+        "uri": "spotify:album:7vuIN24G18PAUAvjnICyA6"
+      },
+      "artists": [
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/4pejUc4iciQfgdX6OKulQn"
+          },
+          "href": "https://api.spotify.com/v1/artists/4pejUc4iciQfgdX6OKulQn",
+          "id": "4pejUc4iciQfgdX6OKulQn",
+          "name": "Queens of the Stone Age",
+          "type": "artist",
+          "uri": "spotify:artist:4pejUc4iciQfgdX6OKulQn"
+        }
+      ],
+      "available_markets": [
+        "IE",
+        "NZ",
+        "US"
+      ],
+      "disc_number": 1,
+      "duration_ms": 390579,
+      "explicit": false,
+      "external_ids": {
+        "isrc": "USMTD1709783"
+      },
+      "external_urls": {
+        "spotify": "https://open.spotify.com/track/5xoNx4guLOeGsuFxuqTord"
+      },
+      "href": "https://api.spotify.com/v1/tracks/5xoNx4guLOeGsuFxuqTord",
+      "id": "5xoNx4guLOeGsuFxuqTord",
+      "is_local": false,
+      "name": "The Evil Has Landed",
+      "popularity": 51,
+      "preview_url": "https://p.scdn.co/mp3-preview/e4aaa87c0dcf2d40bdb05edfaa87a7c75cc7f57d?cid=0ad54630510047d288157ea602078764",
+      "track_number": 8,
+      "type": "track",
+      "uri": "spotify:track:5xoNx4guLOeGsuFxuqTord"
+    },
+    {
+      "album": {
+        "album_type": "ALBUM",
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/4TKTii6gnOnUXQHyuo9JaD"
+            },
+            "href": "https://api.spotify.com/v1/artists/4TKTii6gnOnUXQHyuo9JaD",
+            "id": "4TKTii6gnOnUXQHyuo9JaD",
+            "name": "Sheryl Crow",
+            "type": "artist",
+            "uri": "spotify:artist:4TKTii6gnOnUXQHyuo9JaD"
+          }
+        ],
+        "available_markets": [
+          "IE",
+          "NZ",
+          "US"
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/album/3FiplT4vIgWCRwLZSn0EDd"
+        },
+        "href": "https://api.spotify.com/v1/albums/3FiplT4vIgWCRwLZSn0EDd",
+        "id": "3FiplT4vIgWCRwLZSn0EDd",
+        "images": [
+          {
+            "height": 640,
+            "url": "https://i.scdn.co/image/ab67616d0000b273a192258deb7084638a5f3a47",
+            "width": 640
+          },
+          {
+            "height": 300,
+            "url": "https://i.scdn.co/image/ab67616d00001e02a192258deb7084638a5f3a47",
+            "width": 300
+          },
+          {
+            "height": 64,
+            "url": "https://i.scdn.co/image/ab67616d00004851a192258deb7084638a5f3a47",
+            "width": 64
+          }
+        ],
+        "name": "Sheryl Crow",
+        "release_date": "1996-09-24",
+        "release_date_precision": "day",
+        "total_tracks": 15,
+        "type": "album",
+        "uri": "spotify:album:3FiplT4vIgWCRwLZSn0EDd"
+      },
+      "artists": [
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/4TKTii6gnOnUXQHyuo9JaD"
+          },
+          "href": "https://api.spotify.com/v1/artists/4TKTii6gnOnUXQHyuo9JaD",
+          "id": "4TKTii6gnOnUXQHyuo9JaD",
+          "name": "Sheryl Crow",
+          "type": "artist",
+          "uri": "spotify:artist:4TKTii6gnOnUXQHyuo9JaD"
+        }
+      ],
+      "available_markets": [
+        "IE",
+        "NZ",
+        "US"
+      ],
+      "disc_number": 1,
+      "duration_ms": 324840,
+      "explicit": false,
+      "external_ids": {
+        "isrc": "USAM19604339"
+      },
+      "external_urls": {
+        "spotify": "https://open.spotify.com/track/0lfPPoWG4b3OmhieJ2YDF0"
+      },
+      "href": "https://api.spotify.com/v1/tracks/0lfPPoWG4b3OmhieJ2YDF0",
+      "id": "0lfPPoWG4b3OmhieJ2YDF0",
+      "is_local": false,
+      "name": "If It Makes You Happy",
+      "popularity": 64,
+      "preview_url": "https://p.scdn.co/mp3-preview/3ff7b4d6b2b6c36acf272727b51ea6f01e7cc124?cid=0ad54630510047d288157ea602078764",
+      "track_number": 5,
+      "type": "track",
+      "uri": "spotify:track:0lfPPoWG4b3OmhieJ2YDF0"
+    },
+    {
+      "album": {
+        "album_type": "ALBUM",
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/5me0Irg2ANcsgc93uaYrpb"
+            },
+            "href": "https://api.spotify.com/v1/artists/5me0Irg2ANcsgc93uaYrpb",
+            "id": "5me0Irg2ANcsgc93uaYrpb",
+            "name": "The Notorious B.I.G.",
+            "type": "artist",
+            "uri": "spotify:artist:5me0Irg2ANcsgc93uaYrpb"
+          }
+        ],
+        "available_markets": [
+          "IE",
+          "NZ",
+          "US"
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/album/2HTbQ0RHwukKVXAlTmCZP2"
+        },
+        "href": "https://api.spotify.com/v1/albums/2HTbQ0RHwukKVXAlTmCZP2",
+        "id": "2HTbQ0RHwukKVXAlTmCZP2",
+        "images": [
+          {
+            "height": 640,
+            "url": "https://i.scdn.co/image/ab67616d0000b273db09958534ac66f9a90d3cf7",
+            "width": 640
+          },
+          {
+            "height": 300,
+            "url": "https://i.scdn.co/image/ab67616d00001e02db09958534ac66f9a90d3cf7",
+            "width": 300
+          },
+          {
+            "height": 64,
+            "url": "https://i.scdn.co/image/ab67616d00004851db09958534ac66f9a90d3cf7",
+            "width": 64
+          }
+        ],
+        "name": "Ready to Die (The Remaster)",
+        "release_date": "1994-09-13",
+        "release_date_precision": "day",
+        "total_tracks": 19,
+        "type": "album",
+        "uri": "spotify:album:2HTbQ0RHwukKVXAlTmCZP2"
+      },
+      "artists": [
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/5me0Irg2ANcsgc93uaYrpb"
+          },
+          "href": "https://api.spotify.com/v1/artists/5me0Irg2ANcsgc93uaYrpb",
+          "id": "5me0Irg2ANcsgc93uaYrpb",
+          "name": "The Notorious B.I.G.",
+          "type": "artist",
+          "uri": "spotify:artist:5me0Irg2ANcsgc93uaYrpb"
+        }
+      ],
+      "available_markets": [
+        "IE",
+        "NZ",
+        "US"
+      ],
+      "disc_number": 1,
+      "duration_ms": 319320,
+      "explicit": true,
+      "external_ids": {
+        "isrc": "USBB40580815"
+      },
+      "external_urls": {
+        "spotify": "https://open.spotify.com/track/3bOvAqhaZNSWpGVIvHEx8B"
+      },
+      "href": "https://api.spotify.com/v1/tracks/3bOvAqhaZNSWpGVIvHEx8B",
+      "id": "3bOvAqhaZNSWpGVIvHEx8B",
+      "is_local": false,
+      "name": "Everyday Struggle - 2005 Remaster",
+      "popularity": 57,
+      "preview_url": "https://p.scdn.co/mp3-preview/4970e624ebc6dd13cd3af06efec7ae3a6b66e536?cid=0ad54630510047d288157ea602078764",
+      "track_number": 11,
+      "type": "track",
+      "uri": "spotify:track:3bOvAqhaZNSWpGVIvHEx8B"
+    },
+    {
+      "album": {
+        "album_type": "ALBUM",
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/581C5Qwl87TskfBEzuoisu"
+            },
+            "href": "https://api.spotify.com/v1/artists/581C5Qwl87TskfBEzuoisu",
+            "id": "581C5Qwl87TskfBEzuoisu",
+            "name": "Cafuné",
+            "type": "artist",
+            "uri": "spotify:artist:581C5Qwl87TskfBEzuoisu"
+          }
+        ],
+        "available_markets": [
+          "IE",
+          "NZ",
+          "US"
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/album/2dEf6lN5qYFQQy3Jd3ScHG"
+        },
+        "href": "https://api.spotify.com/v1/albums/2dEf6lN5qYFQQy3Jd3ScHG",
+        "id": "2dEf6lN5qYFQQy3Jd3ScHG",
+        "images": [
+          {
+            "height": 640,
+            "url": "https://i.scdn.co/image/ab67616d0000b273e1bcd643827606eae29cc9c4",
+            "width": 640
+          },
+          {
+            "height": 300,
+            "url": "https://i.scdn.co/image/ab67616d00001e02e1bcd643827606eae29cc9c4",
+            "width": 300
+          },
+          {
+            "height": 64,
+            "url": "https://i.scdn.co/image/ab67616d00004851e1bcd643827606eae29cc9c4",
+            "width": 64
+          }
+        ],
+        "name": "Running",
+        "release_date": "2021-07-20",
+        "release_date_precision": "day",
+        "total_tracks": 9,
+        "type": "album",
+        "uri": "spotify:album:2dEf6lN5qYFQQy3Jd3ScHG"
+      },
+      "artists": [
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/581C5Qwl87TskfBEzuoisu"
+          },
+          "href": "https://api.spotify.com/v1/artists/581C5Qwl87TskfBEzuoisu",
+          "id": "581C5Qwl87TskfBEzuoisu",
+          "name": "Cafuné",
+          "type": "artist",
+          "uri": "spotify:artist:581C5Qwl87TskfBEzuoisu"
+        }
+      ],
+      "available_markets": [
+        "IE",
+        "NZ",
+        "US"
+      ],
+      "disc_number": 1,
+      "duration_ms": 191823,
+      "explicit": false,
+      "external_ids": {
+        "isrc": "QM24S1926168"
+      },
+      "external_urls": {
+        "spotify": "https://open.spotify.com/track/751srcHf5tUqcEa9pRCQwP"
+      },
+      "href": "https://api.spotify.com/v1/tracks/751srcHf5tUqcEa9pRCQwP",
+      "id": "751srcHf5tUqcEa9pRCQwP",
+      "is_local": false,
+      "name": "Tek It",
+      "popularity": 76,
+      "preview_url": "https://p.scdn.co/mp3-preview/4b349447a4514c1d788c6910ffb4340de1aa8c0a?cid=0ad54630510047d288157ea602078764",
+      "track_number": 2,
+      "type": "track",
+      "uri": "spotify:track:751srcHf5tUqcEa9pRCQwP"
+    },
+    {
+      "album": {
+        "album_type": "ALBUM",
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/4pejUc4iciQfgdX6OKulQn"
+            },
+            "href": "https://api.spotify.com/v1/artists/4pejUc4iciQfgdX6OKulQn",
+            "id": "4pejUc4iciQfgdX6OKulQn",
+            "name": "Queens of the Stone Age",
+            "type": "artist",
+            "uri": "spotify:artist:4pejUc4iciQfgdX6OKulQn"
+          }
+        ],
+        "available_markets": [
+          "GB",
+          "IE"
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/album/68ZycIjwlQ0fvtaxVXmgn8"
+        },
+        "href": "https://api.spotify.com/v1/albums/68ZycIjwlQ0fvtaxVXmgn8",
+        "id": "68ZycIjwlQ0fvtaxVXmgn8",
+        "images": [
+          {
+            "height": 640,
+            "url": "https://i.scdn.co/image/ab67616d0000b273ab1aaed1d2f9019183390a98",
+            "width": 640
+          },
+          {
+            "height": 300,
+            "url": "https://i.scdn.co/image/ab67616d00001e02ab1aaed1d2f9019183390a98",
+            "width": 300
+          },
+          {
+            "height": 64,
+            "url": "https://i.scdn.co/image/ab67616d00004851ab1aaed1d2f9019183390a98",
+            "width": 64
+          }
+        ],
+        "name": "Lullabies To Paralyze",
+        "release_date": "2005-01-01",
+        "release_date_precision": "day",
+        "total_tracks": 16,
+        "type": "album",
+        "uri": "spotify:album:68ZycIjwlQ0fvtaxVXmgn8"
+      },
+      "artists": [
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/4pejUc4iciQfgdX6OKulQn"
+          },
+          "href": "https://api.spotify.com/v1/artists/4pejUc4iciQfgdX6OKulQn",
+          "id": "4pejUc4iciQfgdX6OKulQn",
+          "name": "Queens of the Stone Age",
+          "type": "artist",
+          "uri": "spotify:artist:4pejUc4iciQfgdX6OKulQn"
+        }
+      ],
+      "available_markets": [
+        "GB",
+        "IE"
+      ],
+      "disc_number": 1,
+      "duration_ms": 174026,
+      "explicit": false,
+      "external_ids": {
+        "isrc": "USIR10401154"
+      },
+      "external_urls": {
+        "spotify": "https://open.spotify.com/track/6Td8HRLhdV39kKdOQpfQum"
+      },
+      "href": "https://api.spotify.com/v1/tracks/6Td8HRLhdV39kKdOQpfQum",
+      "id": "6Td8HRLhdV39kKdOQpfQum",
+      "is_local": false,
+      "name": "Little Sister",
+      "popularity": 53,
+      "preview_url": "https://p.scdn.co/mp3-preview/2110ba898309db767de405c01e9f7e55add07eea?cid=0ad54630510047d288157ea602078764",
+      "track_number": 7,
+      "type": "track",
+      "uri": "spotify:track:6Td8HRLhdV39kKdOQpfQum"
+    },
+    {
+      "album": {
+        "album_type": "SINGLE",
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/6BCpGC485tSshwjemmeAmd"
+            },
+            "href": "https://api.spotify.com/v1/artists/6BCpGC485tSshwjemmeAmd",
+            "id": "6BCpGC485tSshwjemmeAmd",
+            "name": "The Scratch",
+            "type": "artist",
+            "uri": "spotify:artist:6BCpGC485tSshwjemmeAmd"
+          }
+        ],
+        "available_markets": [
+          "IE",
+          "NZ",
+          "US"
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/album/0CtgzjfrnqG4rK15suDp4m"
+        },
+        "href": "https://api.spotify.com/v1/albums/0CtgzjfrnqG4rK15suDp4m",
+        "id": "0CtgzjfrnqG4rK15suDp4m",
+        "images": [
+          {
+            "height": 640,
+            "url": "https://i.scdn.co/image/ab67616d0000b2738819de1b06e3095caaeec557",
+            "width": 640
+          },
+          {
+            "height": 300,
+            "url": "https://i.scdn.co/image/ab67616d00001e028819de1b06e3095caaeec557",
+            "width": 300
+          },
+          {
+            "height": 64,
+            "url": "https://i.scdn.co/image/ab67616d000048518819de1b06e3095caaeec557",
+            "width": 64
+          }
+        ],
+        "name": "Old Songs",
+        "release_date": "2018-01-08",
+        "release_date_precision": "day",
+        "total_tracks": 5,
+        "type": "album",
+        "uri": "spotify:album:0CtgzjfrnqG4rK15suDp4m"
+      },
+      "artists": [
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/6BCpGC485tSshwjemmeAmd"
+          },
+          "href": "https://api.spotify.com/v1/artists/6BCpGC485tSshwjemmeAmd",
+          "id": "6BCpGC485tSshwjemmeAmd",
+          "name": "The Scratch",
+          "type": "artist",
+          "uri": "spotify:artist:6BCpGC485tSshwjemmeAmd"
+        }
+      ],
+      "available_markets": [
+        "IE",
+        "NZ",
+        "US"
+      ],
+      "disc_number": 1,
+      "duration_ms": 135669,
+      "explicit": false,
+      "external_ids": {
+        "isrc": "QZAPG1828183"
+      },
+      "external_urls": {
+        "spotify": "https://open.spotify.com/track/7mrmaOhFAlhVN46opnHoSN"
+      },
+      "href": "https://api.spotify.com/v1/tracks/7mrmaOhFAlhVN46opnHoSN",
+      "id": "7mrmaOhFAlhVN46opnHoSN",
+      "is_local": false,
+      "name": "McAlpines Fusiliers",
+      "popularity": 31,
+      "preview_url": "https://p.scdn.co/mp3-preview/54ab253045a5ac373cf731f88f8f41905ede01e6?cid=0ad54630510047d288157ea602078764",
+      "track_number": 4,
+      "type": "track",
+      "uri": "spotify:track:7mrmaOhFAlhVN46opnHoSN"
+    },
+    {
+      "album": {
+        "album_type": "ALBUM",
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/7mnBLXK823vNxN3UWB7Gfz"
+            },
+            "href": "https://api.spotify.com/v1/artists/7mnBLXK823vNxN3UWB7Gfz",
+            "id": "7mnBLXK823vNxN3UWB7Gfz",
+            "name": "The Black Keys",
+            "type": "artist",
+            "uri": "spotify:artist:7mnBLXK823vNxN3UWB7Gfz"
+          }
+        ],
+        "available_markets": [
+          "IE",
+          "NZ",
+          "US"
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/album/1YHS3Fw8THvsKVVQ1znAqi"
+        },
+        "href": "https://api.spotify.com/v1/albums/1YHS3Fw8THvsKVVQ1znAqi",
+        "id": "1YHS3Fw8THvsKVVQ1znAqi",
+        "images": [
+          {
+            "height": 640,
+            "url": "https://i.scdn.co/image/ab67616d0000b273b6b648147df2f34d39fc1e14",
+            "width": 640
+          },
+          {
+            "height": 300,
+            "url": "https://i.scdn.co/image/ab67616d00001e02b6b648147df2f34d39fc1e14",
+            "width": 300
+          },
+          {
+            "height": 64,
+            "url": "https://i.scdn.co/image/ab67616d00004851b6b648147df2f34d39fc1e14",
+            "width": 64
+          }
+        ],
+        "name": "Attack & Release",
+        "release_date": "2008-04-01",
+        "release_date_precision": "day",
+        "total_tracks": 11,
+        "type": "album",
+        "uri": "spotify:album:1YHS3Fw8THvsKVVQ1znAqi"
+      },
+      "artists": [
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/7mnBLXK823vNxN3UWB7Gfz"
+          },
+          "href": "https://api.spotify.com/v1/artists/7mnBLXK823vNxN3UWB7Gfz",
+          "id": "7mnBLXK823vNxN3UWB7Gfz",
+          "name": "The Black Keys",
+          "type": "artist",
+          "uri": "spotify:artist:7mnBLXK823vNxN3UWB7Gfz"
+        }
+      ],
+      "available_markets": [
+        "IE",
+        "NZ",
+        "US"
+      ],
+      "disc_number": 1,
+      "duration_ms": 239146,
+      "explicit": false,
+      "external_ids": {
+        "isrc": "USNO10750895"
+      },
+      "external_urls": {
+        "spotify": "https://open.spotify.com/track/319zpJMCzpz50Uz0PsjlJN"
+      },
+      "href": "https://api.spotify.com/v1/tracks/319zpJMCzpz50Uz0PsjlJN",
+      "id": "319zpJMCzpz50Uz0PsjlJN",
+      "is_local": false,
+      "name": "I Got Mine",
+      "popularity": 56,
+      "preview_url": "https://p.scdn.co/mp3-preview/638b3b71c6406beb2b2da9e1f91f96c63d04380d?cid=0ad54630510047d288157ea602078764",
+      "track_number": 2,
+      "type": "track",
+      "uri": "spotify:track:319zpJMCzpz50Uz0PsjlJN"
+    }
+  ],
+  "total": 50,
+  "limit": 20,
+  "offset": 0,
+  "href": "https://api.spotify.com/v1/me/top/tracks",
+  "next": "https://api.spotify.com/v1/me/top/tracks?limit=20&offset=20",
+  "previous": null
+}

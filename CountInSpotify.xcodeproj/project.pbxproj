@@ -60,6 +60,9 @@
 		AC9A27A52B4542790060AA2D /* URLOpener.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9A27A42B4542780060AA2D /* URLOpener.swift */; };
 		AC9A27A72B454C930060AA2D /* AddTrackViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9A27A62B454C930060AA2D /* AddTrackViewModelTests.swift */; };
 		AC9A27A92B454FA50060AA2D /* MockUrlOpeningHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9A27A82B454FA50060AA2D /* MockUrlOpeningHandler.swift */; };
+		AC9A27AB2B46256D0060AA2D /* top-tracks-success.json in Resources */ = {isa = PBXBuildFile; fileRef = AC9A27AA2B46256D0060AA2D /* top-tracks-success.json */; };
+		AC9A27AD2B462B830060AA2D /* search-success.json in Resources */ = {isa = PBXBuildFile; fileRef = AC9A27AC2B462B830060AA2D /* search-success.json */; };
+		AC9A27AF2B462CD60060AA2D /* audio-analysis-success.json in Resources */ = {isa = PBXBuildFile; fileRef = AC9A27AE2B462CD60060AA2D /* audio-analysis-success.json */; };
 		ACA8AF782AF328AF009EA479 /* MockSpotifyService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACA8AF772AF328AF009EA479 /* MockSpotifyService.swift */; };
 		ACBC51062B4502FB00D01F3A /* NetworkingFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACBC51052B4502FB00D01F3A /* NetworkingFactory.swift */; };
 		ACEDB0BF2B0D80410024DB3D /* StoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACEDB0BE2B0D80410024DB3D /* StoreView.swift */; };
@@ -154,6 +157,9 @@
 		AC9A27A42B4542780060AA2D /* URLOpener.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLOpener.swift; sourceTree = "<group>"; };
 		AC9A27A62B454C930060AA2D /* AddTrackViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTrackViewModelTests.swift; sourceTree = "<group>"; };
 		AC9A27A82B454FA50060AA2D /* MockUrlOpeningHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockUrlOpeningHandler.swift; sourceTree = "<group>"; };
+		AC9A27AA2B46256D0060AA2D /* top-tracks-success.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "top-tracks-success.json"; sourceTree = "<group>"; };
+		AC9A27AC2B462B830060AA2D /* search-success.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "search-success.json"; sourceTree = "<group>"; };
+		AC9A27AE2B462CD60060AA2D /* audio-analysis-success.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "audio-analysis-success.json"; sourceTree = "<group>"; };
 		ACA8AF772AF328AF009EA479 /* MockSpotifyService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockSpotifyService.swift; sourceTree = "<group>"; };
 		ACBC51052B4502FB00D01F3A /* NetworkingFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingFactory.swift; sourceTree = "<group>"; };
 		ACEDB0BE2B0D80410024DB3D /* StoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreView.swift; sourceTree = "<group>"; };
@@ -438,6 +444,9 @@
 		ACA8AF762AF32895009EA479 /* Mocks */ = {
 			isa = PBXGroup;
 			children = (
+				AC9A27AE2B462CD60060AA2D /* audio-analysis-success.json */,
+				AC9A27AC2B462B830060AA2D /* search-success.json */,
+				AC9A27AA2B46256D0060AA2D /* top-tracks-success.json */,
 				ACA8AF772AF328AF009EA479 /* MockSpotifyService.swift */,
 			);
 			path = Mocks;
@@ -550,8 +559,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				AC9024A72AC67F8F007EE9A1 /* sound2.wav in Resources */,
+				AC9A27AD2B462B830060AA2D /* search-success.json in Resources */,
 				AC59685C2ABA96EB0067B0D9 /* LaunchScreen.storyboard in Resources */,
+				AC9A27AF2B462CD60060AA2D /* audio-analysis-success.json in Resources */,
 				AC5968592ABA96EB0067B0D9 /* Assets.xcassets in Resources */,
+				AC9A27AB2B46256D0060AA2D /* top-tracks-success.json in Resources */,
 				AC9024A82AC67F8F007EE9A1 /* sound1.wav in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
