@@ -52,7 +52,7 @@ class TrackDetailsViewModel: NSObject, ObservableObject, SpotifyConnectionDelega
     init(track: Track,
          isEditing: Bool = false,
          player: PlayerManagerProtocol = PlayerManager(),
-         service: SpotifyServiceable = SpotifyService()) {
+         service: SpotifyServiceable = NetworkingFactory.createSpotifyService()) {
         
         self.editing = isEditing
         self.track = track

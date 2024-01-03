@@ -28,421 +28,275 @@ struct MockSpotifyService: SpotifyServiceable {
     
     private let topTracksResponseString = """
     {
-      "tracks": {
-        "href": "https://api.spotify.com/v1/search?query=emotion+sickness&type=track&market=IE&locale=en-GB%2Cen%3Bq%3D0.9&offset=0&limit=5",
-        "items": [
-          {
-            "album": {
-              "album_type": "single",
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/4pejUc4iciQfgdX6OKulQn"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/4pejUc4iciQfgdX6OKulQn",
-                  "id": "4pejUc4iciQfgdX6OKulQn",
-                  "name": "Queens of the Stone Age",
-                  "type": "artist",
-                  "uri": "spotify:artist:4pejUc4iciQfgdX6OKulQn"
-                }
-              ],
-              "external_urls": {
-                "spotify": "https://open.spotify.com/album/3dTSDhT6cUg4YxQTMRgf6S"
-              },
-              "href": "https://api.spotify.com/v1/albums/3dTSDhT6cUg4YxQTMRgf6S",
-              "id": "3dTSDhT6cUg4YxQTMRgf6S",
-              "images": [
-                {
-                  "height": 640,
-                  "url": "https://i.scdn.co/image/ab67616d0000b273b60d2e2e459d09aea6205ecf",
-                  "width": 640
-                },
-                {
-                  "height": 300,
-                  "url": "https://i.scdn.co/image/ab67616d00001e02b60d2e2e459d09aea6205ecf",
-                  "width": 300
-                },
-                {
-                  "height": 64,
-                  "url": "https://i.scdn.co/image/ab67616d00004851b60d2e2e459d09aea6205ecf",
-                  "width": 64
-                }
-              ],
-              "is_playable": true,
-              "name": "Emotion Sickness",
-              "release_date": "2023-05-11",
-              "release_date_precision": "day",
-              "total_tracks": 1,
-              "type": "album",
-              "uri": "spotify:album:3dTSDhT6cUg4YxQTMRgf6S"
-            },
+      "items": [
+        {
+          "album": {
+            "album_type": "SINGLE",
             "artists": [
               {
                 "external_urls": {
-                  "spotify": "https://open.spotify.com/artist/4pejUc4iciQfgdX6OKulQn"
+                  "spotify": "https://open.spotify.com/artist/45dkTj5sMRSjrmBSBeiHym"
                 },
-                "href": "https://api.spotify.com/v1/artists/4pejUc4iciQfgdX6OKulQn",
-                "id": "4pejUc4iciQfgdX6OKulQn",
-                "name": "Queens of the Stone Age",
+                "href": "https://api.spotify.com/v1/artists/45dkTj5sMRSjrmBSBeiHym",
+                "id": "45dkTj5sMRSjrmBSBeiHym",
+                "name": "Tate McRae",
                 "type": "artist",
-                "uri": "spotify:artist:4pejUc4iciQfgdX6OKulQn"
+                "uri": "spotify:artist:45dkTj5sMRSjrmBSBeiHym"
               }
             ],
-            "disc_number": 1,
-            "duration_ms": 271076,
-            "explicit": true,
-            "external_ids": {
-              "isrc": "USMTD2200636"
-            },
+            "available_markets": [
+              "GB",
+              "IE",
+              "NZ",
+              "US",
+            ],
             "external_urls": {
-              "spotify": "https://open.spotify.com/track/0qhGOjVl3uY2N6CAafVmCa"
+              "spotify": "https://open.spotify.com/album/3UOV8XvCwMKaATRNXrYCjN"
             },
-            "href": "https://api.spotify.com/v1/tracks/0qhGOjVl3uY2N6CAafVmCa",
-            "id": "0qhGOjVl3uY2N6CAafVmCa",
-            "is_local": false,
-            "is_playable": true,
-            "name": "Emotion Sickness",
-            "popularity": 56,
-            "preview_url": "https://p.scdn.co/mp3-preview/93a8849b63d53633b6f4b0e8395af9d090a7885f?cid=0ad54630510047d288157ea602078764",
-            "track_number": 1,
-            "type": "track",
-            "uri": "spotify:track:0qhGOjVl3uY2N6CAafVmCa"
+            "href": "https://api.spotify.com/v1/albums/3UOV8XvCwMKaATRNXrYCjN",
+            "id": "3UOV8XvCwMKaATRNXrYCjN",
+            "images": [
+              {
+                "height": 640,
+                "url": "https://i.scdn.co/image/ab67616d0000b27322fd802bc61db666c7c81aa8",
+                "width": 640
+              },
+              {
+                "height": 300,
+                "url": "https://i.scdn.co/image/ab67616d00001e0222fd802bc61db666c7c81aa8",
+                "width": 300
+              },
+              {
+                "height": 64,
+                "url": "https://i.scdn.co/image/ab67616d0000485122fd802bc61db666c7c81aa8",
+                "width": 64
+              }
+            ],
+            "name": "greedy",
+            "release_date": "2023-09-15",
+            "release_date_precision": "day",
+            "total_tracks": 1,
+            "type": "album",
+            "uri": "spotify:album:3UOV8XvCwMKaATRNXrYCjN"
           },
-          {
-            "album": {
-              "album_type": "album",
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/4iudEcmuPlYNdbP3e1bdn1"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/4iudEcmuPlYNdbP3e1bdn1",
-                  "id": "4iudEcmuPlYNdbP3e1bdn1",
-                  "name": "Silverchair",
-                  "type": "artist",
-                  "uri": "spotify:artist:4iudEcmuPlYNdbP3e1bdn1"
-                }
-              ],
+          "artists": [
+            {
               "external_urls": {
-                "spotify": "https://open.spotify.com/album/28yAJqJJ0iz1oRqwOD0F20"
+                "spotify": "https://open.spotify.com/artist/45dkTj5sMRSjrmBSBeiHym"
               },
-              "href": "https://api.spotify.com/v1/albums/28yAJqJJ0iz1oRqwOD0F20",
-              "id": "28yAJqJJ0iz1oRqwOD0F20",
-              "images": [
-                {
-                  "height": 640,
-                  "url": "https://i.scdn.co/image/ab67616d0000b2731b0201a6273523f60b8b5406",
-                  "width": 640
-                },
-                {
-                  "height": 300,
-                  "url": "https://i.scdn.co/image/ab67616d00001e021b0201a6273523f60b8b5406",
-                  "width": 300
-                },
-                {
-                  "height": 64,
-                  "url": "https://i.scdn.co/image/ab67616d000048511b0201a6273523f60b8b5406",
-                  "width": 64
-                }
-              ],
-              "is_playable": true,
-              "name": "Neon Ballroom",
-              "release_date": "1999",
-              "release_date_precision": "year",
-              "total_tracks": 12,
-              "type": "album",
-              "uri": "spotify:album:28yAJqJJ0iz1oRqwOD0F20"
-            },
-            "artists": [
-              {
-                "external_urls": {
-                  "spotify": "https://open.spotify.com/artist/4iudEcmuPlYNdbP3e1bdn1"
-                },
-                "href": "https://api.spotify.com/v1/artists/4iudEcmuPlYNdbP3e1bdn1",
-                "id": "4iudEcmuPlYNdbP3e1bdn1",
-                "name": "Silverchair",
-                "type": "artist",
-                "uri": "spotify:artist:4iudEcmuPlYNdbP3e1bdn1"
-              }
+              "href": "https://api.spotify.com/v1/artists/45dkTj5sMRSjrmBSBeiHym",
+              "id": "45dkTj5sMRSjrmBSBeiHym",
+              "name": "Tate McRae",
+              "type": "artist",
+              "uri": "spotify:artist:45dkTj5sMRSjrmBSBeiHym"
+            }
+          ],
+          "available_markets": [
+              "GB",
+              "IE",
+              "NZ",
+              "US",
             ],
-            "disc_number": 1,
-            "duration_ms": 360813,
-            "explicit": false,
-            "external_ids": {
-              "isrc": "AUSM09800223"
-            },
-            "external_urls": {
-              "spotify": "https://open.spotify.com/track/37XF41xuNT4t1Gqy99R7dA"
-            },
-            "href": "https://api.spotify.com/v1/tracks/37XF41xuNT4t1Gqy99R7dA",
-            "id": "37XF41xuNT4t1Gqy99R7dA",
-            "is_local": false,
-            "is_playable": true,
-            "name": "Emotion Sickness",
-            "popularity": 37,
-            "preview_url": "https://p.scdn.co/mp3-preview/10891a11ae57077bbbccd0be4f572951c58cdac7?cid=0ad54630510047d288157ea602078764",
-            "track_number": 1,
-            "type": "track",
-            "uri": "spotify:track:37XF41xuNT4t1Gqy99R7dA"
+          "disc_number": 1,
+          "duration_ms": 131872,
+          "explicit": true,
+          "external_ids": {
+            "isrc": "USRC12301932"
           },
-          {
-            "album": {
-              "album_type": "album",
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/4pejUc4iciQfgdX6OKulQn"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/4pejUc4iciQfgdX6OKulQn",
-                  "id": "4pejUc4iciQfgdX6OKulQn",
-                  "name": "Queens of the Stone Age",
-                  "type": "artist",
-                  "uri": "spotify:artist:4pejUc4iciQfgdX6OKulQn"
-                }
-              ],
-              "external_urls": {
-                "spotify": "https://open.spotify.com/album/2ZTDmH94OLjeNaOvT7Ngwk"
-              },
-              "href": "https://api.spotify.com/v1/albums/2ZTDmH94OLjeNaOvT7Ngwk",
-              "id": "2ZTDmH94OLjeNaOvT7Ngwk",
-              "images": [
-                {
-                  "height": 640,
-                  "url": "https://i.scdn.co/image/ab67616d0000b273df1999f84b4c1981ba570d17",
-                  "width": 640
-                },
-                {
-                  "height": 300,
-                  "url": "https://i.scdn.co/image/ab67616d00001e02df1999f84b4c1981ba570d17",
-                  "width": 300
-                },
-                {
-                  "height": 64,
-                  "url": "https://i.scdn.co/image/ab67616d00004851df1999f84b4c1981ba570d17",
-                  "width": 64
-                }
-              ],
-              "is_playable": true,
-              "name": "In Times New Roman...",
-              "release_date": "2023-06-16",
-              "release_date_precision": "day",
-              "total_tracks": 10,
-              "type": "album",
-              "uri": "spotify:album:2ZTDmH94OLjeNaOvT7Ngwk"
-            },
-            "artists": [
-              {
-                "external_urls": {
-                  "spotify": "https://open.spotify.com/artist/4pejUc4iciQfgdX6OKulQn"
-                },
-                "href": "https://api.spotify.com/v1/artists/4pejUc4iciQfgdX6OKulQn",
-                "id": "4pejUc4iciQfgdX6OKulQn",
-                "name": "Queens of the Stone Age",
-                "type": "artist",
-                "uri": "spotify:artist:4pejUc4iciQfgdX6OKulQn"
-              }
-            ],
-            "disc_number": 1,
-            "duration_ms": 271076,
-            "explicit": true,
-            "external_ids": {
-              "isrc": "USMTD2200636"
-            },
-            "external_urls": {
-              "spotify": "https://open.spotify.com/track/5a8V2ZeVLj8ktvodCa1m80"
-            },
-            "href": "https://api.spotify.com/v1/tracks/5a8V2ZeVLj8ktvodCa1m80",
-            "id": "5a8V2ZeVLj8ktvodCa1m80",
-            "is_local": false,
-            "is_playable": true,
-            "name": "Emotion Sickness",
-            "popularity": 56,
-            "preview_url": "https://p.scdn.co/mp3-preview/93a8849b63d53633b6f4b0e8395af9d090a7885f?cid=0ad54630510047d288157ea602078764",
-            "track_number": 9,
-            "type": "track",
-            "uri": "spotify:track:5a8V2ZeVLj8ktvodCa1m80"
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/3rUGC1vUpkDG9CZFHMur1t"
           },
-          {
-            "album": {
-              "album_type": "album",
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/4LZ4De2MoO3lP6QaNCfvcu"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/4LZ4De2MoO3lP6QaNCfvcu",
-                  "id": "4LZ4De2MoO3lP6QaNCfvcu",
-                  "name": "Said The Sky",
-                  "type": "artist",
-                  "uri": "spotify:artist:4LZ4De2MoO3lP6QaNCfvcu"
-                }
-              ],
-              "external_urls": {
-                "spotify": "https://open.spotify.com/album/4eZHJqBC68gC2UtAKeiCnA"
-              },
-              "href": "https://api.spotify.com/v1/albums/4eZHJqBC68gC2UtAKeiCnA",
-              "id": "4eZHJqBC68gC2UtAKeiCnA",
-              "images": [
-                {
-                  "height": 640,
-                  "url": "https://i.scdn.co/image/ab67616d0000b2731da2e316376d4701ace02c53",
-                  "width": 640
-                },
-                {
-                  "height": 300,
-                  "url": "https://i.scdn.co/image/ab67616d00001e021da2e316376d4701ace02c53",
-                  "width": 300
-                },
-                {
-                  "height": 64,
-                  "url": "https://i.scdn.co/image/ab67616d000048511da2e316376d4701ace02c53",
-                  "width": 64
-                }
-              ],
-              "is_playable": true,
-              "name": "Sentiment",
-              "release_date": "2022-02-18",
-              "release_date_precision": "day",
-              "total_tracks": 15,
-              "type": "album",
-              "uri": "spotify:album:4eZHJqBC68gC2UtAKeiCnA"
-            },
+          "href": "https://api.spotify.com/v1/tracks/3rUGC1vUpkDG9CZFHMur1t",
+          "id": "3rUGC1vUpkDG9CZFHMur1t",
+          "is_local": false,
+          "name": "greedy",
+          "popularity": 97,
+          "preview_url": "https://p.scdn.co/mp3-preview/ca7bdcb691fb64a5af8a3253b89356390664fcf1?cid=0ad54630510047d288157ea602078764",
+          "track_number": 1,
+          "type": "track",
+          "uri": "spotify:track:3rUGC1vUpkDG9CZFHMur1t"
+        },
+        {
+          "album": {
+            "album_type": "ALBUM",
             "artists": [
               {
                 "external_urls": {
-                  "spotify": "https://open.spotify.com/artist/4LZ4De2MoO3lP6QaNCfvcu"
+                  "spotify": "https://open.spotify.com/artist/2JSjCHK79gdaiPWdKiNUNp"
                 },
-                "href": "https://api.spotify.com/v1/artists/4LZ4De2MoO3lP6QaNCfvcu",
-                "id": "4LZ4De2MoO3lP6QaNCfvcu",
-                "name": "Said The Sky",
+                "href": "https://api.spotify.com/v1/artists/2JSjCHK79gdaiPWdKiNUNp",
+                "id": "2JSjCHK79gdaiPWdKiNUNp",
+                "name": "Dionne Warwick",
                 "type": "artist",
-                "uri": "spotify:artist:4LZ4De2MoO3lP6QaNCfvcu"
-              },
-              {
-                "external_urls": {
-                  "spotify": "https://open.spotify.com/artist/2PCUhxD40qlMqsKHjTZD2e"
-                },
-                "href": "https://api.spotify.com/v1/artists/2PCUhxD40qlMqsKHjTZD2e",
-                "id": "2PCUhxD40qlMqsKHjTZD2e",
-                "name": "Parachute",
-                "type": "artist",
-                "uri": "spotify:artist:2PCUhxD40qlMqsKHjTZD2e"
-              },
-              {
-                "external_urls": {
-                  "spotify": "https://open.spotify.com/artist/3jASw3YQHarl90fZWNyCdn"
-                },
-                "href": "https://api.spotify.com/v1/artists/3jASw3YQHarl90fZWNyCdn",
-                "id": "3jASw3YQHarl90fZWNyCdn",
-                "name": "Will Anderson",
-                "type": "artist",
-                "uri": "spotify:artist:3jASw3YQHarl90fZWNyCdn"
+                "uri": "spotify:artist:2JSjCHK79gdaiPWdKiNUNp"
               }
             ],
-            "disc_number": 1,
-            "duration_ms": 202493,
-            "explicit": false,
-            "external_ids": {
-              "isrc": "GBKPL2282216"
-            },
+            "available_markets": [
+              "GB",
+              "IE",
+              "NZ",
+              "US",
+            ],
             "external_urls": {
-              "spotify": "https://open.spotify.com/track/5NWyhQjPTh37ygOq4UHYZk"
+              "spotify": "https://open.spotify.com/album/6edKvdyBPyTPPWCOcTdrhr"
             },
-            "href": "https://api.spotify.com/v1/tracks/5NWyhQjPTh37ygOq4UHYZk",
-            "id": "5NWyhQjPTh37ygOq4UHYZk",
-            "is_local": false,
-            "is_playable": true,
-            "name": "Emotion Sickness",
-            "popularity": 53,
-            "preview_url": "https://p.scdn.co/mp3-preview/d5b92647bf5c1f2ed868313bcc8e4aa3e862a2de?cid=0ad54630510047d288157ea602078764",
-            "track_number": 7,
-            "type": "track",
-            "uri": "spotify:track:5NWyhQjPTh37ygOq4UHYZk"
+            "href": "https://api.spotify.com/v1/albums/6edKvdyBPyTPPWCOcTdrhr",
+            "id": "6edKvdyBPyTPPWCOcTdrhr",
+            "images": [
+              {
+                "height": 640,
+                "url": "https://i.scdn.co/image/ab67616d0000b27396ac1a606d66e405563ccebd",
+                "width": 640
+              },
+              {
+                "height": 300,
+                "url": "https://i.scdn.co/image/ab67616d00001e0296ac1a606d66e405563ccebd",
+                "width": 300
+              },
+              {
+                "height": 64,
+                "url": "https://i.scdn.co/image/ab67616d0000485196ac1a606d66e405563ccebd",
+                "width": 64
+              }
+            ],
+            "name": "Make Way for Dionne Warwick",
+            "release_date": "1964",
+            "release_date_precision": "year",
+            "total_tracks": 12,
+            "type": "album",
+            "uri": "spotify:album:6edKvdyBPyTPPWCOcTdrhr"
           },
-          {
-            "album": {
-              "album_type": "album",
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/00IiVt687EdR9JnSoJN7IA"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/00IiVt687EdR9JnSoJN7IA",
-                  "id": "00IiVt687EdR9JnSoJN7IA",
-                  "name": "Mazza_l20",
-                  "type": "artist",
-                  "uri": "spotify:artist:00IiVt687EdR9JnSoJN7IA"
-                }
-              ],
+          "artists": [
+            {
               "external_urls": {
-                "spotify": "https://open.spotify.com/album/5ZCSGeltEmsrr9zWuHv2Fs"
+                "spotify": "https://open.spotify.com/artist/2JSjCHK79gdaiPWdKiNUNp"
               },
-              "href": "https://api.spotify.com/v1/albums/5ZCSGeltEmsrr9zWuHv2Fs",
-              "id": "5ZCSGeltEmsrr9zWuHv2Fs",
-              "images": [
-                {
-                  "height": 640,
-                  "url": "https://i.scdn.co/image/ab67616d0000b273686efa27468c5b6757d1f36f",
-                  "width": 640
-                },
-                {
-                  "height": 300,
-                  "url": "https://i.scdn.co/image/ab67616d00001e02686efa27468c5b6757d1f36f",
-                  "width": 300
-                },
-                {
-                  "height": 64,
-                  "url": "https://i.scdn.co/image/ab67616d00004851686efa27468c5b6757d1f36f",
-                  "width": 64
-                }
-              ],
-              "is_playable": true,
-              "name": "Concrete Jungle",
-              "release_date": "2023-08-29",
-              "release_date_precision": "day",
-              "total_tracks": 12,
-              "type": "album",
-              "uri": "spotify:album:5ZCSGeltEmsrr9zWuHv2Fs"
-            },
+              "href": "https://api.spotify.com/v1/artists/2JSjCHK79gdaiPWdKiNUNp",
+              "id": "2JSjCHK79gdaiPWdKiNUNp",
+              "name": "Dionne Warwick",
+              "type": "artist",
+              "uri": "spotify:artist:2JSjCHK79gdaiPWdKiNUNp"
+            }
+          ],
+          "available_markets": [
+              "GB",
+              "IE",
+              "NZ",
+              "US",
+            ],
+          "disc_number": 1,
+          "duration_ms": 178333,
+          "explicit": false,
+          "external_ids": {
+            "isrc": "USWSP0000173"
+          },
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/3xsOtNxtBW0oTI1OWKAzTm"
+          },
+          "href": "https://api.spotify.com/v1/tracks/3xsOtNxtBW0oTI1OWKAzTm",
+          "id": "3xsOtNxtBW0oTI1OWKAzTm",
+          "is_local": false,
+          "name": "Walk on By",
+          "popularity": 66,
+          "preview_url": "https://p.scdn.co/mp3-preview/cbe4c6d9813a2d8fd3fac79b8a54b67c6ba86794?cid=0ad54630510047d288157ea602078764",
+          "track_number": 8,
+          "type": "track",
+          "uri": "spotify:track:3xsOtNxtBW0oTI1OWKAzTm"
+        },
+        {
+          "album": {
+            "album_type": "ALBUM",
             "artists": [
               {
                 "external_urls": {
-                  "spotify": "https://open.spotify.com/artist/00IiVt687EdR9JnSoJN7IA"
+                  "spotify": "https://open.spotify.com/artist/4TKTii6gnOnUXQHyuo9JaD"
                 },
-                "href": "https://api.spotify.com/v1/artists/00IiVt687EdR9JnSoJN7IA",
-                "id": "00IiVt687EdR9JnSoJN7IA",
-                "name": "Mazza_l20",
+                "href": "https://api.spotify.com/v1/artists/4TKTii6gnOnUXQHyuo9JaD",
+                "id": "4TKTii6gnOnUXQHyuo9JaD",
+                "name": "Sheryl Crow",
                 "type": "artist",
-                "uri": "spotify:artist:00IiVt687EdR9JnSoJN7IA"
+                "uri": "spotify:artist:4TKTii6gnOnUXQHyuo9JaD"
               }
             ],
-            "disc_number": 1,
-            "duration_ms": 224680,
-            "explicit": true,
-            "external_ids": {
-              "isrc": "QZNWS2378569"
-            },
+            "available_markets": [
+              "GB",
+              "IE",
+              "NZ",
+              "US",
+            ],
             "external_urls": {
-              "spotify": "https://open.spotify.com/track/4yr9gSPRZwH1G7EhrjQ6QN"
+              "spotify": "https://open.spotify.com/album/6jVP5U8VtHnVpaHXAXdOE7"
             },
-            "href": "https://api.spotify.com/v1/tracks/4yr9gSPRZwH1G7EhrjQ6QN",
-            "id": "4yr9gSPRZwH1G7EhrjQ6QN",
-            "is_local": false,
-            "is_playable": true,
-            "name": "Emotional Scars",
-            "popularity": 47,
-            "preview_url": "https://p.scdn.co/mp3-preview/84c4abbde5e5669a7049c45c2cd3ab5cc990ac42?cid=0ad54630510047d288157ea602078764",
-            "track_number": 2,
-            "type": "track",
-            "uri": "spotify:track:4yr9gSPRZwH1G7EhrjQ6QN"
-          }
-        ],
-        "limit": 5,
-        "next": "https://api.spotify.com/v1/search?query=emotion+sickness&type=track&market=IE&locale=en-GB%2Cen%3Bq%3D0.9&offset=5&limit=5",
-        "offset": 0,
-        "previous": null,
-        "total": 804
-      }
+            "href": "https://api.spotify.com/v1/albums/6jVP5U8VtHnVpaHXAXdOE7",
+            "id": "6jVP5U8VtHnVpaHXAXdOE7",
+            "images": [
+              {
+                "height": 640,
+                "url": "https://i.scdn.co/image/ab67616d0000b2737bd2c060cec23df69c3835bb",
+                "width": 640
+              },
+              {
+                "height": 300,
+                "url": "https://i.scdn.co/image/ab67616d00001e027bd2c060cec23df69c3835bb",
+                "width": 300
+              },
+              {
+                "height": 64,
+                "url": "https://i.scdn.co/image/ab67616d000048517bd2c060cec23df69c3835bb",
+                "width": 64
+              }
+            ],
+            "name": "The Globe Sessions",
+            "release_date": "1998-09-21",
+            "release_date_precision": "day",
+            "total_tracks": 13,
+            "type": "album",
+            "uri": "spotify:album:6jVP5U8VtHnVpaHXAXdOE7"
+          },
+          "artists": [
+            {
+              "external_urls": {
+                "spotify": "https://open.spotify.com/artist/4TKTii6gnOnUXQHyuo9JaD"
+              },
+              "href": "https://api.spotify.com/v1/artists/4TKTii6gnOnUXQHyuo9JaD",
+              "id": "4TKTii6gnOnUXQHyuo9JaD",
+              "name": "Sheryl Crow",
+              "type": "artist",
+              "uri": "spotify:artist:4TKTii6gnOnUXQHyuo9JaD"
+            }
+          ],
+          "available_markets": [
+              "GB",
+              "IE",
+              "NZ",
+              "US",
+            ],
+          "disc_number": 1,
+          "duration_ms": 248240,
+          "explicit": false,
+          "external_ids": {
+            "isrc": "USAM19800172"
+          },
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/3BOywlNj1muD3sU9aMYRiA"
+          },
+          "href": "https://api.spotify.com/v1/tracks/3BOywlNj1muD3sU9aMYRiA",
+          "id": "3BOywlNj1muD3sU9aMYRiA",
+          "is_local": false,
+          "name": "My Favorite Mistake",
+          "popularity": 47,
+          "preview_url": "https://p.scdn.co/mp3-preview/b900e4134d871c5d1a9a948755424e9b7f9058fe?cid=0ad54630510047d288157ea602078764",
+          "track_number": 1,
+          "type": "track",
+          "uri": "spotify:track:3BOywlNj1muD3sU9aMYRiA"
+        }
+      ],
+      "total": 50,
+      "limit": 3,
+      "offset": 0,
+      "href": "https://api.spotify.com/v1/me/top/tracks?limit=3&offset=0&time_range=short_term",
+      "next": "https://api.spotify.com/v1/me/top/tracks?limit=3&offset=3&time_range=short_term",
+      "previous": null
     }
     """
     

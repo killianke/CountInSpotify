@@ -58,6 +58,7 @@
 		AC9024F82ACFB4AB007EE9A1 /* ViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9024F72ACFB4AB007EE9A1 /* ViewExtensions.swift */; };
 		AC9024FA2AD0101A007EE9A1 /* TracksStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9024F92AD0101A007EE9A1 /* TracksStore.swift */; };
 		ACA8AF782AF328AF009EA479 /* MockSpotifyService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACA8AF772AF328AF009EA479 /* MockSpotifyService.swift */; };
+		ACBC51062B4502FB00D01F3A /* NetworkingFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACBC51052B4502FB00D01F3A /* NetworkingFactory.swift */; };
 		ACEDB0BF2B0D80410024DB3D /* StoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACEDB0BE2B0D80410024DB3D /* StoreView.swift */; };
 /* End PBXBuildFile section */
 
@@ -148,6 +149,7 @@
 		AC9024F72ACFB4AB007EE9A1 /* ViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExtensions.swift; sourceTree = "<group>"; };
 		AC9024F92AD0101A007EE9A1 /* TracksStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TracksStore.swift; sourceTree = "<group>"; };
 		ACA8AF772AF328AF009EA479 /* MockSpotifyService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockSpotifyService.swift; sourceTree = "<group>"; };
+		ACBC51052B4502FB00D01F3A /* NetworkingFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingFactory.swift; sourceTree = "<group>"; };
 		ACEDB0BE2B0D80410024DB3D /* StoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -325,6 +327,7 @@
 				AC9024C32ACA8492007EE9A1 /* Base */,
 				AC9024CC2ACA849E007EE9A1 /* Endpoints */,
 				AC9024CF2ACA84B0007EE9A1 /* Services */,
+				ACBC51052B4502FB00D01F3A /* NetworkingFactory.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -553,6 +556,7 @@
 				AC9024D92ACAA927007EE9A1 /* SearchResult.swift in Sources */,
 				AC9024E92ACE5206007EE9A1 /* TrackRowView.swift in Sources */,
 				AC9024A42AC67B51007EE9A1 /* Metronome.swift in Sources */,
+				ACBC51062B4502FB00D01F3A /* NetworkingFactory.swift in Sources */,
 				AC9024E02ACABED8007EE9A1 /* TrackListViewModel.swift in Sources */,
 				AC9024E42ACBF19E007EE9A1 /* AddTrackView.swift in Sources */,
 				AC9024B12AC918EF007EE9A1 /* Album.swift in Sources */,
