@@ -28,6 +28,9 @@ struct AddTrackView: View {
                 LoadingIndicatorView()
             }
         }
+        .safeAreaInset(edge: .bottom) {
+            openSpotifyButton
+        }
         .navigationTitle("Add Songs")
         .navigationBarTitleDisplayMode(.inline)
         .toolbarColorScheme(.dark, for: .navigationBar)
@@ -60,10 +63,31 @@ struct AddTrackView: View {
             }
         }
     }
+    
+    private var openSpotifyButton: some View {
+        Button {
+            viewModel.openSpotifyButtonTapped()
+        } label: {
+            Label {
+                Text("Open Spotify")
+            } icon: {
+                Style.Images.spotifyIconWhite
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .frame(maxHeight: 20)
+            }
+        }
+        .tint(.white)
+        .padding(15)
+        .background(Color.teal)
+        .cornerRadius(25)
+    }
 }
 
 struct AddTrackView_Previews: PreviewProvider {
     static var previews: some View {
-        AddTrackView(path: .constant(NavigationPath()), viewModel: AddTrackViewModel(service: MockSpotifyService()))
+        NavigationStack {
+            AddTrackView(path: .constant(NavigationPath()), viewModel: AddTrackViewModel(service: MockSpotifyService()))
+        }
     }
 }

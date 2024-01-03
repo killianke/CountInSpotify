@@ -59,4 +59,10 @@ class AddTrackViewModel: ObservableObject {
             self.error = error
         }
     }
+    
+    func openSpotifyButtonTapped(urlOpener: URLOpener = URLOpener()) {
+        if let url = URL(string: Constants.spotifyBaseURLScheme) {
+            urlOpener.open(url: url)
+        }
+    }
 }

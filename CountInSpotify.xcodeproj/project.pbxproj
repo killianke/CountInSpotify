@@ -57,6 +57,7 @@
 		AC9024F62ACF9D5B007EE9A1 /* AudioAnalysis.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9024F52ACF9D5B007EE9A1 /* AudioAnalysis.swift */; };
 		AC9024F82ACFB4AB007EE9A1 /* ViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9024F72ACFB4AB007EE9A1 /* ViewExtensions.swift */; };
 		AC9024FA2AD0101A007EE9A1 /* TracksStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9024F92AD0101A007EE9A1 /* TracksStore.swift */; };
+		AC9A27A52B4542790060AA2D /* URLOpener.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9A27A42B4542780060AA2D /* URLOpener.swift */; };
 		ACA8AF782AF328AF009EA479 /* MockSpotifyService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACA8AF772AF328AF009EA479 /* MockSpotifyService.swift */; };
 		ACBC51062B4502FB00D01F3A /* NetworkingFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACBC51052B4502FB00D01F3A /* NetworkingFactory.swift */; };
 		ACEDB0BF2B0D80410024DB3D /* StoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACEDB0BE2B0D80410024DB3D /* StoreView.swift */; };
@@ -148,6 +149,7 @@
 		AC9024F52ACF9D5B007EE9A1 /* AudioAnalysis.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioAnalysis.swift; sourceTree = "<group>"; };
 		AC9024F72ACFB4AB007EE9A1 /* ViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExtensions.swift; sourceTree = "<group>"; };
 		AC9024F92AD0101A007EE9A1 /* TracksStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TracksStore.swift; sourceTree = "<group>"; };
+		AC9A27A42B4542780060AA2D /* URLOpener.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLOpener.swift; sourceTree = "<group>"; };
 		ACA8AF772AF328AF009EA479 /* MockSpotifyService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockSpotifyService.swift; sourceTree = "<group>"; };
 		ACBC51052B4502FB00D01F3A /* NetworkingFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingFactory.swift; sourceTree = "<group>"; };
 		ACEDB0BE2B0D80410024DB3D /* StoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreView.swift; sourceTree = "<group>"; };
@@ -216,6 +218,7 @@
 				AC59688F2AC3B6B80067B0D9 /* Assets */,
 				AC51BB542AD5267A00E07AC0 /* Storage */,
 				AC59688A2ABC3E2B0067B0D9 /* Extensions */,
+				AC9A27A32B45424D0060AA2D /* Utils */,
 				AC9024A92AC6CDDD007EE9A1 /* Models */,
 				AC9024B42AC95580007EE9A1 /* Networking */,
 				AC8FF2A72ADF77CB00C8226A /* Audio */,
@@ -418,6 +421,14 @@
 			path = TrackInfoView;
 			sourceTree = "<group>";
 		};
+		AC9A27A32B45424D0060AA2D /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				AC9A27A42B4542780060AA2D /* URLOpener.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 		ACA8AF762AF32895009EA479 /* Mocks */ = {
 			isa = PBXGroup;
 			children = (
@@ -595,6 +606,7 @@
 				AC9024C92ACA8492007EE9A1 /* HTTPClient.swift in Sources */,
 				AC9024F42ACF80C5007EE9A1 /* TrackDetailsViewModel.swift in Sources */,
 				AC8FF2A92ADF8FFE00C8226A /* CircularProgressView.swift in Sources */,
+				AC9A27A52B4542790060AA2D /* URLOpener.swift in Sources */,
 				AC9024CA2ACA8492007EE9A1 /* RequestError.swift in Sources */,
 				AC9024C82ACA8492007EE9A1 /* HTTPMethod.swift in Sources */,
 				ACEDB0BF2B0D80410024DB3D /* StoreView.swift in Sources */,
