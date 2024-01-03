@@ -26,10 +26,15 @@ struct TrackInfoView: View {
                 Button {
                     viewModel.spotifyAttributionTapped()
                 } label: {
-                    Image("Spotify_Logo_RGB_White")
-                        .resizable()
-                        .aspectRatio(contentMode: .fit)
-                        .frame(maxHeight: 20)
+                    HStack {
+                        Style.Images.spotifyIconWhite
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                            .frame(maxHeight: 24)
+                        Text("PLAY ON SPOTIFY")
+                            .font(.body)
+                            .fontWeight(.semibold)
+                    }
                 }
             }
             .padding([.leading, .trailing], 16)

@@ -14,6 +14,12 @@ struct Style {
         static let accentColor: Color = .teal
     }
     
+    struct Images {
+        static let spotifyLogoWhite = Image("Spotify_Logo_RGB_White")
+        static let spotifyLogoBlack = Image("Spotify_Logo_RGB_Black")
+        static let spotifyIconWhite = Image("Spotify_Icon_RGB_White")
+    }
+    
     struct Modifiers {
         struct FullWidthButton: ViewModifier {
             var userInteractionDisabled: Bool = false

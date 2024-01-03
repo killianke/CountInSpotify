@@ -24,10 +24,10 @@ struct TrackRowView: View {
                 Text(viewModel.nameString).font(.headline)
                 Text(viewModel.artistsString).font(.caption)
                 Text(viewModel.albumString).font(.caption2)
-                Image("Spotify_Logo_RGB_Black")
+                Style.Images.spotifyLogoBlack
                     .resizable()
                     .aspectRatio(contentMode: .fit)
-                    .frame(height: 12)
+                    .frame(height: 16)
             }
         }
     }
