@@ -58,6 +58,8 @@
 		AC9024F82ACFB4AB007EE9A1 /* ViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9024F72ACFB4AB007EE9A1 /* ViewExtensions.swift */; };
 		AC9024FA2AD0101A007EE9A1 /* TracksStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9024F92AD0101A007EE9A1 /* TracksStore.swift */; };
 		AC9A27A52B4542790060AA2D /* URLOpener.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9A27A42B4542780060AA2D /* URLOpener.swift */; };
+		AC9A27A72B454C930060AA2D /* AddTrackViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9A27A62B454C930060AA2D /* AddTrackViewModelTests.swift */; };
+		AC9A27A92B454FA50060AA2D /* MockUrlOpeningHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9A27A82B454FA50060AA2D /* MockUrlOpeningHandler.swift */; };
 		ACA8AF782AF328AF009EA479 /* MockSpotifyService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACA8AF772AF328AF009EA479 /* MockSpotifyService.swift */; };
 		ACBC51062B4502FB00D01F3A /* NetworkingFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACBC51052B4502FB00D01F3A /* NetworkingFactory.swift */; };
 		ACEDB0BF2B0D80410024DB3D /* StoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACEDB0BE2B0D80410024DB3D /* StoreView.swift */; };
@@ -150,6 +152,8 @@
 		AC9024F72ACFB4AB007EE9A1 /* ViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExtensions.swift; sourceTree = "<group>"; };
 		AC9024F92AD0101A007EE9A1 /* TracksStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TracksStore.swift; sourceTree = "<group>"; };
 		AC9A27A42B4542780060AA2D /* URLOpener.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLOpener.swift; sourceTree = "<group>"; };
+		AC9A27A62B454C930060AA2D /* AddTrackViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTrackViewModelTests.swift; sourceTree = "<group>"; };
+		AC9A27A82B454FA50060AA2D /* MockUrlOpeningHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockUrlOpeningHandler.swift; sourceTree = "<group>"; };
 		ACA8AF772AF328AF009EA479 /* MockSpotifyService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockSpotifyService.swift; sourceTree = "<group>"; };
 		ACBC51052B4502FB00D01F3A /* NetworkingFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingFactory.swift; sourceTree = "<group>"; };
 		ACEDB0BE2B0D80410024DB3D /* StoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreView.swift; sourceTree = "<group>"; };
@@ -244,6 +248,7 @@
 			isa = PBXGroup;
 			children = (
 				AC7D0A762B16BEC900BDB7EB /* TrackDetailsViewModelTests.swift */,
+				AC9A27A62B454C930060AA2D /* AddTrackViewModelTests.swift */,
 				AC7D0A782B16C31800BDB7EB /* Mocks */,
 			);
 			path = CountInSpotifyTests;
@@ -289,6 +294,7 @@
 			children = (
 				AC7D0A792B16C33C00BDB7EB /* MockPlayerManager.swift */,
 				AC7D0A7B2B16EA4B00BDB7EB /* MockTrackStore.swift */,
+				AC9A27A82B454FA50060AA2D /* MockUrlOpeningHandler.swift */,
 			);
 			path = Mocks;
 			sourceTree = "<group>";
@@ -621,8 +627,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AC9A27A72B454C930060AA2D /* AddTrackViewModelTests.swift in Sources */,
 				AC7D0A7C2B16EA4B00BDB7EB /* MockTrackStore.swift in Sources */,
 				AC7D0A7A2B16C33C00BDB7EB /* MockPlayerManager.swift in Sources */,
+				AC9A27A92B454FA50060AA2D /* MockUrlOpeningHandler.swift in Sources */,
 				AC7D0A772B16BEC900BDB7EB /* TrackDetailsViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
