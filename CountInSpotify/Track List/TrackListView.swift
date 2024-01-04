@@ -56,6 +56,11 @@ struct TrackListView: View {
                     )
                 }
             }
+            .safeAreaInset(edge: .bottom) {
+                OpenSpotifyButton {
+                    viewModel.openSpotifyButtonTapped()
+                }
+            }
         }
         .accentColor(.white)
         .scrollContentBackground(.hidden)

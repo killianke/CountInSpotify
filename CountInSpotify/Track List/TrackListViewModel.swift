@@ -55,4 +55,10 @@ class TrackListViewModel: NSObject, ObservableObject, SpotifyConnectionDelegate 
     func spotifyAppNotInstalled() {
         presentAppStore = true
     }
+    
+    func openSpotifyButtonTapped(urlOpener: URLOpener = URLOpener()) {
+        if let url = URL(string: Constants.spotifyBaseURLScheme) {
+            urlOpener.open(url: url)
+        }
+    }
 }
