@@ -29,7 +29,9 @@ struct AddTrackView: View {
             }
         }
         .safeAreaInset(edge: .bottom) {
-            openSpotifyButton
+            OpenSpotifyButton {
+                viewModel.openSpotifyButtonTapped()
+            }
         }
         .navigationTitle("Add Songs")
         .navigationBarTitleDisplayMode(.inline)
@@ -62,25 +64,6 @@ struct AddTrackView: View {
                 Text(headerText).foregroundColor(.white)
             }
         }
-    }
-    
-    private var openSpotifyButton: some View {
-        Button {
-            viewModel.openSpotifyButtonTapped()
-        } label: {
-            Label {
-                Text("Open Spotify")
-            } icon: {
-                Style.Images.spotifyIconWhite
-                    .resizable()
-                    .aspectRatio(contentMode: .fit)
-                    .frame(maxHeight: 20)
-            }
-        }
-        .tint(.white)
-        .padding(15)
-        .background(Color.teal)
-        .cornerRadius(25)
     }
 }
 

@@ -65,6 +65,7 @@
 		AC9A27AF2B462CD60060AA2D /* audio-analysis-success.json in Resources */ = {isa = PBXBuildFile; fileRef = AC9A27AE2B462CD60060AA2D /* audio-analysis-success.json */; };
 		ACA8AF782AF328AF009EA479 /* MockSpotifyService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACA8AF772AF328AF009EA479 /* MockSpotifyService.swift */; };
 		ACBC51062B4502FB00D01F3A /* NetworkingFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACBC51052B4502FB00D01F3A /* NetworkingFactory.swift */; };
+		ACC59FDB2B4631A1000295A5 /* OpenSpotifyButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC59FDA2B4631A1000295A5 /* OpenSpotifyButton.swift */; };
 		ACEDB0BF2B0D80410024DB3D /* StoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACEDB0BE2B0D80410024DB3D /* StoreView.swift */; };
 /* End PBXBuildFile section */
 
@@ -162,6 +163,7 @@
 		AC9A27AE2B462CD60060AA2D /* audio-analysis-success.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "audio-analysis-success.json"; sourceTree = "<group>"; };
 		ACA8AF772AF328AF009EA479 /* MockSpotifyService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockSpotifyService.swift; sourceTree = "<group>"; };
 		ACBC51052B4502FB00D01F3A /* NetworkingFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingFactory.swift; sourceTree = "<group>"; };
+		ACC59FDA2B4631A1000295A5 /* OpenSpotifyButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenSpotifyButton.swift; sourceTree = "<group>"; };
 		ACEDB0BE2B0D80410024DB3D /* StoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -402,6 +404,7 @@
 				AC8FF2AC2AE92FF000C8226A /* LoadingIndicatorView.swift */,
 				AC355B892AF9FCB3000CE340 /* BackgroundGradientView.swift */,
 				ACEDB0BE2B0D80410024DB3D /* StoreView.swift */,
+				ACC59FDA2B4631A1000295A5 /* OpenSpotifyButton.swift */,
 			);
 			path = SharedViews;
 			sourceTree = "<group>";
@@ -631,6 +634,7 @@
 				AC9024DC2ACABE3B007EE9A1 /* ViewController.swift in Sources */,
 				AC5968862ABA9F210067B0D9 /* Constants.swift in Sources */,
 				AC8FF2A02ADE057900C8226A /* NowPlayingViewModel.swift in Sources */,
+				ACC59FDB2B4631A1000295A5 /* OpenSpotifyButton.swift in Sources */,
 				AC9024F22ACF80B6007EE9A1 /* TrackDetailsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
