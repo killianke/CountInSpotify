@@ -69,7 +69,9 @@ final class SpotifyConnectionManager: NSObject, SPTAppRemoteDelegate {
         )
         
         if !appInstalled {
+            #if !targetEnvironment(simulator)
             remoteDelegate?.spotifyAppNotInstalled()
+            #endif
         }
     }
 
