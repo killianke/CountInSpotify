@@ -11,7 +11,10 @@ import SwiftUI
 struct Style {
     
     struct Colors {
-        static let accentColor: Color = .teal
+        static let accentColor: Color = .init(
+            light: .systemTeal,
+            dark: UIColor(red: 0.12, green: 0.44, blue: 0.53, alpha: 1.00)
+        )
     }
     
     struct Images {

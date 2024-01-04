@@ -26,7 +26,7 @@ struct OpenSpotifyButton: View {
         }
         .tint(.white)
         .padding(15)
-        .background(Color.teal)
+        .background(Style.Colors.accentColor)
         .cornerRadius(25)
     }
 }

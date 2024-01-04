@@ -47,7 +47,7 @@ struct TrackInfoView: View {
 struct TrackInfoView_Previews: PreviewProvider {
     static var previews: some View {
         ZStack {
-            Color.teal
+            Style.Colors.accentColor
             TrackInfoView(viewModel: TrackInfoViewModel(track: .previewContent))
         }
     }
