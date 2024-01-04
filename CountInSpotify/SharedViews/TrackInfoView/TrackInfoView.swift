@@ -30,9 +30,9 @@ struct TrackInfoView: View {
                         Style.Images.spotifyIconWhite
                             .resizable()
                             .aspectRatio(contentMode: .fit)
-                            .frame(maxHeight: 24)
+                            .frame(maxHeight: 20)
                         Text("PLAY ON SPOTIFY")
-                            .font(.body)
+                            .font(.callout)
                             .fontWeight(.semibold)
                     }
                 }
