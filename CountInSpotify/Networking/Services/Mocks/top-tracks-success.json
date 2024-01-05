@@ -257,6 +257,91 @@
     },
     {
       "album": {
+        "album_type": "ALBUM",
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/1fEwGqdphBrvv5Vx79PjUi"
+            },
+            "href": "https://api.spotify.com/v1/artists/1fEwGqdphBrvv5Vx79PjUi",
+            "id": "1fEwGqdphBrvv5Vx79PjUi",
+            "name": "The Stunning",
+            "type": "artist",
+            "uri": "spotify:artist:1fEwGqdphBrvv5Vx79PjUi"
+          }
+        ],
+        "available_markets": [
+          "IE",
+          "NZ",
+          "US"
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/album/4XTjph4BK5o2kNGfmn69G4"
+        },
+        "href": "https://api.spotify.com/v1/albums/4XTjph4BK5o2kNGfmn69G4",
+        "id": "4XTjph4BK5o2kNGfmn69G4",
+        "images": [
+          {
+            "height": 640,
+            "url": "https://i.scdn.co/image/ab67616d0000b273ae1c5d9aee0f14adf28feeed",
+            "width": 640
+          },
+          {
+            "height": 300,
+            "url": "https://i.scdn.co/image/ab67616d00001e02ae1c5d9aee0f14adf28feeed",
+            "width": 300
+          },
+          {
+            "height": 64,
+            "url": "https://i.scdn.co/image/ab67616d00004851ae1c5d9aee0f14adf28feeed",
+            "width": 64
+          }
+        ],
+        "name": "Paradise in the Picturehouse",
+        "release_date": "1990-05-09",
+        "release_date_precision": "day",
+        "total_tracks": 12,
+        "type": "album",
+        "uri": "spotify:album:4XTjph4BK5o2kNGfmn69G4"
+      },
+      "artists": [
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/1fEwGqdphBrvv5Vx79PjUi"
+          },
+          "href": "https://api.spotify.com/v1/artists/1fEwGqdphBrvv5Vx79PjUi",
+          "id": "1fEwGqdphBrvv5Vx79PjUi",
+          "name": "The Stunning",
+          "type": "artist",
+          "uri": "spotify:artist:1fEwGqdphBrvv5Vx79PjUi"
+        }
+      ],
+      "available_markets": [
+        "IE",
+        "NZ",
+        "US"
+      ],
+      "disc_number": 1,
+      "duration_ms": 206413,
+      "explicit": false,
+      "external_ids": {
+        "isrc": "IEAAK0300001"
+      },
+      "external_urls": {
+        "spotify": "https://open.spotify.com/track/7sroqRA4g1eBgjyuazSgN7"
+      },
+      "href": "https://api.spotify.com/v1/tracks/7sroqRA4g1eBgjyuazSgN7",
+      "id": "7sroqRA4g1eBgjyuazSgN7",
+      "is_local": false,
+      "name": "Brewing Up a Storm",
+      "popularity": 48,
+      "preview_url": "https://p.scdn.co/mp3-preview/cb6531b252966372dd3143f54e85f580f5c6ef39?cid=0ad54630510047d288157ea602078764",
+      "track_number": 1,
+      "type": "track",
+      "uri": "spotify:track:7sroqRA4g1eBgjyuazSgN7"
+    },
+    {
+      "album": {
         "album_type": "SINGLE",
         "artists": [
           {
@@ -424,91 +509,6 @@
       "track_number": 1,
       "type": "track",
       "uri": "spotify:track:3rUGC1vUpkDG9CZFHMur1t"
-    },
-    {
-      "album": {
-        "album_type": "ALBUM",
-        "artists": [
-          {
-            "external_urls": {
-              "spotify": "https://open.spotify.com/artist/1fEwGqdphBrvv5Vx79PjUi"
-            },
-            "href": "https://api.spotify.com/v1/artists/1fEwGqdphBrvv5Vx79PjUi",
-            "id": "1fEwGqdphBrvv5Vx79PjUi",
-            "name": "The Stunning",
-            "type": "artist",
-            "uri": "spotify:artist:1fEwGqdphBrvv5Vx79PjUi"
-          }
-        ],
-        "available_markets": [
-          "IE",
-          "NZ",
-          "US"
-        ],
-        "external_urls": {
-          "spotify": "https://open.spotify.com/album/4XTjph4BK5o2kNGfmn69G4"
-        },
-        "href": "https://api.spotify.com/v1/albums/4XTjph4BK5o2kNGfmn69G4",
-        "id": "4XTjph4BK5o2kNGfmn69G4",
-        "images": [
-          {
-            "height": 640,
-            "url": "https://i.scdn.co/image/ab67616d0000b273ae1c5d9aee0f14adf28feeed",
-            "width": 640
-          },
-          {
-            "height": 300,
-            "url": "https://i.scdn.co/image/ab67616d00001e02ae1c5d9aee0f14adf28feeed",
-            "width": 300
-          },
-          {
-            "height": 64,
-            "url": "https://i.scdn.co/image/ab67616d00004851ae1c5d9aee0f14adf28feeed",
-            "width": 64
-          }
-        ],
-        "name": "Paradise in the Picturehouse",
-        "release_date": "1990-05-09",
-        "release_date_precision": "day",
-        "total_tracks": 12,
-        "type": "album",
-        "uri": "spotify:album:4XTjph4BK5o2kNGfmn69G4"
-      },
-      "artists": [
-        {
-          "external_urls": {
-            "spotify": "https://open.spotify.com/artist/1fEwGqdphBrvv5Vx79PjUi"
-          },
-          "href": "https://api.spotify.com/v1/artists/1fEwGqdphBrvv5Vx79PjUi",
-          "id": "1fEwGqdphBrvv5Vx79PjUi",
-          "name": "The Stunning",
-          "type": "artist",
-          "uri": "spotify:artist:1fEwGqdphBrvv5Vx79PjUi"
-        }
-      ],
-      "available_markets": [
-        "IE",
-        "NZ",
-        "US"
-      ],
-      "disc_number": 1,
-      "duration_ms": 206413,
-      "explicit": false,
-      "external_ids": {
-        "isrc": "IEAAK0300001"
-      },
-      "external_urls": {
-        "spotify": "https://open.spotify.com/track/7sroqRA4g1eBgjyuazSgN7"
-      },
-      "href": "https://api.spotify.com/v1/tracks/7sroqRA4g1eBgjyuazSgN7",
-      "id": "7sroqRA4g1eBgjyuazSgN7",
-      "is_local": false,
-      "name": "Brewing Up a Storm",
-      "popularity": 48,
-      "preview_url": "https://p.scdn.co/mp3-preview/cb6531b252966372dd3143f54e85f580f5c6ef39?cid=0ad54630510047d288157ea602078764",
-      "track_number": 1,
-      "type": "track",
-      "uri": "spotify:track:7sroqRA4g1eBgjyuazSgN7"
     },
     {
       "album": {
